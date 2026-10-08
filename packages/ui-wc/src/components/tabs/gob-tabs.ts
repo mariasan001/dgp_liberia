@@ -1,0 +1,1 @@
+import './gob-tabs.element';

@@ -1,0 +1,168 @@
+/* Gob UI - design tokens mapped to reusable CSS variables */
+
+:root {
+  color-scheme: light;
+
+  /* Typography */
+  --gob-font-sans: Gotham, "Gotham Book", Raleway, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --gob-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+  --gob-text-xs: 0.75rem;
+  --gob-text-sm: 0.875rem;
+  --gob-text-md: 1rem;
+  --gob-text-lg: 1.125rem;
+  --gob-text-xl: 1.375rem;
+  --gob-text-2xl: clamp(2rem, 4vw, 3.5rem);
+  --gob-display: clamp(2.75rem, 6vw, 4.25rem);
+  --gob-leading-tight: 1.15;
+  --gob-leading-normal: 1.5;
+
+  /* Playground / marketing surfaces */
+  --gob-hero-line: linear-gradient(90deg, var(--gob-primary), var(--gob-accent));
+  --gob-veil: rgba(255, 255, 255, 0.72);
+  --gob-veil-strong: rgba(255, 255, 255, 0.9);
+  --gob-stage-grid:
+    linear-gradient(rgba(24, 21, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 21, 17, 0.04) 1px, transparent 1px);
+  --gob-stage-grid-size: 32px 32px;
+  --gob-stage-glow:
+    radial-gradient(960px 420px at 80% 0%, rgba(159, 33, 65, 0.12), transparent 58%),
+    radial-gradient(760px 360px at 12% 8%, rgba(188, 148, 90, 0.12), transparent 56%);
+
+  /* Brand */
+  --gob-primary: #9f2141;
+  --gob-primary-hover: #861b36;
+  --gob-primary-soft: rgba(159, 33, 65, 0.12);
+  --gob-primary-contrast: #ffffff;
+  --gob-accent: #bc945a;
+  --gob-accent-soft: rgba(188, 148, 90, 0.18);
+  --gob-soft: #e7d7bd;
+  --gob-neutral: #e3dcd0;
+
+  /* Surfaces */
+  --gob-bg: #fafafa;
+  --gob-surface: #ffffff;
+  --gob-surface-raised: #fffdf9;
+  --gob-surface-muted: #f8f5ef;
+  --gob-panel: var(--gob-surface);
+  --gob-panel-strong: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 245, 239, 0.96));
+  --gob-scrim: rgba(24, 21, 17, 0.38);
+
+  /* Text */
+  --gob-text: #181511;
+  --gob-text-muted: rgba(24, 21, 17, 0.68);
+  --gob-text-subtle: rgba(24, 21, 17, 0.5);
+  --gob-muted: var(--gob-text-muted);
+
+  /* Borders */
+  --gob-border: rgba(24, 21, 17, 0.1);
+  --gob-border-soft: rgba(24, 21, 17, 0.06);
+  --gob-border-strong: rgba(24, 21, 17, 0.16);
+  --gob-divider: rgba(24, 21, 17, 0.08);
+
+  /* Semantic / semaforo */
+  --gob-success: #1f8a55;
+  --gob-success-bg: rgba(31, 138, 85, 0.14);
+  --gob-warning: #d0921a;
+  --gob-warning-bg: rgba(208, 146, 26, 0.16);
+  --gob-danger: #c62828;
+  --gob-danger-bg: rgba(198, 40, 40, 0.12);
+  --gob-info: #2f5f8a;
+  --gob-info-bg: rgba(47, 95, 138, 0.12);
+
+  /* Spacing */
+  --gob-space-0: 0;
+  --gob-space-1: 4px;
+  --gob-space-2: 8px;
+  --gob-space-3: 12px;
+  --gob-space-4: 16px;
+  --gob-space-5: 20px;
+  --gob-space-6: 24px;
+  --gob-space-8: 32px;
+  --gob-space-10: 40px;
+  --gob-space-12: 48px;
+
+  /* Radius */
+  --gob-radius-sm: 10px;
+  --gob-radius-md: 16px;
+  --gob-radius-lg: 24px;
+  --gob-radius-xl: 32px;
+  --gob-radius-full: 9999px;
+
+  /* Shadows */
+  --gob-shadow-none: none;
+  --gob-shadow-xs: 0 8px 20px rgba(41, 31, 20, 0.06);
+  --gob-shadow-sm: 0 16px 34px rgba(41, 31, 20, 0.1);
+  --gob-shadow-md: 0 24px 52px rgba(41, 31, 20, 0.14);
+  --gob-shadow-lg: 0 36px 72px rgba(20, 14, 10, 0.18);
+
+  /* Motion + interaction */
+  --gob-focus: 0 0 0 4px rgba(159, 33, 65, 0.24);
+  --gob-focus-ring: var(--gob-focus);
+  --gob-overlay-hover: rgba(24, 21, 17, 0.035);
+  --gob-overlay-hover-strong: rgba(24, 21, 17, 0.06);
+  --gob-pressed-translate: translateY(1px);
+  --gob-opacity-disabled: 0.5;
+  --gob-opacity-loading: 0.82;
+  --gob-transition-fast: 140ms ease;
+  --gob-transition-base: 220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Button tokens */
+  --gob-button-height-sm: 38px;
+  --gob-button-height-md: 44px;
+  --gob-button-height-lg: 50px;
+  --gob-button-padding-sm: 0 14px;
+  --gob-button-padding-md: 0 16px;
+  --gob-button-padding-lg: 0 20px;
+
+}
+
+[data-gob-theme="dark"] {
+  color-scheme: dark;
+
+  --gob-bg: #161310;
+  --gob-surface: #201c18;
+  --gob-surface-raised: #2a241f;
+  --gob-surface-muted: #1b1714;
+  --gob-panel: var(--gob-surface);
+  --gob-panel-strong: linear-gradient(180deg, rgba(42, 36, 31, 0.96), rgba(32, 28, 24, 0.96));
+  --gob-scrim: rgba(5, 4, 3, 0.52);
+
+  --gob-text: #f4efe8;
+  --gob-text-muted: rgba(244, 239, 232, 0.7);
+  --gob-text-subtle: rgba(244, 239, 232, 0.52);
+
+  --gob-border: rgba(244, 239, 232, 0.12);
+  --gob-border-soft: rgba(244, 239, 232, 0.06);
+  --gob-border-strong: rgba(244, 239, 232, 0.18);
+  --gob-divider: rgba(244, 239, 232, 0.08);
+
+  --gob-primary-hover: #b12c52;
+  --gob-primary-soft: rgba(159, 33, 65, 0.2);
+  --gob-accent-soft: rgba(188, 148, 90, 0.16);
+  --gob-soft: #4c4031;
+  --gob-neutral: #40362b;
+
+  --gob-success-bg: rgba(31, 138, 85, 0.18);
+  --gob-warning-bg: rgba(208, 146, 26, 0.18);
+  --gob-danger-bg: rgba(198, 40, 40, 0.18);
+  --gob-info-bg: rgba(47, 95, 138, 0.18);
+
+  --gob-shadow-xs: 0 8px 18px rgba(0, 0, 0, 0.2);
+  --gob-shadow-sm: 0 18px 34px rgba(0, 0, 0, 0.34);
+  --gob-shadow-md: 0 24px 54px rgba(0, 0, 0, 0.42);
+  --gob-shadow-lg: 0 38px 74px rgba(0, 0, 0, 0.5);
+
+  --gob-focus: 0 0 0 4px rgba(188, 148, 90, 0.28);
+  --gob-overlay-hover: rgba(255, 255, 255, 0.04);
+  --gob-overlay-hover-strong: rgba(255, 255, 255, 0.08);
+
+  --gob-veil: rgba(22, 19, 16, 0.78);
+  --gob-veil-strong: rgba(32, 28, 24, 0.92);
+  --gob-stage-grid:
+    linear-gradient(rgba(244, 239, 232, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 239, 232, 0.05) 1px, transparent 1px);
+  --gob-stage-glow:
+    radial-gradient(960px 420px at 80% 0%, rgba(159, 33, 65, 0.18), transparent 58%),
+    radial-gradient(760px 360px at 12% 8%, rgba(188, 148, 90, 0.16), transparent 56%);
+}

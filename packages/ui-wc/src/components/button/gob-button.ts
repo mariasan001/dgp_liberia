@@ -1,0 +1,1 @@
+import './gob-button.element';

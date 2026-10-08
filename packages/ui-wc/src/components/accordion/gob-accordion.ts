@@ -1,0 +1,1 @@
+import './gob-accordion.element';

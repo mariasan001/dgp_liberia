@@ -1,0 +1,12 @@
+{
+  "name": "consumer-smoke",
+  "private": true,
+  "scripts": {
+    "pack:tarballs": "node ./scripts/pack-tarballs.mjs",
+    "install:apps": "node ./scripts/install-apps.mjs",
+    "vite:dev": "node ./scripts/run-vite-dev-smoke.mjs",
+    "vite:build": "pnpm --dir vite-react --ignore-workspace build",
+    "next:build": "pnpm --dir next-app --ignore-workspace build",
+    "smoke": "pnpm run install:apps && pnpm run vite:dev && pnpm run vite:build && pnpm run next:build"
+  }
+}

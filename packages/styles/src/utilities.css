@@ -1,0 +1,54 @@
+/* Layout helpers powered by theme variables */
+
+.gob-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gob-space-3);
+}
+
+.gob-stack--lg {
+  gap: var(--gob-space-6);
+}
+
+.gob-row {
+  display: flex;
+  gap: var(--gob-space-3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gob-grid {
+  display: grid;
+  gap: var(--gob-space-4);
+}
+
+.gob-container {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  padding: var(--gob-space-6) var(--gob-space-4);
+}
+
+.gob-muted {
+  color: var(--gob-text-muted);
+}
+
+.gob-subtle {
+  color: var(--gob-text-subtle);
+}
+
+.gob-page-bg {
+  min-height: 100%;
+  background:
+    radial-gradient(920px 420px at 78% 0%, rgba(159, 33, 65, 0.09), transparent 58%),
+    radial-gradient(760px 360px at 12% 4%, rgba(188, 148, 90, 0.1), transparent 54%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0)),
+    var(--gob-bg);
+}
+
+[data-gob-theme='dark'] .gob-page-bg {
+  background:
+    radial-gradient(880px 400px at 72% -4%, rgba(159, 33, 65, 0.22), transparent 58%),
+    radial-gradient(720px 360px at 8% 2%, rgba(188, 148, 90, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    var(--gob-bg);
+}

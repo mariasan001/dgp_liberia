@@ -1,0 +1,91 @@
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  background: var(--gob-bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--gob-font-sans);
+  font-size: var(--gob-text-md);
+  line-height: var(--gob-leading-normal);
+  color: var(--gob-text);
+  background:
+    radial-gradient(960px 440px at 78% 0%, rgba(159, 33, 65, 0.08), transparent 58%),
+    radial-gradient(720px 380px at 16% 4%, rgba(188, 148, 90, 0.1), transparent 54%),
+    var(--gob-bg);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--gob-primary-soft);
+  color: var(--gob-text);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--gob-font-sans);
+  letter-spacing: -0.025em;
+  color: var(--gob-text);
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.02;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+  color: var(--gob-text-muted);
+}
+
+small {
+  color: var(--gob-text-subtle);
+}
+
+code,
+pre {
+  font-family: var(--gob-font-mono);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--gob-focus-ring);
+}

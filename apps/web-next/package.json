@@ -1,0 +1,27 @@
+{
+  "name": "web-next",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0 --port 9090",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0 --port 9090",
+    "lint": "eslint . --max-warnings=0"
+  },
+  "dependencies": {
+    "@mariasan001/styles": "workspace:*",
+    "@mariasan001/ui-wc": "workspace:*",
+    "@phosphor-icons/react": "2.1.7",
+    "echarts": "^6.1.0",
+    "next": "15.1.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.1.6",
+    "typescript": "^5.6.3"
+  }
+}

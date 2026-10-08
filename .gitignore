@@ -1,0 +1,43 @@
+# deps
+node_modules/
+.pnpm-store/
+
+# builds (monorepo)
+dist/
+**/dist/
+.next/
+**/.next/
+out/
+**/out/
+coverage/
+**/coverage/
+*.tsbuildinfo
+
+# tooling caches
+.turbo/
+**/.turbo/
+.eslintcache
+**/.eslintcache
+tools/consumer-smoke/tarballs/
+tools/consumer-smoke/*.log
+tools/consumer-smoke/**/pnpm-lock.yaml
+
+# env
+.env
+.env.*
+!.env.example
+
+# npm / pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# registry / secrets
+.npmrc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
