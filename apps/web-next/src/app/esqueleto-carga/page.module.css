@@ -1,0 +1,391 @@
+.page {
+  min-height: 100vh;
+  background: var(--gob-bg, #fafafa);
+  font-family: var(--gob-font-sans, Raleway, sans-serif);
+}
+
+.hero {
+  padding: 32px 20px 96px;
+  background: linear-gradient(165deg, #6e142c 0%, #9f2141 42%, #7a1832 100%);
+  color: #fff;
+}
+
+.heroInner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+.back {
+  width: fit-content;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.back:hover {
+  color: #fff;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.hint {
+  margin: 0;
+  max-width: 48ch;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.hint strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.version {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.panelWrap {
+  width: min(1100px, calc(100% - 24px));
+  margin: -64px auto 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.panel {
+  display: grid;
+  gap: 40px;
+  padding: 28px 26px 40px;
+  border-radius: 28px 28px 22px 22px;
+  background: #fff;
+  border: 1px solid rgba(24, 21, 17, 0.06);
+  box-shadow: 0 20px 48px rgba(24, 21, 17, 0.08);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 32px;
+  align-items: flex-end;
+  padding: 4px 2px 22px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.filterBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.filterLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8278;
+}
+
+.langRow,
+.colorRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.langChip {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #6b655c;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.langChipActive {
+  background: #efefef;
+  color: #181511;
+}
+
+.colorSwatch {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #d0d0d0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.colorSwatchActive {
+  box-shadow: 0 0 0 2px #9f2141;
+}
+
+.colorSwatch[data-tone='neutral'] {
+  box-shadow: 0 0 0 1px #bdbdbd;
+}
+
+.spec {
+  display: grid;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.specTitle {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #181511;
+}
+
+.specDesc {
+  margin: 0;
+  max-width: 54ch;
+  color: #6b655c;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.anatomyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: -12px;
+}
+
+.anatomyCard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  min-width: 0;
+}
+
+.anatomyHead {
+  display: grid;
+  gap: 4px;
+}
+
+.anatomyTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #181511;
+}
+
+.anatomyCaption {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8a8278;
+}
+
+.anatomyStage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 112px;
+  padding: 22px 16px;
+  border-radius: 14px;
+  background: #f4f4f4;
+  border: 1px solid #ececec;
+}
+
+.anatomyStage :global(gob-button) {
+  transform: scale(1.28);
+  transform-origin: center center;
+}
+
+.anatomyMetrics {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #efefef;
+  display: grid;
+  gap: 8px;
+}
+
+.anatomyMetrics li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+  font-size: 12px;
+  color: #6b655c;
+}
+
+.anatomyMetrics li span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.anatomyMetrics strong {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #181511;
+  white-space: nowrap;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  padding-top: 32px;
+  margin-top: 8px;
+  border-top: 1px solid #eaeaea;
+}
+
+.sectionHead {
+  display: grid;
+  gap: 8px;
+  max-width: 58ch;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #181511;
+  text-align: left;
+}
+
+.sectionDesc {
+  margin: 0;
+  color: #6b655c;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: 118px repeat(4, minmax(0, 1fr));
+  gap: 22px 14px;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.matrixCorner {
+  min-height: 0;
+}
+
+.matrixColHead,
+.matrixRowHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a453e;
+  text-align: center;
+}
+
+.matrixRowHead {
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.matrixCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 28px 4px 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.matrixCell :global(gob-button) {
+  flex-shrink: 0;
+}
+
+.copyBtn {
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #333;
+  border-radius: 999px;
+  min-height: 22px;
+  padding: 0 10px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 140ms ease;
+  white-space: nowrap;
+}
+
+.matrixCell:hover .copyBtn,
+.matrixCell:focus-within .copyBtn {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .anatomyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix {
+    grid-template-columns: 1fr;
+  }
+
+  .matrixCorner {
+    display: none;
+  }
+
+  .matrixColHead {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

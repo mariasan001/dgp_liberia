@@ -1,0 +1,35 @@
+{
+  "name": "gob-ui",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:next": "pnpm -C apps/web-next dev",
+    "dev": "pnpm dev:next",
+    "typecheck:next": "pnpm -C apps/web-next exec tsc --noEmit",
+    "typecheck": "pnpm build:ui-wc && pnpm typecheck:next",
+    "build:next": "pnpm -C apps/web-next build",
+    "build": "pnpm build:ui-wc && pnpm build:next",
+    "start:next": "pnpm -C apps/web-next start",
+    "lint:next": "pnpm -C apps/web-next lint",
+    "lint": "pnpm lint:next",
+
+    "build:ui-wc": "pnpm -C packages/ui-wc build",
+    "pack:styles": "pnpm -C packages/styles exec npm pack --dry-run --cache .npm-cache",
+    "pack:ui-wc": "pnpm -C packages/ui-wc exec npm pack --dry-run --cache .npm-cache",
+    "publish:ui-wc": "cd packages/ui-wc && npm publish --registry=https://npm.pkg.github.com",
+    "smoke:pack": "pnpm -C tools/consumer-smoke pack:tarballs",
+    "smoke:consumers": "pnpm -C tools/consumer-smoke smoke",
+    "verify": "pnpm lint && pnpm typecheck && pnpm build:next && pnpm pack:styles && pnpm pack:ui-wc",
+
+    "build:all": "pnpm -r build",
+    "lint:all": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.27",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

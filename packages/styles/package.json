@@ -1,0 +1,27 @@
+{
+  "name": "@mariasan001/styles",
+  "version": "0.1.2",
+  "private": false,
+  "type": "module",
+  "files": [
+    "base.css",
+    "theme.css",
+    "utilities.css",
+    "fonts.css",
+    "src",
+    "src/fonts"
+  ],
+  "sideEffects": [
+    "*.css",
+    "src/**/*.css"
+  ],
+  "exports": {
+    "./base.css": "./base.css",
+    "./theme.css": "./theme.css",
+    "./utilities.css": "./utilities.css",
+    "./fonts.css": "./fonts.css"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

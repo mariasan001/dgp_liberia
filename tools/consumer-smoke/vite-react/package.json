@@ -1,0 +1,22 @@
+{
+  "name": "consumer-smoke-vite-react",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build"
+  },
+  "dependencies": {
+    "@mariasan001/styles": "file:../tarballs/styles.tgz",
+    "@mariasan001/ui-wc": "file:../tarballs/ui-wc.tgz",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.5.2",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.19"
+  }
+}

@@ -1,0 +1,60 @@
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px;
+  border-radius: 16px;
+  border: 1px solid #ebebeb;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.item:hover,
+.item:focus-visible {
+  border-color: rgba(159, 33, 65, 0.28);
+  background: #fff;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #181511;
+}
+
+.desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #6b665f;
+}
+
+.cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #9f2141;
+}
