@@ -45,10 +45,10 @@ export default function IconografiaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Iconografia</h1>
+          <h1 className={s.title}>Iconografía</h1>
           <p className={s.hint}>
             <strong>Phosphor</strong> en peso <strong>thin</strong>. Cambia el lenguaje para ver su
-            instalacion y copia cada icono en <strong>{lang.toUpperCase()}</strong>.
+            instalación y copia cada icono en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -111,7 +111,7 @@ export default function IconografiaPage() {
           </section>
 
           <p className={s.note}>
-            Catalogo curado Gob UI ({totalIcons} iconos). La libreria completa Phosphor esta en{' '}
+            Catálogo curado Gob UI ({totalIcons} iconos). La librería completa Phosphor esta en{' '}
             <a href="https://phosphoricons.com" target="_blank" rel="noreferrer">
               phosphoricons.com
             </a>
@@ -146,7 +146,7 @@ export default function IconografiaPage() {
             </section>
           ))}
 
-          <section className={s.section} aria-label="Reglas de iconografia">
+          <section className={s.section} aria-label="Reglas de iconografía">
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Reglas</h2>
               <p className={s.sectionDesc}>

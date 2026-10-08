@@ -185,7 +185,7 @@ export default function ColoresPage() {
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Superficies</h2>
               <p className={s.sectionDesc}>
-                Fondos de pagina, paneles y bordes para construir layouts sin inventar grises.
+                Fondos de página, paneles y bordes para construir layouts sin inventar grises.
               </p>
             </div>
             <div className={s.colorPanel}>
@@ -204,7 +204,7 @@ export default function ColoresPage() {
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Texto</h2>
               <p className={s.sectionDesc}>
-                Jerarquia de lectura. En tipografia de contenido, preferir negro y gris claro.
+                Jerarquia de lectura. En tipografía de contenido, preferir negro y gris claro.
               </p>
             </div>
             <div className={s.colorPanel}>
@@ -223,7 +223,7 @@ export default function ColoresPage() {
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Semaforizacion</h2>
               <p className={s.sectionDesc}>
-                Estados semanticos: exito, atencion, critico e informativo. Cada uno trae color
+                Estados semanticos: éxito, atencion, critico e informativo. Cada uno trae color
                 solido y fondo soft.
               </p>
             </div>
@@ -243,7 +243,7 @@ export default function ColoresPage() {
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Reglas</h2>
               <p className={s.sectionDesc}>
-                Criterios para aplicar la escala sin romper marca ni semaforo.
+                Criterios para aplicar la escala sin romper marca ni semáforo.
               </p>
             </div>
             <div className={s.rulesPanel}>

@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Opcion unica — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Opción única — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -47,7 +47,7 @@ export default function OpcionUnicaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Opcion unica</h1>
+          <h1 className={s.title}>Opción única</h1>
           <p className={s.hint}>
             Radios nativos del design system. Pulsa <strong>Copiar</strong> para
             markup en <strong>{lang.toUpperCase()}</strong>.
@@ -116,7 +116,7 @@ export default function OpcionUnicaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

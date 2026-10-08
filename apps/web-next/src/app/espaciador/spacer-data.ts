@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SpacerExample = {
@@ -19,7 +16,7 @@ export type SpacerExample = {
 export const SPACER_EXAMPLES: SpacerExample[] = [
   {
     id: 'xs',
-    title: 'Extra pequeno',
+    title: 'Extra pequeño',
     description: '4px entre elementos muy cercanos.',
     variant: 'xs',
   },
@@ -44,7 +41,7 @@ export const SPACER_EXAMPLES: SpacerExample[] = [
   {
     id: 'xl',
     title: 'Extra grande',
-    description: '40px para saltos de seccion ligeros.',
+    description: '40px para saltos de sección ligeros.',
     variant: 'xl',
   },
   {
@@ -55,8 +52,8 @@ export const SPACER_EXAMPLES: SpacerExample[] = [
   },
   {
     id: 'section',
-    title: 'Seccion',
-    description: '64px para separar secciones de pagina.',
+    title: 'Sección',
+    description: '64px para separar secciones de página.',
     variant: 'section',
   },
 ];

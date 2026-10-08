@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Casilla — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Casilla — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -49,7 +49,7 @@ export default function CasillaPage() {
           </Link>
           <h1 className={s.title}>Casilla</h1>
           <p className={s.hint}>
-            Seleccion multiple nativa del design system. Pulsa{' '}
+            Selección múltiple nativa del design system. Pulsa{' '}
             <strong>Copiar</strong> para markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -116,7 +116,7 @@ export default function CasillaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

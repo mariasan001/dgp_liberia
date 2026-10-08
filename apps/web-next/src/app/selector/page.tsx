@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Selector — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Selector — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -50,7 +50,7 @@ export default function SelectorPage() {
           <h1 className={s.title}>Selector</h1>
           <p className={s.hint}>
             Listas desplegables modernas del design system: panel custom,
-            busqueda, chips y motion. Pulsa <strong>Copiar</strong> para markup
+            búsqueda, chips y motion. Pulsa <strong>Copiar</strong> para markup
             en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -107,7 +107,7 @@ export default function SelectorPage() {
               <h2 className={s.sectionTitle}>Atributos</h2>
               <p className={s.sectionDesc}>
                 API de <code>gob-select</code>. Emite <code>gob-select</code> al
-                cambiar. Panel listbox con teclado, limpia y semaforo.
+                cambiar. Panel listbox con teclado, limpia y semáforo.
               </p>
             </div>
             <div className={local.tableWrap}>
@@ -117,7 +117,7 @@ export default function SelectorPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

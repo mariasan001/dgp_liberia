@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: DividerTone; label: string; swatch: string }[] = [
@@ -24,14 +21,14 @@ export type DividerExample = {
 export const DIVIDER_EXAMPLES: DividerExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Linea horizontal continua para separar bloques.',
+    title: 'Básico',
+    description: 'Línea horizontal continua para separar bloques.',
     variant: 'basic',
   },
   {
     id: 'vertical',
     title: 'Vertical',
-    description: 'Linea vertical para separar acciones en una fila.',
+    description: 'Línea vertical para separar acciones en una fila.',
     variant: 'vertical',
   },
   {
@@ -49,7 +46,7 @@ export const DIVIDER_EXAMPLES: DividerExample[] = [
   {
     id: 'thick',
     title: 'Grueso',
-    description: 'Mayor grosor para cortes de seccion fuertes.',
+    description: 'Mayor grosor para cortes de sección fuertes.',
     variant: 'thick',
   },
   {
@@ -61,7 +58,7 @@ export const DIVIDER_EXAMPLES: DividerExample[] = [
   {
     id: 'inset',
     title: 'Inset',
-    description: 'Linea con margen interior para alinear con el contenido.',
+    description: 'Línea con margen interior para alinear con el contenido.',
     variant: 'inset',
   },
 ];
@@ -77,7 +74,7 @@ export const DIVIDER_ATTRS = [
     name: 'tone',
     type: 'string',
     defaultValue: 'primary',
-    body: 'Color de la linea: primary | accent',
+    body: 'Color de la línea: primary | accent',
   },
 ] as const;
 

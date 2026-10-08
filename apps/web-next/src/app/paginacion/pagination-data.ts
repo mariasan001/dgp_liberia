@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 /** Same swatches as Botones docs shell. */
@@ -32,8 +29,8 @@ export const ANATOMY_SAMPLES: PaginationVariantDemo[] = [
   {
     id: 'basic',
     title: 'Basica',
-    caption: 'Solo numeros',
-    description: 'Solo numeros de pagina, sin flechas.',
+    caption: 'Solo números',
+    description: 'Solo números de página, sin flechas.',
     page: 2,
     total: 5,
     metrics: [
@@ -58,8 +55,8 @@ export const ANATOMY_SAMPLES: PaginationVariantDemo[] = [
   {
     id: 'compact',
     title: 'Compacta',
-    caption: 'Pagina / total',
-    description: 'Muestra pagina actual sobre el total.',
+    caption: 'Página / total',
+    description: 'Muestra página actual sobre el total.',
     page: 4,
     total: 12,
     metrics: [
@@ -79,13 +76,13 @@ export const CONTENT_SECTIONS: {
   {
     id: 'numeric',
     title: 'Numerica',
-    description: 'Rangos de pagina con o sin flechas y elipsis.',
+    description: 'Rangos de página con o sin flechas y elipsis.',
     variants: ['basic', 'arrows', 'ellipsis', 'edges'],
   },
   {
     id: 'compact',
     title: 'Compacta',
-    description: 'Navegacion minima para espacios reducidos.',
+    description: 'Navegación mínima para espacios reducidos.',
     variants: ['compact', 'icons'],
   },
   {
@@ -103,7 +100,7 @@ export const CONTENT_SECTIONS: {
   {
     id: 'jump',
     title: 'Salto directo',
-    description: 'Campo para escribir la pagina destino.',
+    description: 'Campo para escribir la página destino.',
     variants: ['jump'],
   },
 ];
@@ -112,8 +109,8 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
   {
     id: 'basic',
     title: 'Basica',
-    caption: 'Solo numeros',
-    description: 'Solo numeros de pagina, sin flechas.',
+    caption: 'Solo números',
+    description: 'Solo números de página, sin flechas.',
     page: 2,
     total: 5,
     metrics: [],
@@ -140,7 +137,7 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
     id: 'edges',
     title: 'Primera y ultima',
     caption: 'Saltos a extremos',
-    description: 'Incluye saltos a la primera y ultima pagina.',
+    description: 'Incluye saltos a la primera y ultima página.',
     page: 5,
     total: 18,
     metrics: [],
@@ -148,8 +145,8 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
   {
     id: 'compact',
     title: 'Compacta',
-    caption: 'Pagina / total',
-    description: 'Muestra pagina actual sobre el total.',
+    caption: 'Página / total',
+    description: 'Muestra página actual sobre el total.',
     page: 4,
     total: 12,
     metrics: [],
@@ -158,7 +155,7 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
     id: 'icons',
     title: 'Solo iconos',
     caption: 'Solo flechas',
-    description: 'Navegacion minima con flechas.',
+    description: 'Navegación mínima con flechas.',
     page: 2,
     total: 10,
     metrics: [],
@@ -212,7 +209,7 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
     id: 'summary',
     title: 'Resumen',
     caption: 'Rango de resultados',
-    description: 'Muestra el rango de items con flechas de navegacion.',
+    description: 'Muestra el rango de items con flechas de navegación.',
     page: 3,
     total: 12,
     metrics: [],
@@ -220,8 +217,8 @@ export const PAGINATION_VARIANTS: PaginationVariantDemo[] = [
   {
     id: 'jump',
     title: 'Salto directo',
-    caption: 'Input de pagina',
-    description: 'Campo para escribir la pagina destino.',
+    caption: 'Input de página',
+    description: 'Campo para escribir la página destino.',
     page: 9,
     total: 30,
     metrics: [],
@@ -245,7 +242,7 @@ export function buildSnippet(opts: {
     return `import { useEffect, useRef, useState } from 'react';
 import '@mariasan001/ui-wc';
 
-export function Paginacion() {
+export function Paginación() {
   const [page, setPage] = useState(${opts.page});
   const ref = useRef(null);
 
@@ -259,7 +256,7 @@ export function Paginacion() {
 
   return (
     <>
-      <p>Pagina {page} de ${opts.total}</p>
+      <p>Página {page} de ${opts.total}</p>
       <gob-pagination
         ref={ref}
         ${attrs.replace(`page="${opts.page}"`, 'page={String(page)}')}
@@ -278,7 +275,7 @@ function onPage(e) { page.value = e.detail.page; }
 </script>
 
 <template>
-  <p>Pagina {{ page }} de ${opts.total}</p>
+  <p>Página {{ page }} de ${opts.total}</p>
   <gob-pagination
     ${attrs.replace(`page="${opts.page}"`, ':page="String(page)"')}
     @gob-page-change="onPage"
@@ -299,7 +296,7 @@ import '@mariasan001/ui-wc';
   const el = document.querySelector('gob-pagination');
   el.addEventListener('gob-page-change', (e) => {
     el.setAttribute('page', String(e.detail.page));
-    console.log('Pagina', e.detail.page);
+    console.log('Página', e.detail.page);
   });
 </script>
 

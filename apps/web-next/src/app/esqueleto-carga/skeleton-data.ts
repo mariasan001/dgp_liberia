@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SkeletonExample = {
@@ -27,7 +24,7 @@ export const SKELETON_EXAMPLES: SkeletonExample[] = [
   {
     id: 'avatar',
     title: 'Con avatar',
-    description: 'Circulo + lineas para perfiles o actores.',
+    description: 'Circulo + líneas para perfiles o actores.',
     variant: 'avatar',
   },
   {
@@ -94,13 +91,13 @@ export const SKELETON_ATTRS = [
     name: 'rows',
     type: 'number',
     defaultValue: '3',
-    body: 'Filas en table / list / complete (1–12).',
+    body: 'Filas en table / list / complete (1â€“12).',
   },
   {
     name: 'animated',
     type: 'boolean',
     defaultValue: 'true',
-    body: 'Shimmer en gris clarito. Usa animated="false" para estatico.',
+    body: 'Shimmer en gris clarito. Usa animated="false" para estático.',
   },
 ] as const;
 

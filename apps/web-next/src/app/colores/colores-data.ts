@@ -2,9 +2,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type ColorSwatch = {
@@ -20,7 +17,7 @@ export const BRAND_COLORS: ColorSwatch[] = [
   {
     id: 'primary',
     name: 'Primary',
-    role: 'Accion principal · marca',
+    role: 'Acción principal Â· marca',
     hex: '#9F2141',
     token: '--gob-primary',
     onDark: true,
@@ -83,7 +80,7 @@ export const SURFACE_COLORS: ColorSwatch[] = [
   {
     id: 'bg',
     name: 'Canvas',
-    role: 'Fondo de pagina',
+    role: 'Fondo de página',
     hex: '#FAFAFA',
     token: '--gob-bg',
   },
@@ -154,20 +151,20 @@ export const SEMAPHORE_COLORS: SemaphoreColor[] = [
   {
     id: 'success',
     name: 'Success',
-    role: 'Verde · correcto',
+    role: 'Verde Â· correcto',
     hex: '#1F8A55',
     token: '--gob-success',
     bgToken: '--gob-success-bg',
     bgHex: 'rgba(31, 138, 85, 0.14)',
     onDark: true,
-    meaning: 'Exito, confirmacion, estado activo positivo.',
-    doUse: 'Guardado, aprobado, disponible, validacion ok.',
+    meaning: 'Exito, confirmación, estado activo positivo.',
+    doUse: 'Guardado, aprobado, disponible, validación ok.',
     dontUse: 'No usar como color de marca ni en CTAs primarios.',
   },
   {
     id: 'warning',
     name: 'Warning',
-    role: 'Ambar · atencion',
+    role: 'Ambar Â· atencion',
     hex: '#D0921A',
     token: '--gob-warning',
     bgToken: '--gob-warning-bg',
@@ -180,20 +177,20 @@ export const SEMAPHORE_COLORS: SemaphoreColor[] = [
   {
     id: 'danger',
     name: 'Danger',
-    role: 'Rojo · critico',
+    role: 'Rojo Â· critico',
     hex: '#C62828',
     token: '--gob-danger',
     bgToken: '--gob-danger-bg',
     bgHex: 'rgba(198, 40, 40, 0.12)',
     onDark: true,
-    meaning: 'Error, rechazo, accion destructiva o bloqueo.',
+    meaning: 'Error, rechazo, acción destructiva o bloqueo.',
     doUse: 'Errores de formulario, eliminar, denegado.',
     dontUse: 'No saturar la UI: reservar para estados reales de fallo. Distinto del primary de marca.',
   },
   {
     id: 'info',
     name: 'Info',
-    role: 'Azul · informativo',
+    role: 'Azul Â· informativo',
     hex: '#2F5F8A',
     token: '--gob-info',
     bgToken: '--gob-info-bg',
@@ -210,7 +207,7 @@ export const COLOR_RULES = [
     id: 'brand',
     index: '01',
     title: 'Marca primero',
-    body: 'Primary (#9F2141) concentra la accion principal. Accent (#BC945A) apoya, no reemplaza.',
+    body: 'Primary (#9F2141) concentra la acción principal. Accent (#BC945A) apoya, no reemplaza.',
   },
   {
     id: 'semaphore',
@@ -228,7 +225,7 @@ export const COLOR_RULES = [
     id: 'soft',
     index: '04',
     title: 'Soft para fondos',
-    body: 'Las variantes soft (*-soft / *-bg) son para chips, alerts y fondos. No para texto ni iconos criticos.',
+    body: 'Las variantes soft (*-soft / *-bg) son para chips, alerts y fondos. No para texto ni iconos críticos.',
   },
   {
     id: 'tokens',
@@ -239,8 +236,8 @@ export const COLOR_RULES = [
   {
     id: 'type',
     index: '06',
-    title: 'Tipografia aparte',
-    body: 'En tipografia de lectura solo negro y gris claro. El color de marca vive en acciones y estados.',
+    title: 'Tipografía aparte',
+    body: 'En tipografía de lectura solo negro y gris claro. El color de marca vive en acciones y estados.',
   },
 ] as const;
 

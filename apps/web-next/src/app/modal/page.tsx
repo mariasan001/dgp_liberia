@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Modal — cascaron canonico = Botones (/botones).
+ * Docs de Modal — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -48,8 +48,8 @@ export default function ModalPage() {
           </Link>
           <h1 className={s.title}>Modal</h1>
           <p className={s.hint}>
-            Ventana de confirmacion o formulario corto. Cada tarjeta muestra el
-            dialogo en linea; pulsa <strong>Probar overlay</strong> o{' '}
+            Ventana de confirmación o formulario corto. Cada tarjeta muestra el
+            diálogo en línea; pulsa <strong>Probar overlay</strong> o{' '}
             <strong>Copiar</strong> para markup en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
@@ -116,7 +116,7 @@ export default function ModalPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

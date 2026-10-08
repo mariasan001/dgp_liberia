@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type AlertExample = {
@@ -24,12 +21,12 @@ export type AlertExample = {
 export const ALERT_EXAMPLES: AlertExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Aviso persistente informativo.',
     variant: 'basic',
     tone: 'info',
     alertTitle: 'Actualizacion disponible',
-    alertDescription: 'Hay una nueva version del catalogo de tramites.',
+    alertDescription: 'Hay una nueva version del catálogo de trámites.',
   },
   {
     id: 'success',
@@ -58,7 +55,7 @@ export const ALERT_EXAMPLES: AlertExample[] = [
     variant: 'solid',
     tone: 'danger',
     alertTitle: 'No se pudo guardar',
-    alertDescription: 'Revisa tu conexion e intenta de nuevo.',
+    alertDescription: 'Revisa tu conexión e intenta de nuevo.',
     action: 'Reintentar',
   },
   {
@@ -81,7 +78,7 @@ export const ALERT_EXAMPLES: AlertExample[] = [
   },
   {
     id: 'inline',
-    title: 'En linea',
+    title: 'En línea',
     description: 'Chip de aviso corto.',
     variant: 'inline',
     tone: 'success',
@@ -100,7 +97,7 @@ export const ALERT_EXAMPLES: AlertExample[] = [
   {
     id: 'dismissible',
     title: 'Descartable',
-    description: 'Con boton de cierre.',
+    description: 'Con botón de cierre.',
     variant: 'dismissible',
     tone: 'info',
     alertTitle: 'Tip de usabilidad',
@@ -113,7 +110,7 @@ export const ALERT_EXAMPLES: AlertExample[] = [
     description: 'Riel dorado institucional.',
     variant: 'complete',
     tone: 'info',
-    alertTitle: 'Revision institucional',
+    alertTitle: 'Revisión institucional',
     alertDescription: 'Este aviso usa el acento dorado del sistema.',
     action: 'Entendido',
     dismissible: true,
@@ -123,10 +120,10 @@ export const ALERT_EXAMPLES: AlertExample[] = [
 export const ALERT_ATTRS = [
   { name: 'variant', type: 'string', defaultValue: 'basic', body: 'basic | soft | outline | solid | banner | dense | inline | bordered | dismissible | complete' },
   { name: 'tone', type: 'string', defaultValue: 'info', body: 'info | success | warning | danger | neutral' },
-  { name: 'title', type: 'string', defaultValue: 'Aviso importante', body: 'Titulo del aviso.' },
-  { name: 'description', type: 'string', defaultValue: '—', body: 'Texto de apoyo.' },
-  { name: 'action', type: 'string', defaultValue: '—', body: 'Etiqueta del boton de accion.' },
-  { name: 'dismissible', type: 'boolean', defaultValue: 'false', body: 'Muestra boton de cierre.' },
+  { name: 'title', type: 'string', defaultValue: 'Aviso importante', body: 'Título del aviso.' },
+  { name: 'description', type: 'string', defaultValue: 'â€”', body: 'Texto de apoyo.' },
+  { name: 'action', type: 'string', defaultValue: 'â€”', body: 'Etiqueta del botón de acción.' },
+  { name: 'dismissible', type: 'boolean', defaultValue: 'false', body: 'Muestra botón de cierre.' },
 ] as const;
 
 export function buildSnippet(lang: CodeLang, example: AlertExample): string {

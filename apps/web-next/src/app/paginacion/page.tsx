@@ -71,9 +71,9 @@ export default function PaginacionPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Paginacion</h1>
+          <h1 className={s.title}>Paginación</h1>
           <p className={s.hint}>
-            Pasa el mouse sobre una variante y pulsa <strong>Copiar</strong> para obtener el codigo en{' '}
+            Pasa el mouse sobre una variante y pulsa <strong>Copiar</strong> para obtener el código en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -127,7 +127,7 @@ export default function PaginacionPage() {
           </div>
 
           <div className={s.spec}>
-            <h2 className={s.specTitle}>Anatomia de la paginacion</h2>
+            <h2 className={s.specTitle}>Anatomia de la paginación</h2>
             <p className={s.specDesc}>
               Tres formas base del sistema. Altura, gap y controles alineados para listados reales.
             </p>

@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Cuadricula — cascaron canonico = Botones (/botones).
- * Caracteristica: espaciado (gap), sin seleccion de color.
+ * Docs de Cuadrícula — cascarrón canónico = Botones (/botones).
+ * Caracteristica: espaciado (gap), sin selección de color.
  */
 
 import Link from 'next/link';
@@ -50,10 +50,10 @@ export default function CuadriculaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Cuadricula</h1>
+          <h1 className={s.title}>Cuadrícula</h1>
           <p className={s.hint}>
             Filas, columnas y espacios. Pasa el mouse y pulsa{' '}
-            <strong>Copiar</strong> para el codigo en <strong>{lang.toUpperCase()}</strong>.
+            <strong>Copiar</strong> para el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -138,7 +138,7 @@ export default function CuadriculaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

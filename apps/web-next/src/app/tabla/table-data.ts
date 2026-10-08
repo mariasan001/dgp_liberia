@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: TableTone; label: string; swatch: string }[] =
@@ -37,16 +34,16 @@ export const TABLE_EXAMPLES: TableExample[] = [
     description: 'Listado limpio de expedientes. Punto de partida para consultas.',
     variant: 'basic',
     cardTitle: 'Expedientes recientes',
-    footer: 'Mostrando 1–5 de 12,480',
+    footer: 'Mostrando 1â€“5 de 12,480',
   },
   {
     id: 'striped',
     title: 'Zebra',
-    description: 'Filas alternadas para escanear miles de registros sin perder la linea.',
+    description: 'Filas alternadas para escanear miles de registros sin perder la línea.',
     variant: 'striped',
     cardTitle: 'Padron de beneficiarios',
     subtitle: 'Corte 2026-Q2',
-    footer: '5,902 registros en esta pagina',
+    footer: '5,902 registros en esta página',
   },
   {
     id: 'bordered',
@@ -61,14 +58,14 @@ export const TABLE_EXAMPLES: TableExample[] = [
     description: 'Maxima densidad tipografica para tableros con mucho volumen.',
     variant: 'dense',
     cardTitle: 'Bitacora de movimientos',
-    footer: 'Densidad compacta · 40 filas/vista',
+    footer: 'Densidad compacta Â· 40 filas/vista',
   },
   {
     id: 'selectable',
     title: 'Seleccionable',
     description: 'Checkbox por fila para acciones masivas (exportar, asignar, archivar).',
     variant: 'selectable',
-    cardTitle: 'Lote de tramites',
+    cardTitle: 'Lote de trámites',
     subtitle: 'Selecciona para operar en bloque',
     showActions: true,
     footer: '2 seleccionados de 5',
@@ -78,7 +75,7 @@ export const TABLE_EXAMPLES: TableExample[] = [
     title: 'Ordenable',
     description: 'Encabezados con orden para priorizar por folio, fecha o monto.',
     variant: 'sortable',
-    cardTitle: 'Cola de revision',
+    cardTitle: 'Cola de revisión',
     subtitle: 'Orden por fecha de ingreso',
     footer: 'Clic en columna para ordenar',
   },
@@ -94,7 +91,7 @@ export const TABLE_EXAMPLES: TableExample[] = [
   {
     id: 'status',
     title: 'Con estatus',
-    description: 'Badges de estado para flujos: en revision, aprobado, rechazado.',
+    description: 'Badges de estado para flujos: en revisión, aprobado, rechazado.',
     variant: 'status',
     cardTitle: 'Seguimiento de solicitudes',
     showActions: true,
@@ -114,7 +111,7 @@ export const TABLE_EXAMPLES: TableExample[] = [
     title: 'Vacia',
     description: 'Estado sin resultados para busquedas o filtros sin coincidencias.',
     variant: 'empty',
-    cardTitle: 'Resultados de busqueda',
+    cardTitle: 'Resultados de búsqueda',
     subtitle: 'Folio / CURP / RFC',
   },
 ];
@@ -135,38 +132,38 @@ export const TABLE_ATTRS = [
   {
     name: 'slot=title',
     type: 'slot',
-    defaultValue: '—',
-    body: 'Titulo del listado.',
+    defaultValue: 'â€”',
+    body: 'Título del listado.',
   },
   {
     name: 'slot=subtitle',
     type: 'slot',
-    defaultValue: '—',
+    defaultValue: 'â€”',
     body: 'Contexto o corte de datos.',
   },
   {
     name: 'slot=actions',
     type: 'slot',
-    defaultValue: '—',
+    defaultValue: 'â€”',
     body: 'Acciones de lote (exportar, filtrar).',
   },
   {
     name: 'slot=default',
     type: 'slot',
-    defaultValue: '—',
+    defaultValue: 'â€”',
     body: 'Tabla HTML nativa (<table>) con thead/tbody.',
   },
   {
     name: 'slot=empty',
     type: 'slot',
-    defaultValue: '—',
-    body: 'Contenido del estado vacio (variant=empty).',
+    defaultValue: 'â€”',
+    body: 'Contenido del estado vacío (variant=empty).',
   },
   {
     name: 'slot=footer',
     type: 'slot',
-    defaultValue: '—',
-    body: 'Resumen / paginacion / conteo de registros.',
+    defaultValue: 'â€”',
+    body: 'Resumen / paginación / conteo de registros.',
   },
 ] as const;
 
@@ -204,7 +201,7 @@ export const DEMO_ROWS: DemoRow[] = [
     fecha: '12/03/2026',
     monto: '$1,180.00',
     estatus: 'warn',
-    estatusLabel: 'En revision',
+    estatusLabel: 'En revisión',
     initials: 'LH',
     hue: 1,
   },
@@ -257,7 +254,7 @@ export const DEMO_ROWS_LONG: DemoRow[] = [
     fecha: '10/03/2026',
     monto: '$760.00',
     estatus: 'warn',
-    estatusLabel: 'En revision',
+    estatusLabel: 'En revisión',
     initials: 'MO',
     hue: 5,
   },
@@ -389,7 +386,7 @@ export function TablaVacia() {
 
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
-<!-- gob-table estiliza. Seleccion/orden los cables tu (JS o framework). -->
+<!-- gob-table estiliza. Selección/orden los cables tu (JS o framework). -->
 <script type="module">import '@mariasan001/ui-wc';</script>
 
 <gob-table${attrs}>
@@ -408,7 +405,7 @@ ${withStatus ? `        <th>Estatus</th>\n` : ''}      </tr>
 ${body}
     </tbody>
   </table>
-  <span slot="footer">Mostrando 1–${rows.length} de ${rows.length}</span>
+  <span slot="footer">Mostrando 1â€“${rows.length} de ${rows.length}</span>
 </gob-table>`;
   }
 
@@ -456,7 +453,7 @@ ${withCheck ? `
     <gob-table${attrs}>
       <span slot="title">${title}</span>
 ${example.subtitle ? `      <span slot="subtitle">${example.subtitle}</span>\n` : ''}${example.showActions ? `      <span slot="actions">
-        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Filtrar…" />
+        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Filtrarâ€¦" />
       </span>\n` : ''}      <table>
         <thead>
           <tr>
@@ -500,7 +497,7 @@ ${withStatus ? `              <td>
         </tbody>
       </table>
       <span slot="footer">
-${withCheck ? `        {selected.size} seleccionados · ` : ''}{rows.length} registros
+${withCheck ? `        {selected.size} seleccionados Â· ` : ''}{rows.length} registros
       </span>
     </gob-table>
   );
@@ -527,7 +524,7 @@ const filtered = computed(() => {
   <gob-table${attrs}>
     <span slot="title">${title}</span>
 ${example.showActions ? `    <span slot="actions">
-      <input v-model="query" placeholder="Filtrar…" />
+      <input v-model="query" placeholder="Filtrarâ€¦" />
     </span>\n` : ''}    <table>
       <thead>
         <tr>
@@ -572,7 +569,7 @@ ${withStatus ? `        <th>Estatus</th>\n` : ''}      </tr>
 ${body}
     </tbody>
   </table>
-  <span slot="footer">Mostrando 1–${rows.length}</span>
+  <span slot="footer">Mostrando 1â€“${rows.length}</span>
 </gob-table>`;
 }
 

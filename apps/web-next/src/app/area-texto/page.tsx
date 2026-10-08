@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Area de texto — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Área de texto — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -47,9 +47,9 @@ export default function AreaTextoPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Area de texto</h1>
+          <h1 className={s.title}>Área de texto</h1>
           <p className={s.hint}>
-            Texto multilinea nativo del design system. Pulsa{' '}
+            Texto multilínea nativo del design system. Pulsa{' '}
             <strong>Copiar</strong> para markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -106,7 +106,7 @@ export default function AreaTextoPage() {
               <h2 className={s.sectionTitle}>Atributos</h2>
               <p className={s.sectionDesc}>
                 API de <code>gob-textarea</code>. Emite <code>gob-textarea</code>{' '}
-                al escribir. Focus con anillo vino / semaforo.
+                al escribir. Focus con anillo vino / semáforo.
               </p>
             </div>
             <div className={local.tableWrap}>
@@ -116,7 +116,7 @@ export default function AreaTextoPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

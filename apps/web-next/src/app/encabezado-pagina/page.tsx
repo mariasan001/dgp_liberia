@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Encabezado de pagina — cascaron canonico = Botones (/botones).
- * Filtro de superficie: con fondo / sin fondo (sin seleccion de color).
+ * Docs de Encabezado de página — cascarrón canónico = Botones (/botones).
+ * Filtro de superficie: con fondo / sin fondo (sin selección de color).
  */
 
 import Link from 'next/link';
@@ -50,7 +50,7 @@ export default function EncabezadoPaginaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Encabezado de pagina</h1>
+          <h1 className={s.title}>Encabezado de página</h1>
           <p className={s.hint}>
             Funcional: migas, estatus y acciones. Pulsa <strong>Copiar</strong>{' '}
             para markup + patron interactivo en <strong>{lang.toUpperCase()}</strong>.
@@ -140,7 +140,7 @@ export default function EncabezadoPaginaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

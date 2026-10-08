@@ -182,29 +182,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'kpi-card') {
-    return (
-      <div className={s.fakeKpi} aria-hidden="true">
-        <span className={s.fakeKpiLabel} />
-        <span className={s.fakeKpiValue} />
-        <span className={s.fakeKpiTrend} />
-      </div>
-    );
-  }
-  if (kind === 'chart-card') {
-    return (
-      <div className={s.fakeChart} aria-hidden="true">
-        <span className={s.fakeChartTitle} />
-        <span className={s.fakeChartBars}>
-          <i style={{ height: '40%' }} />
-          <i style={{ height: '70%' }} />
-          <i style={{ height: '55%' }} />
-          <i style={{ height: '85%' }} />
-        </span>
-      </div>
-    );
-  }
-  if (kind === 'tabla') {
+      if (kind === 'tabla') {
     return (
       <div className={s.fakeTable} aria-hidden="true">
         <span className={s.fakeTableHead} />
@@ -214,38 +192,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'data-grid') {
-    return (
-      <div className={s.fakeDataGrid} aria-hidden="true">
-        <span className={s.fakeDataGridFilters} />
-        <span className={s.fakeTableHead} />
-        <span className={s.fakeTableRow} />
-        <span className={s.fakeTableRow} />
-        <span className={s.fakeTableRow} />
-      </div>
-    );
-  }
-  if (kind === 'filter-bar') {
-    return (
-      <div className={s.fakeFilterBar} aria-hidden="true">
-        <span className={s.fakeFilterSearch} />
-        <i />
-        <i />
-        <b />
-      </div>
-    );
-  }
-  if (kind === 'toolbar') {
-    return (
-      <div className={s.fakeToolbar} aria-hidden="true">
-        <span className={s.fakeToolbarTitle} />
-        <i />
-        <i />
-        <b />
-      </div>
-    );
-  }
-  if (kind === 'list') {
+        if (kind === 'list') {
     return (
       <div className={s.fakeList} aria-hidden="true">
         <span className={s.fakeListRow}>
@@ -263,43 +210,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'timeline') {
-    return (
-      <div className={s.fakeTimeline} aria-hidden="true">
-        <span className={s.fakeTimelineRow}>
-          <i />
-          <b />
-        </span>
-        <span className={s.fakeTimelineRow}>
-          <i />
-          <b />
-        </span>
-        <span className={s.fakeTimelineRow}>
-          <i />
-          <b />
-        </span>
-      </div>
-    );
-  }
-  if (kind === 'activity-feed') {
-    return (
-      <div className={s.fakeActivity} aria-hidden="true">
-        <span className={s.fakeActivityRow}>
-          <i />
-          <b />
-        </span>
-        <span className={s.fakeActivityRow}>
-          <i />
-          <b />
-        </span>
-        <span className={s.fakeActivityRow}>
-          <i />
-          <b />
-        </span>
-      </div>
-    );
-  }
-  if (kind === 'empty-state') {
+      if (kind === 'empty-state') {
     return (
       <div className={s.fakeEmpty} aria-hidden="true">
         <i />
@@ -362,18 +273,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'combobox') {
-    return (
-      <div className={s.fakeCombobox} aria-hidden="true">
-        <b />
-        <i>
-          <em />
-          <span />
-        </i>
-      </div>
-    );
-  }
-  if (kind === 'checkbox') {
+    if (kind === 'checkbox') {
     return (
       <div className={s.fakeCheckbox} aria-hidden="true">
         <i />
@@ -399,23 +299,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'datepicker') {
-    return (
-      <div className={s.fakeDatepicker} aria-hidden="true">
-        <b />
-        <i />
-      </div>
-    );
-  }
-  if (kind === 'timepicker') {
-    return (
-      <div className={s.fakeTimepicker} aria-hidden="true">
-        <b />
-        <i />
-      </div>
-    );
-  }
-  if (kind === 'file-upload') {
+      if (kind === 'file-upload') {
     return (
       <div className={s.fakeFileUpload} aria-hidden="true">
         <i />
@@ -423,16 +307,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'slider') {
-    return (
-      <div className={s.fakeSlider} aria-hidden="true">
-        <i>
-          <em />
-        </i>
-      </div>
-    );
-  }
-  if (kind === 'search-field') {
+    if (kind === 'search-field') {
     return (
       <div className={s.fakeSearch} aria-hidden="true">
         <i />
@@ -505,16 +380,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'segmented') {
-    return (
-      <div className={s.fakeSegmented} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'icon-button') {
+    if (kind === 'icon-button') {
     return (
       <div className={s.fakeIconButton} aria-hidden="true">
         <i />
@@ -542,22 +408,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'split-button') {
-    return (
-      <div className={s.fakeSplitButton} aria-hidden="true">
-        <i />
-        <b />
-      </div>
-    );
-  }
-  if (kind === 'fab') {
-    return (
-      <div className={s.fakeFab} aria-hidden="true">
-        <i />
-      </div>
-    );
-  }
-  if (kind === 'alert') {
+      if (kind === 'alert') {
     return (
       <div className={s.fakeAlert} aria-hidden="true">
         <i />
@@ -628,35 +479,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'drawer') {
-    return (
-      <div className={s.fakeDrawer} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-        <span />
-      </div>
-    );
-  }
-  if (kind === 'popover') {
-    return (
-      <div className={s.fakePopover} aria-hidden="true">
-        <i />
-        <b />
-      </div>
-    );
-  }
-  if (kind === 'sheet') {
-    return (
-      <div className={s.fakeSheet} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-        <span />
-      </div>
-    );
-  }
-  if (kind === 'confirm-dialog') {
+        if (kind === 'confirm-dialog') {
     return (
       <div className={s.fakeConfirm} aria-hidden="true">
         <i />
@@ -684,16 +507,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'user-menu') {
-    return (
-      <div className={s.fakeUserMenu} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'accordion') {
+    if (kind === 'accordion') {
     return (
       <div className={s.fakeAccordion} aria-hidden="true">
         <i />
@@ -702,79 +516,7 @@ function Preview({ kind }: { kind: PreviewKind }) {
       </div>
     );
   }
-  if (kind === 'content-section') {
-    return (
-      <div className={s.fakeContentSection} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'hero-block') {
-    return (
-      <div className={s.fakeHeroBlock} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'footer') {
-    return (
-      <div className={s.fakeFooter} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'table-of-contents') {
-    return (
-      <div className={s.fakeToc} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'code-block') {
-    return (
-      <div className={s.fakeCodeBlock} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'stat-strip') {
-    return (
-      <div className={s.fakeStatStrip} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'notification-center') {
-    return (
-      <div className={s.fakeNotificationCenter} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  if (kind === 'command-palette') {
-    return (
-      <div className={s.fakeCommandPalette} aria-hidden="true">
-        <i />
-        <b />
-        <em />
-      </div>
-    );
-  }
-  return (
+                  return (
     <div className={s.fakeSoon}>
       <CirclesFour weight="thin" size={28} />
       <Square weight="thin" size={28} />
@@ -808,11 +550,11 @@ export default function HomePage() {
 
       <main className={s.shell}>
         <header className={s.hero}>
-          <p className={s.eyebrow}>Sistema de diseno</p>
+          <p className={s.eyebrow}>Sistema de interfaz · HTML</p>
           <h1 className={s.title}>Gob UI</h1>
           <p className={s.lead}>
-            Catalogo para dashboards y paginas web. Filtra, elige uno y lo
-            desarrollamos poco a poco.
+            Núcleo de 50 componentes básicos para trámites y tableros.
+            Consumo oficial en HTML con Web Components.
           </p>
         </header>
 

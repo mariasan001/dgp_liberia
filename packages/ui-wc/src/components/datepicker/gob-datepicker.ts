@@ -1,1 +1,0 @@
-import './gob-datepicker.element';

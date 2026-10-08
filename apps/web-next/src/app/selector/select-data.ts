@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SelectExample = {
@@ -35,7 +32,7 @@ const DEPT_OPTIONS = JSON.stringify([
 
 const STATUS_OPTIONS = JSON.stringify([
   { value: 'abierto', label: 'Abierto', hint: 'En captura' },
-  { value: 'revision', label: 'En revision', hint: 'Validando' },
+  { value: 'revisión', label: 'En revisión', hint: 'Validando' },
   { value: 'aprobado', label: 'Aprobado', hint: 'Listo' },
   { value: 'cerrado', label: 'Cerrado', hint: 'Archivado' },
 ]);
@@ -49,10 +46,10 @@ const PRIORITY_OPTIONS = JSON.stringify([
 export const SELECT_EXAMPLES: SelectExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Panel custom con check, hint y chevron animado.',
     variant: 'basic',
-    placeholder: 'Elige una entidad…',
+    placeholder: 'Elige una entidadâ€¦',
   },
   {
     id: 'labeled',
@@ -60,7 +57,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     description: 'Label institucional + required. Meta debajo del valor.',
     variant: 'labeled',
     label: 'Entidad federativa',
-    placeholder: 'Selecciona…',
+    placeholder: 'Seleccionaâ€¦',
     required: true,
     value: 'cdmx',
   },
@@ -76,12 +73,12 @@ export const SELECT_EXAMPLES: SelectExample[] = [
   },
   {
     id: 'search',
-    title: 'Con busqueda',
+    title: 'Con búsqueda',
     description: 'Filtra opciones en vivo dentro del panel.',
     variant: 'search',
     label: 'Buscar dependencia',
-    placeholder: 'Escribe para filtrar…',
-    helper: 'Prueba con “salud” o “hacienda”.',
+    placeholder: 'Escribe para filtrarâ€¦',
+    helper: 'Prueba con â€œsaludâ€ o â€œhaciendaâ€.',
     options: DEPT_OPTIONS,
   },
   {
@@ -92,7 +89,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     label: 'Estatus',
     size: 'sm',
     options: STATUS_OPTIONS,
-    value: 'revision',
+    value: 'revisión',
   },
   {
     id: 'filled',
@@ -116,7 +113,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     title: 'Split',
     description: 'Icono en bloque vino/dorado. Look de producto moderno.',
     variant: 'split',
-    label: 'Area operativa',
+    label: 'Área operativa',
     placeholder: 'Selecciona area',
     options: DEPT_OPTIONS,
     value: 'seguridad',
@@ -131,7 +128,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
   {
     id: 'underline',
     title: 'Subrayado',
-    description: 'Solo linea inferior; acento vino al foco.',
+    description: 'Solo línea inferior; acento vino al foco.',
     variant: 'underline',
     label: 'Prioridad',
     placeholder: 'Elige prioridad',
@@ -151,14 +148,14 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     title: 'Pildora',
     description: 'Bordes redondeados para filtros rapidos.',
     variant: 'pill',
-    label: 'Filtro rapido',
-    placeholder: 'Filtrar por…',
+    label: 'Filtro rápido',
+    placeholder: 'Filtrar porâ€¦',
     options: STATUS_OPTIONS,
   },
   {
     id: 'icon',
     title: 'Con icono',
-    description: 'Leading pin + limpia con × al tener valor.',
+    description: 'Leading pin + limpia con Ã— al tener valor.',
     variant: 'icon',
     label: 'Ubicacion',
     placeholder: 'Selecciona estado',
@@ -175,10 +172,10 @@ export const SELECT_EXAMPLES: SelectExample[] = [
   {
     id: 'multiple',
     title: 'Multiple + chips',
-    description: 'Seleccion multiple con chips removibles en el trigger.',
+    description: 'Selección múltiple con chips removibles en el trigger.',
     variant: 'multiple',
     label: 'Dependencias involucradas',
-    helper: 'Toca una opcion para marcar o quitar.',
+    helper: 'Toca una opción para marcar o quitar.',
     options: DEPT_OPTIONS,
     value: 'salud,educacion',
   },
@@ -187,7 +184,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     title: 'Error',
     description: 'Semaforo danger con mensaje.',
     variant: 'helper',
-    label: 'Tipo de tramite',
+    label: 'Tipo de trámite',
     status: 'error',
     helper: 'Debes seleccionar un tipo.',
     options: STATUS_OPTIONS,
@@ -195,7 +192,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'helper',
     label: 'Prioridad',
     value: 'aprobado',
@@ -208,7 +205,7 @@ export const SELECT_EXAMPLES: SelectExample[] = [
     title: 'Completo',
     description: 'Icono, ayuda, required e info.',
     variant: 'complete',
-    label: 'Area responsable',
+    label: 'Área responsable',
     placeholder: 'Selecciona area',
     helper: 'Quien firma el dictamen.',
     required: true,
@@ -222,7 +219,7 @@ export const SELECT_ATTRS = [
     name: 'variant',
     type: 'string',
     defaultValue: 'basic',
-    body: 'basic | labeled | helper | dense | filled | soft | floating | pill | icon | group | multiple | search | underline | ghost | split | complete',
+    body: 'basic | labeled | helper | dense | filled | soft | floating | pill | icon | group | múltiple | search | underline | ghost | split | complete',
   },
   {
     name: 'label',
@@ -233,14 +230,14 @@ export const SELECT_ATTRS = [
   {
     name: 'placeholder',
     type: 'string',
-    defaultValue: 'Selecciona una opcion',
+    defaultValue: 'Selecciona una opción',
     body: 'Texto cuando no hay valor.',
   },
   {
     name: 'options',
     type: 'string (JSON)',
     defaultValue: 'entidades MX',
-    body: 'JSON [{value,label,hint?}] o grupos [{label,options:[…]}].',
+    body: 'JSON [{value,label,hint?}] o grupos [{label,options:[â€¦]}].',
   },
   {
     name: 'value',

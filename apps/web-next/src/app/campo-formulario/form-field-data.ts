@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type FormFieldExample = {
@@ -32,10 +29,10 @@ export type FormFieldExample = {
 export const FORM_FIELD_EXAMPLES: FormFieldExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Envoltorio minimo del control.',
+    title: 'Básico',
+    description: 'Envoltorio mínimo del control.',
     variant: 'basic',
-    controlPlaceholder: 'Escribe aqui…',
+    controlPlaceholder: 'Escribe aquíâ€¦',
   },
   {
     id: 'labeled',
@@ -88,14 +85,14 @@ export const FORM_FIELD_EXAMPLES: FormFieldExample[] = [
     variant: 'stacked',
     label: 'Observaciones',
     helper: 'Visible para el revisor.',
-    controlPlaceholder: 'Notas del tramite',
+    controlPlaceholder: 'Notas del trámite',
   },
   {
     id: 'inline',
-    title: 'En linea',
-    description: 'Control + accion en la misma fila.',
+    title: 'En línea',
+    description: 'Control + acción en la misma fila.',
     variant: 'inline',
-    label: 'Codigo postal',
+    label: 'Código postal',
     controlPlaceholder: '44100',
   },
   {
@@ -130,7 +127,7 @@ export const FORM_FIELD_EXAMPLES: FormFieldExample[] = [
   {
     id: 'complete',
     title: 'Completo',
-    description: 'Label, required, ayuda y semaforo.',
+    description: 'Label, required, ayuda y semáforo.',
     variant: 'complete',
     label: 'Expediente',
     helper: 'Usa el folio del oficio de origen.',
@@ -175,7 +172,7 @@ export const FORM_FIELD_ATTRS = [
   {
     name: 'slot (default)',
     type: 'node',
-    defaultValue: '—',
+    defaultValue: 'â€”',
     body: 'Control hijo (input, select, etc.).',
   },
 ] as const;
@@ -203,7 +200,7 @@ export function buildSnippet(lang: CodeLang, example: FormFieldExample): string 
 
 `;
 
-  const placeholder = example.controlPlaceholder || '…';
+  const placeholder = example.controlPlaceholder || 'â€¦';
   const valueAttr = example.controlValue
     ? ` value="${example.controlValue}"`
     : '';

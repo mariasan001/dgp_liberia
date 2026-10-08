@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Tabla — cascaron canonico = Botones (/botones).
+ * Docs de Tabla — cascarrón canónico = Botones (/botones).
  * Pensada para listados masivos institucionales.
  */
 
@@ -64,8 +64,8 @@ export default function TablaPage() {
         <section className={s.panel}>
           <p className={local.libNote}>
             Tabla <strong>funcional</strong>: ordenar, seleccionar, filtrar y
-            menu de acciones. Pensada para padrones y bitacoras. Para tabs,
-            lotes y paginacion ve{' '}
+            menú de acciones. Pensada para padrones y bitacoras. Para tabs,
+            lotes y paginación ve{' '}
             <a href="/tabla-avanzada">Tabla avanzada</a>.
           </p>
 
@@ -150,7 +150,7 @@ export default function TablaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

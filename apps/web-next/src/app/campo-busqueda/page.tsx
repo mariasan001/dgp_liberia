@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Campo de busqueda — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Campo de búsqueda — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -47,9 +47,9 @@ export default function CampoBusquedaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Campo de busqueda</h1>
+          <h1 className={s.title}>Campo de búsqueda</h1>
           <p className={s.hint}>
-            Busqueda nativa del design system. Pulsa <strong>Copiar</strong> para
+            Búsqueda nativa del design system. Pulsa <strong>Copiar</strong> para
             markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -116,7 +116,7 @@ export default function CampoBusquedaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

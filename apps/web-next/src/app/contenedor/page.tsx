@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Contenedor — cascaron canonico = Botones (/botones).
- * Caracteristicas: radio y sombra (sin seleccion de color).
+ * Docs de Contenedor — cascarrón canónico = Botones (/botones).
+ * Caracteristicas: radio y sombra (sin selección de color).
  */
 
 import Link from 'next/link';
@@ -53,8 +53,8 @@ export default function ContenedorPage() {
           </Link>
           <h1 className={s.title}>Contenedor</h1>
           <p className={s.hint}>
-            Anchos y margenes consistentes de pagina. Pasa el mouse y pulsa{' '}
-            <strong>Copiar</strong> para el codigo en <strong>{lang.toUpperCase()}</strong>.
+            Anchos y márgenes consistentes de página. Pasa el mouse y pulsa{' '}
+            <strong>Copiar</strong> para el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -157,7 +157,7 @@ export default function ContenedorPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

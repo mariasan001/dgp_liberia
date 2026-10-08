@@ -24,7 +24,6 @@ type CellProps = {
   language: CodeLanguage;
   contentMode: ContentMode;
   appearance: Appearance;
-  split?: boolean;
   label: string;
   disabled?: boolean;
   loading?: boolean;
@@ -53,7 +52,6 @@ function ButtonCell({
   language,
   contentMode,
   appearance,
-  split,
   label,
   disabled,
   loading,
@@ -68,7 +66,6 @@ function ButtonCell({
     contentMode,
     disabled,
     loading,
-    split,
     language,
   });
 
@@ -94,8 +91,7 @@ function ButtonCell({
         appearance={appearance}
         disabled={disabled || undefined}
         loading={loading || undefined}
-        split={split || undefined}
-        preview={demo}
+        data-preview={demo}
         icon-only={iconOnly || undefined}
         icon-position={contentMode === 'icon' || contentMode === 'icon-only' ? 'left' : undefined}
         aria-label={iconOnly ? label : undefined}
@@ -139,7 +135,6 @@ export function ButtonMatrix({ tone, language, contentMode }: ButtonMatrixProps)
                 language={language}
                 contentMode={contentMode}
                 appearance={col.appearance}
-                split={col.split}
                 label="Aceptar"
                 disabled={row.disabled}
                 loading={row.loading}

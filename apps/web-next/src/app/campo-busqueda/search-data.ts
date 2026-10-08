@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SearchExample = {
@@ -34,10 +31,10 @@ export type SearchExample = {
 export const SEARCH_EXAMPLES: SearchExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Busqueda limpia con icono.',
+    title: 'Básico',
+    description: 'Búsqueda limpia con icono.',
     variant: 'basic',
-    placeholder: 'Buscar expediente…',
+    placeholder: 'Buscar expedienteâ€¦',
   },
   {
     id: 'labeled',
@@ -78,12 +75,12 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
     title: 'Flotante',
     description: 'Label dentro del control.',
     variant: 'floating',
-    label: 'Busqueda avanzada',
+    label: 'Búsqueda avanzada',
   },
   {
     id: 'underline',
     title: 'Subrayado',
-    description: 'Solo linea inferior.',
+    description: 'Solo línea inferior.',
     variant: 'underline',
     label: 'Filtrar tabla',
     value: 'dictamen',
@@ -93,12 +90,12 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
     title: 'Pildora',
     description: 'Contorno redondeado tipo chip.',
     variant: 'pill',
-    placeholder: 'Buscar en el menu…',
+    placeholder: 'Buscar en el menúâ€¦',
   },
   {
     id: 'clearable',
     title: 'Limpiable',
-    description: 'Boton para borrar el texto.',
+    description: 'Botón para borrar el texto.',
     variant: 'clearable',
     label: 'Buscar oficio',
     value: 'OF-8842',
@@ -106,11 +103,11 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
   {
     id: 'shortcut',
     title: 'Con atajo',
-    description: 'Badge de teclado (⌘K).',
+    description: 'Badge de teclado (âŒ˜K).',
     variant: 'shortcut',
     label: 'Paleta de comandos',
-    placeholder: 'Buscar accion…',
-    shortcut: '⌘K',
+    placeholder: 'Buscar acciónâ€¦',
+    shortcut: 'âŒ˜K',
   },
   {
     id: 'loading',
@@ -126,7 +123,7 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
     title: 'Error',
     description: 'Semaforo danger con mensaje.',
     variant: 'helper',
-    label: 'Busqueda',
+    label: 'Búsqueda',
     status: 'error',
     helper: 'No se encontraron resultados.',
     value: 'xyz-999',
@@ -136,7 +133,7 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
     title: 'Deshabilitado',
     description: 'No interactivo.',
     variant: 'labeled',
-    label: 'Busqueda bloqueada',
+    label: 'Búsqueda bloqueada',
     value: 'inactivo',
     disabled: true,
   },
@@ -145,12 +142,12 @@ export const SEARCH_EXAMPLES: SearchExample[] = [
     title: 'Completo',
     description: 'Atajo + limpiar + ayuda + info.',
     variant: 'complete',
-    label: 'Busqueda institucional',
+    label: 'Búsqueda institucional',
     helper: 'Enter para buscar. Esc para limpiar.',
     required: true,
     status: 'info',
     shortcut: 'Ctrl K',
-    placeholder: 'Expediente, persona o tramite',
+    placeholder: 'Expediente, persona o trámite',
   },
 ];
 
@@ -170,7 +167,7 @@ export const SEARCH_ATTRS = [
   {
     name: 'shortcut',
     type: 'string',
-    defaultValue: '⌘K',
+    defaultValue: 'âŒ˜K',
     body: 'Texto del badge de atajo (variantes shortcut/complete).',
   },
   {

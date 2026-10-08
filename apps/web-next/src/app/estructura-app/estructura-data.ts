@@ -4,12 +4,9 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
-/** Mismos swatches que Botones / Paginacion. Afectan el menu lateral. */
+/** Mismos swatches que Botones / Paginación. Afectan el menú lateral. */
 export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
   { id: 'primary', label: 'Primary', swatch: '#9F2141' },
   { id: 'accent', label: 'Accent', swatch: '#BC945A' },
@@ -18,7 +15,7 @@ export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
   { id: 'soft', label: 'Soft', swatch: '#E7D7BD' },
 ];
 
-/** Fondo del menu + estado seleccionado + acento de topbar (campana / avatar). */
+/** Fondo del menú + estado seleccionado + acento de topbar (campana / avatar). */
 export const SIDEBAR_THEMES: Record<
   Tone,
   {
@@ -32,7 +29,7 @@ export const SIDEBAR_THEMES: Record<
     footBg: string;
     footBorder: string;
     border: string;
-    /** Color del punto de notificacion y avatar. */
+    /** Color del punto de notificación y avatar. */
     accent: string;
     accentSoft: string;
     accentText: string;
@@ -139,13 +136,13 @@ export const SHELL_ATTRS = [
     name: 'collapsed',
     type: 'boolean',
     defaultValue: 'false',
-    body: 'Reduce el menu lateral a 72px para dar prioridad al contenido.',
+    body: 'Reduce el menú lateral a 72px para dar prioridad al contenido.',
   },
   {
     name: 'dense',
     type: 'boolean',
     defaultValue: 'false',
-    body: 'Baja padding del contenido y estrecha un poco el menu.',
+    body: 'Baja padding del contenido y estrecha un poco el menú.',
   },
   {
     name: 'hide-topbar',
@@ -165,17 +162,17 @@ export const SHELL_TOKENS = [
   {
     name: '--gob-shell-sidebar-bg',
     value: 'Surface',
-    body: 'Fondo del menu lateral. Cambia con el color del sistema.',
+    body: 'Fondo del menú lateral. Cambia con el color del sistema.',
   },
   {
     name: '--gob-shell-sidebar-width',
     value: '248px',
-    body: 'Ancho del menu lateral expandido.',
+    body: 'Ancho del menú lateral expandido.',
   },
   {
     name: '--gob-shell-sidebar-collapsed-width',
     value: '72px',
-    body: 'Ancho del menu con collapsed.',
+    body: 'Ancho del menú con collapsed.',
   },
   {
     name: '--gob-shell-content-padding',
@@ -192,14 +189,14 @@ export const SHELL_TOKENS = [
 export const SHELL_EXAMPLES: ShellExample[] = [
   {
     id: 'basico',
-    title: 'Basico',
-    description: 'Menu lateral + barra superior + contenido. Punto de partida de cualquier tablero.',
+    title: 'Básico',
+    description: 'Menú lateral + barra superior + contenido. Punto de partida de cualquier tablero.',
     variant: 'simple',
     tags: ['default', 'tablero'],
   },
   {
     id: 'colapsado',
-    title: 'Menu colapsado',
+    title: 'Menú colapsado',
     description: 'Mas espacio horizontal para tablas densas. Activa collapsed.',
     collapsed: true,
     variant: 'simple',
@@ -208,7 +205,7 @@ export const SHELL_EXAMPLES: ShellExample[] = [
   {
     id: 'sin-topbar',
     title: 'Sin barra superior',
-    description: 'Solo menu y contenido. Ideal para asistentes, login interno o foco total.',
+    description: 'Solo menú y contenido. Ideal para asistentes, login interno o foco total.',
     hideTopbar: true,
     variant: 'simple',
     tags: ['hide-topbar', 'asistente'],
@@ -216,17 +213,17 @@ export const SHELL_EXAMPLES: ShellExample[] = [
   {
     id: 'compacto',
     title: 'Densidad compacta',
-    description: 'Menos padding y menu un poco mas estrecho. Activa dense.',
+    description: 'Menos padding y menú un poco más estrecho. Activa dense.',
     dense: true,
     variant: 'simple',
     tags: ['dense', 'operativo'],
   },
   {
     id: 'tablero',
-    title: 'Tablero con metricas',
+    title: 'Tablero con métricas',
     description: 'Composicion real: cabecera con usuario, KPIs y bloque de listado.',
     variant: 'board',
-    tags: ['composicion', 'kpis'],
+    tags: ['composición', 'kpis'],
   },
 ];
 
@@ -240,26 +237,26 @@ export const SHELL_RULES = [
   {
     id: 'nav',
     index: '02',
-    title: 'Navegacion en el menu',
-    body: 'El menu lateral concentra la navegacion primaria. Evita duplicar el mismo menu en el topbar.',
+    title: 'Navegación en el menú',
+    body: 'El menú lateral concentra la navegación primaria. Evita duplicar el mismo menú en el topbar.',
   },
   {
     id: 'collapsed',
     index: '03',
-    title: 'Colapsa con proposito',
+    title: 'Colapsa con propósito',
     body: 'collapsed es para tablas y paneles anchos, no un estado estetico permanente.',
   },
   {
     id: 'dense',
     index: '04',
     title: 'Compacto con cuidado',
-    body: 'dense baja el aire del contenido. Combinalo con tipografia y espaciado del sistema.',
+    body: 'dense baja el aire del contenido. Combinalo con tipografía y espaciado del sistema.',
   },
   {
     id: 'tokens',
     index: '05',
     title: 'Personaliza con tokens',
-    body: 'Ajusta anchos y padding con variables CSS. Mantén Canvas (#FAFAFA) y Surface (#FFF).',
+    body: 'Ajusta anchos y padding con variables CSS. MantÃ©n Canvas (#FAFAFA) y Surface (#FFF).',
   },
   {
     id: 'hide',
@@ -338,7 +335,7 @@ function sidebarMarkup(lang: CodeLang, example: ShellExample, indent: string): s
     ? [
         `<div ${cls(lang, 'brand')}>`,
         `  <span ${cls(lang, 'brand-mark')} aria-hidden="true">G</span>`,
-        `  <!-- titulo oculto en collapsed -->`,
+        `  <!-- título oculto en collapsed -->`,
         `  <div ${cls(lang, 'brand-text')}></div>`,
         `</div>`,
       ]
@@ -358,7 +355,7 @@ function sidebarMarkup(lang: CodeLang, example: ShellExample, indent: string): s
         `  <button type="button" aria-label="Salir">`,
         `    ${icon(lang, 'SignOut')}`,
         `  </button>`,
-        `  <!-- usuario vacio en collapsed -->`,
+        `  <!-- usuario vacío en collapsed -->`,
         `  <div ${cls(lang, 'sidebar-user')}></div>`,
         `</div>`,
       ]
@@ -410,7 +407,7 @@ function topbarMarkup(
           : 'Inicio';
   const meta =
     example.id === 'tablero'
-      ? 'Hoy · 30 jul 2026'
+      ? 'Hoy Â· 30 jul 2026'
       : example.id === 'compacto'
         ? 'Turno matutino'
         : 'Direccion de Operaciones';
@@ -443,7 +440,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `    <div ${cls(lang, 'steps')}>`,
       `      <span ${cls(lang, 'step step--active')}>1. Datos</span>`,
       `      <span ${cls(lang, 'step')}>2. Documentos</span>`,
-      `      <span ${cls(lang, 'step')}>3. Revision</span>`,
+      `      <span ${cls(lang, 'step')}>3. Revisión</span>`,
       `    </div>`,
       `  </div>`,
       `  <div ${cls(lang, 'form')}>`,
@@ -474,7 +471,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `  <div ${cls(lang, 'content-head')}>`,
       `    <div>`,
       `      <h1>Expedientes</h1>`,
-      `      <p>Vista ancha con menu colapsado.</p>`,
+      `      <p>Vista ancha con menú colapsado.</p>`,
       `    </div>`,
       `    <span ${cls(lang, 'meta-chip')}>248 registros</span>`,
       `  </div>`,
@@ -490,7 +487,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `        <strong>EXP-2041</strong>`,
       `        <span>Ana Ruiz</span>`,
       `        <span>Salud</span>`,
-      `        <em ${cls(lang, 'status')}>En revision</em>`,
+      `        <em ${cls(lang, 'status')}>En revisión</em>`,
       `      </div>`,
       `      <div ${cls(lang, 'table-row')}>`,
       `        <strong>EXP-2040</strong>`,
@@ -522,7 +519,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `  <div ${cls(lang, 'content-head')}>`,
       `    <div>`,
       `      <h1>Cola operativa</h1>`,
-      `      <p>Densidad compacta para revision rapida.</p>`,
+      `      <p>Densidad compacta para revisión rápida.</p>`,
       `    </div>`,
       `    <!-- acciones opcionales vacias -->`,
       `    <div ${cls(lang, 'content-head-actions')}></div>`,
@@ -580,7 +577,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `      <small>+12 esta semana</small>`,
       `    </article>`,
       `    <article ${cls(lang, 'kpi')}>`,
-      `      <span>En revision</span>`,
+      `      <span>En revisión</span>`,
       `      <strong>46</strong>`,
       `      <small>8 urgentes</small>`,
       `    </article>`,
@@ -594,21 +591,21 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
       `    <div ${cls(lang, 'list-row')}>`,
       `      <div>`,
       `        <strong>EXP-2041</strong>`,
-      `        <span>Constancia · Salud</span>`,
+      `        <span>Constancia Â· Salud</span>`,
       `      </div>`,
-      `      <em ${cls(lang, 'status')}>En revision</em>`,
+      `      <em ${cls(lang, 'status')}>En revisión</em>`,
       `    </div>`,
       `    <div ${cls(lang, 'list-row')}>`,
       `      <div>`,
       `        <strong>EXP-2040</strong>`,
-      `        <span>Actualizacion · Educacion</span>`,
+      `        <span>Actualizacion Â· Educacion</span>`,
       `      </div>`,
       `      <em ${cls(lang, 'status')}>Abierto</em>`,
       `    </div>`,
       `    <div ${cls(lang, 'list-row')}>`,
       `      <div>`,
       `        <strong>EXP-2038</strong>`,
-      `        <span>Baja · Obras</span>`,
+      `        <span>Baja Â· Obras</span>`,
       `      </div>`,
       `      <em ${cls(lang, 'status')}>Cerrado</em>`,
       `    </div>`,
@@ -617,7 +614,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
     ]);
   }
 
-  // basico — misma estructura completa del preview
+  // básico â€” misma estructura completa del preview
   return pad(indent, [
     `<section ${cls(lang, 'content')}>`,
     `  <div ${cls(lang, 'content-head')}>`,
@@ -634,7 +631,7 @@ function contentMarkup(lang: CodeLang, example: ShellExample, indent: string): s
     `          <strong>EXP-2041</strong>`,
     `          <span>Solicitud de constancia</span>`,
     `        </div>`,
-    `        <em ${cls(lang, 'status')}>En revision</em>`,
+    `        <em ${cls(lang, 'status')}>En revisión</em>`,
     `      </div>`,
     `      <div ${cls(lang, 'list-row')}>`,
     `        <div>`,
@@ -671,7 +668,7 @@ function bodyMarkup(lang: CodeLang, example: ShellExample, indent = '  '): strin
 
 function iconImports(lang: CodeLang): string {
   if (lang === 'html') {
-    return `<!-- Phosphor thin para iconos del menu y topbar -->
+    return `<!-- Phosphor thin para iconos del menú y topbar -->
 <link
   rel="stylesheet"
   type="text/css"
@@ -745,7 +742,7 @@ export function buildSnippet(
 
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
-<!-- Color del menu: ${tone} -->
+<!-- Color del menú: ${tone} -->
 <script type="module">
   import '@mariasan001/ui-wc';
 </script>
@@ -785,7 +782,7 @@ ${bodyMarkup(lang, example, '    ')}
   }
 
   return `// app.component.ts
-${iconImports(lang)}// app.component.html — color menu: ${tone}
+${iconImports(lang)}// app.component.html â€” color menú: ${tone}
 <gob-app-shell${attrs}${style}>
 ${bodyMarkup(lang, example)}
 </gob-app-shell>`;

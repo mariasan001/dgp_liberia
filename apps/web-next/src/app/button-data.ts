@@ -4,10 +4,9 @@ export type CodeLanguage = 'html' | 'react' | 'vue' | 'angular';
 export type ContentMode = 'default' | 'icon' | 'icon-only';
 
 export type ButtonAppearanceColumn = {
-  id: Appearance | 'split';
+  id: Appearance;
   label: string;
   appearance: Appearance;
-  split?: boolean;
 };
 
 export type ButtonStateRow = {
@@ -20,9 +19,6 @@ export type ButtonStateRow = {
 
 export const CODE_LANGUAGES: { id: CodeLanguage; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const TONE_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
@@ -43,7 +39,6 @@ export const APPEARANCE_COLUMNS: ButtonAppearanceColumn[] = [
   { id: 'solid', label: 'Relleno', appearance: 'solid' },
   { id: 'outline', label: 'Contorno', appearance: 'outline' },
   { id: 'ghost', label: 'Texto', appearance: 'ghost' },
-  { id: 'split', label: 'Dividido', appearance: 'solid', split: true },
 ];
 
 export const STATE_ROWS: ButtonStateRow[] = [
@@ -61,7 +56,6 @@ export type SnippetInput = {
   contentMode: ContentMode;
   disabled?: boolean;
   loading?: boolean;
-  split?: boolean;
   language: CodeLanguage;
 };
 
@@ -73,11 +67,10 @@ function attrsFor(input: SnippetInput): string {
 
   if (input.loading) parts.push('loading');
   if (input.disabled) parts.push('disabled');
-  if (input.split) parts.push('split');
 
   if (input.contentMode === 'icon-only') {
     parts.push('icon-only');
-    parts.push('aria-label="Accion"');
+    parts.push('aria-label="Acción"');
   } else if (input.contentMode === 'icon') {
     parts.push('icon-position="left"');
   }
@@ -101,13 +94,6 @@ export function buildSnippet(input: SnippetInput): string {
       return `<gob-button ${attrs}>\n  ${iconSlot()}\n</gob-button>`;
     }
     return `<gob-button ${attrs}></gob-button>`;
-  }
-
-  if (input.split) {
-    if (withIcon) {
-      return `<gob-button ${attrs}>\n  ${iconSlot()}\n  ${label}\n</gob-button>`;
-    }
-    return `<gob-button ${attrs}>${label}</gob-button>`;
   }
 
   if (withIcon) {

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Menu lateral — cascaron canonico = Botones (/botones).
+ * Docs de Menú lateral — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -49,10 +49,10 @@ export default function MenuLateralPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Menu lateral</h1>
+          <h1 className={s.title}>Menú lateral</h1>
           <p className={s.hint}>
-            Navegacion lateral colapsable. Prueba el boton del menu y pulsa <strong>Copiar</strong>{' '}
-            para el codigo en <strong>{lang.toUpperCase()}</strong>.
+            Navegación lateral colapsable. Prueba el botón del menú y pulsa <strong>Copiar</strong>{' '}
+            para el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -140,7 +140,7 @@ export default function MenuLateralPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

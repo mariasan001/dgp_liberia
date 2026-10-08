@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type NavMenuExample = {
@@ -44,8 +41,8 @@ const ITEMS_DOCK = JSON.stringify([
 export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Navegacion limpia con tipografia precisa.',
+    title: 'Básico',
+    description: 'Navegación limpia con tipografía precisa.',
     variant: 'basic',
     value: 'inicio',
     items: ITEMS,
@@ -53,15 +50,15 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
   {
     id: 'horizontal',
     title: 'Horizontal',
-    description: 'Barra de seccion con indicador inferior.',
+    description: 'Barra de sección con indicador inferior.',
     variant: 'horizontal',
-    value: 'tramites',
+    value: 'trámites',
     items: ITEMS,
   },
   {
     id: 'vertical',
     title: 'Vertical',
-    description: 'Menu lateral con descripcion e iconos.',
+    description: 'Menú lateral con descripción e iconos.',
     variant: 'vertical',
     value: 'ciudadanos',
     items: ITEMS,
@@ -71,7 +68,7 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
     title: 'Riel',
     description: 'Acento vino a la izquierda, estilo app.',
     variant: 'rail',
-    value: 'tramites',
+    value: 'trámites',
     items: ITEMS,
   },
   {
@@ -111,13 +108,13 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
     title: 'Suave',
     description: 'Tinte vino en el item activo.',
     variant: 'soft',
-    value: 'tramites',
+    value: 'trámites',
     items: ITEMS,
   },
   {
     id: 'ghost',
     title: 'Fantasma',
-    description: 'Minimo chrome, tipografia protagonista.',
+    description: 'Minimo chrome, tipografía protagonista.',
     variant: 'ghost',
     value: 'inicio',
     items: ITEMS,
@@ -134,7 +131,7 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
   {
     id: 'icons',
     title: 'Con iconos',
-    description: 'Iconografia Phosphor thin protagonista.',
+    description: 'Iconografía Phosphor thin protagonista.',
     variant: 'icons',
     value: 'ciudadanos',
     items: ITEMS,
@@ -144,7 +141,7 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
     title: 'Dock',
     description: 'Barra tipo app con icono + label.',
     variant: 'dock',
-    value: 'tramites',
+    value: 'trámites',
     items: ITEMS_DOCK,
   },
   {
@@ -166,7 +163,7 @@ export const NAV_MENU_EXAMPLES: NavMenuExample[] = [
   {
     id: 'disabled',
     title: 'Deshabilitado',
-    description: 'Menu bloqueado.',
+    description: 'Menú bloqueado.',
     variant: 'floating',
     value: 'inicio',
     items: ITEMS,
@@ -203,7 +200,7 @@ export const NAV_MENU_ATTRS = [
     name: 'disabled',
     type: 'boolean',
     defaultValue: 'false',
-    body: 'Deshabilita el menu.',
+    body: 'Deshabilita el menú.',
   },
 ] as const;
 

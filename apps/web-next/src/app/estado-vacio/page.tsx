@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Estado vacio — cascaron canonico = Botones (/botones).
+ * Docs de Estado vacío — cascarrón canónico = Botones (/botones).
  * Color de marca fijo (vino + dorado); sin selector de tone.
  */
 
@@ -51,9 +51,9 @@ export default function EstadoVacioPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Estado vacio</h1>
+          <h1 className={s.title}>Estado vacío</h1>
           <p className={s.hint}>
-            Funcional: vacios utiles con CTA y semaforo. Pulsa{' '}
+            Funcional: vacíos útiles con CTA y semáforo. Pulsa{' '}
             <strong>Copiar</strong> para markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -121,7 +121,7 @@ export default function EstadoVacioPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>
