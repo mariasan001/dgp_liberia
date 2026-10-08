@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const RADIUS_OPTIONS: { id: boolean; label: string }[] = [
@@ -30,8 +27,8 @@ export type ContainerExample = {
 export const CONTAINER_EXAMPLES: ContainerExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Ancho estandar de pagina para consolas y listados.',
+    title: 'Básico',
+    description: 'Ancho estandar de página para consolas y listados.',
     variant: 'basic',
     widthLabel: '960px',
   },
@@ -59,16 +56,16 @@ export const CONTAINER_EXAMPLES: ContainerExample[] = [
   {
     id: 'flush',
     title: 'Sin margen',
-    description: 'Mismo ancho basico, sin padding horizontal.',
+    description: 'Mismo ancho básico, sin padding horizontal.',
     variant: 'flush',
-    widthLabel: '960px · 0 pad',
+    widthLabel: '960px Â· 0 pad',
   },
   {
     id: 'padded',
     title: 'Con relleno',
     description: 'Panel con padding generoso y borde suave.',
     variant: 'padded',
-    widthLabel: '960px · pad',
+    widthLabel: '960px Â· pad',
   },
   {
     id: 'prose',
@@ -106,7 +103,7 @@ function bodyFor(example: ContainerExample): string {
     return `${i}<h2>Lineamientos de operacion</h2>
 ${i}<p>
 ${i}  El contenedor limita el ancho de lectura para que el texto se mantenga
-${i}  comodo en pantallas amplias sin romper la jerarquia de la pagina.
+${i}  comodo en pantallas amplias sin romper la jerarquia de la página.
 ${i}</p>`;
   }
 

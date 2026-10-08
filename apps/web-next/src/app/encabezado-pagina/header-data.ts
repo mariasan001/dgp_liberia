@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const SURFACE_OPTIONS: { id: PageHeaderSurface; label: string }[] = [
@@ -24,20 +21,20 @@ export type HeaderExample = {
 export const HEADER_EXAMPLES: HeaderExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Solo el titulo de la vista. Punto de partida limpio.',
+    title: 'Básico',
+    description: 'Solo el título de la vista. Punto de partida limpio.',
     variant: 'basic',
   },
   {
     id: 'description',
-    title: 'Con descripcion',
-    description: 'Titulo y texto de apoyo para contextualizar la pantalla.',
+    title: 'Con descripción',
+    description: 'Título y texto de apoyo para contextualizar la pantalla.',
     variant: 'description',
   },
   {
     id: 'breadcrumb',
     title: 'Con migas',
-    description: 'Ruta jerarquica encima del titulo para orientarse.',
+    description: 'Ruta jerárquica encima del título para orientarse.',
     variant: 'breadcrumb',
   },
   {
@@ -49,7 +46,7 @@ export const HEADER_EXAMPLES: HeaderExample[] = [
   {
     id: 'status',
     title: 'Con estado',
-    description: 'Chip de estado junto al titulo para lectura rapida.',
+    description: 'Chip de estado junto al título para lectura rápida.',
     variant: 'status',
   },
   {
@@ -61,7 +58,7 @@ export const HEADER_EXAMPLES: HeaderExample[] = [
   {
     id: 'complete',
     title: 'Completo',
-    description: 'Migas, titulo, estado, descripcion y acciones juntos.',
+    description: 'Migas, título, estado, descripción y acciones juntos.',
     variant: 'complete',
   },
 ];
@@ -111,14 +108,14 @@ ${i}</nav>`);
   );
 
   if (showStatus) {
-    parts.push(`${i}<span slot="meta" class="status">En revision</span>`);
+    parts.push(`${i}<span slot="meta" class="status">En revisión</span>`);
   }
 
   if (showDesc) {
     parts.push(
       `${i}<p slot="description">${
         example.variant === 'dense'
-          ? 'Turno matutino · 24 pendientes'
+          ? 'Turno matutino Â· 24 pendientes'
           : 'Consulta y da seguimiento a los expedientes abiertos de la direccion.'
       }</p>`,
     );
@@ -179,7 +176,7 @@ import { useState } from 'react';
 import '@mariasan001/ui-wc';
 
 export function EncabezadoPagina() {
-  const [status, setStatus] = useState('En revision');
+  const [status, setStatus] = useState('En revisión');
   const [flash, setFlash] = useState('');
 
   return (
@@ -192,7 +189,7 @@ ${showCrumb ? `      <nav slot="breadcrumb" aria-label="Migas">
         <strong>Detalle</strong>
       </nav>` : ''}
       <h1 slot="title">Expedientes</h1>
-${showStatus ? `      <button type="button" slot="meta" onClick={() => setStatus((s) => (s === 'En revision' ? 'Aprobado' : 'En revision'))}>
+${showStatus ? `      <button type="button" slot="meta" onClick={() => setStatus((s) => (s === 'En revisión' ? 'Aprobado' : 'En revisión'))}>
         {status}
       </button>` : ''}
       <p slot="description">{flash || 'Consulta y da seguimiento a los expedientes abiertos.'}</p>

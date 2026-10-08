@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type ProgressExample = {
@@ -31,7 +28,7 @@ export const PROGRESS_EXAMPLES: ProgressExample[] = [
   {
     id: 'labeled',
     title: 'Con etiqueta',
-    description: 'Titulo y porcentaje visibles.',
+    description: 'Título y porcentaje visibles.',
     variant: 'labeled',
     value: 68,
     label: 'Expedientes revisados',
@@ -46,7 +43,7 @@ export const PROGRESS_EXAMPLES: ProgressExample[] = [
   {
     id: 'thick',
     title: 'Gruesa',
-    description: 'Barra mas alta para paneles principales.',
+    description: 'Barra más alta para paneles principales.',
     variant: 'thick',
     value: 72,
   },
@@ -81,7 +78,7 @@ export const PROGRESS_EXAMPLES: ProgressExample[] = [
     title: 'Indeterminada',
     description: 'Proceso en curso sin porcentaje fijo.',
     variant: 'indeterminate',
-    label: 'Generando dictamen…',
+    label: 'Generando dictamenâ€¦',
   },
   {
     id: 'stacked',
@@ -103,10 +100,10 @@ export const PROGRESS_EXAMPLES: ProgressExample[] = [
   {
     id: 'warning',
     title: 'Semaforo warning',
-    description: 'Estado en revision (amarillo institucional).',
+    description: 'Estado en revisión (amarillo institucional).',
     variant: 'labeled',
     value: 40,
-    label: 'En revision',
+    label: 'En revisión',
     status: 'warning',
   },
   {
@@ -155,7 +152,7 @@ export const PROGRESS_ATTRS = [
     name: 'steps',
     type: 'number',
     defaultValue: '4',
-    body: 'Cantidad de pasos/segmentos (2–8) en steps y segmented.',
+    body: 'Cantidad de pasos/segmentos (2â€“8) en steps y segmented.',
   },
 ] as const;
 

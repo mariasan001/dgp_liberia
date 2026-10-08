@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
@@ -28,12 +25,12 @@ export const TOPBAR_EXAMPLES: TopbarExample[] = [
   {
     id: 'basic',
     title: 'Basica',
-    description: 'Titulo de vista y avatar. Punto de partida limpio.',
+    description: 'Título de vista y avatar. Punto de partida limpio.',
     variant: 'basic',
   },
   {
     id: 'search',
-    title: 'Con busqueda',
+    title: 'Con búsqueda',
     description: 'Campo central para encontrar expedientes o usuarios.',
     variant: 'search',
   },
@@ -52,7 +49,7 @@ export const TOPBAR_EXAMPLES: TopbarExample[] = [
   {
     id: 'breadcrumb',
     title: 'Con migas',
-    description: 'Ruta de navegacion para ubicar la vista actual.',
+    description: 'Ruta de navegación para ubicar la vista actual.',
     variant: 'breadcrumb',
   },
   {
@@ -64,7 +61,7 @@ export const TOPBAR_EXAMPLES: TopbarExample[] = [
   {
     id: 'complete',
     title: 'Completa',
-    description: 'Titulo, busqueda, acciones, campana y avatar juntos.',
+    description: 'Título, búsqueda, acciones, campana y avatar juntos.',
     variant: 'complete',
   },
 ];
@@ -254,7 +251,7 @@ ${body}
 </template>`;
   }
 
-  return `// app.component.html — cables busqueda/acciones en el .ts
+  return `// app.component.html â€” cables búsqueda/acciones en el .ts
 ${iconImports(lang)}<gob-topbar${attrs}>
 ${body}
 </gob-topbar>`;

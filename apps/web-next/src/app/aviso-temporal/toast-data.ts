@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type ToastExample = {
@@ -25,7 +22,7 @@ export type ToastExample = {
 export const TOAST_EXAMPLES: ToastExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Mensaje breve de sistema.',
     variant: 'basic',
     tone: 'info',
@@ -72,7 +69,7 @@ export const TOAST_EXAMPLES: ToastExample[] = [
   },
   {
     id: 'action',
-    title: 'Con accion',
+    title: 'Con acción',
     description: 'Incluye CTA secundaria.',
     variant: 'action',
     tone: 'info',
@@ -103,7 +100,7 @@ export const TOAST_EXAMPLES: ToastExample[] = [
   {
     id: 'compact',
     title: 'Compacto',
-    description: 'Solo titulo.',
+    description: 'Solo título.',
     variant: 'compact',
     tone: 'success',
     toastTitle: 'Copiado al portapapeles',
@@ -114,7 +111,7 @@ export const TOAST_EXAMPLES: ToastExample[] = [
     description: 'Riel dorado + progreso.',
     variant: 'complete',
     tone: 'info',
-    toastTitle: 'Revision lista',
+    toastTitle: 'Revisión lista',
     toastDescription: 'Acento institucional con barra temporal.',
     dismissible: true,
     duration: 0,
@@ -124,9 +121,9 @@ export const TOAST_EXAMPLES: ToastExample[] = [
 export const TOAST_ATTRS = [
   { name: 'variant', type: 'string', defaultValue: 'basic', body: 'basic | soft | solid | outline | dense | action | progress | stacked | compact | complete' },
   { name: 'tone', type: 'string', defaultValue: 'info', body: 'info | success | warning | danger | neutral' },
-  { name: 'title', type: 'string', defaultValue: 'Aviso', body: 'Titulo del toast.' },
-  { name: 'description', type: 'string', defaultValue: '—', body: 'Texto de apoyo.' },
-  { name: 'action', type: 'string', defaultValue: '—', body: 'Etiqueta de accion.' },
+  { name: 'title', type: 'string', defaultValue: 'Aviso', body: 'Título del toast.' },
+  { name: 'description', type: 'string', defaultValue: 'â€”', body: 'Texto de apoyo.' },
+  { name: 'action', type: 'string', defaultValue: 'â€”', body: 'Etiqueta de acción.' },
   { name: 'dismissible', type: 'boolean', defaultValue: 'false', body: 'Muestra cierre.' },
   { name: 'duration', type: 'number', defaultValue: '0', body: 'Autocierre en ms (progress/complete).' },
   { name: 'open', type: 'boolean', defaultValue: 'true', body: 'Controla visibilidad.' },

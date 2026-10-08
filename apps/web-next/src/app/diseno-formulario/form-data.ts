@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type FormExample = {
@@ -25,7 +22,7 @@ export type FormExample = {
 export const FORM_EXAMPLES: FormExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Una columna limpia sin marco.',
     variant: 'basic',
     fields: [
@@ -39,7 +36,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     description: 'Encabezado editorial y campos en serie.',
     variant: 'single',
     formTitle: 'Alta de ciudadano',
-    formDescription: 'Datos basicos del registro.',
+    formDescription: 'Datos básicos del registro.',
     fields: [
       { label: 'CURP', placeholder: 'GASM850101HDFNRR09' },
       { label: 'Telefono', placeholder: '33 1234 5678' },
@@ -79,7 +76,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     formTitle: 'Observaciones',
     formDescription: 'Para notas del revisor.',
     fields: [
-      { label: 'Motivo', placeholder: 'Revision documental' },
+      { label: 'Motivo', placeholder: 'Revisión documental' },
       { label: 'Notas', placeholder: 'Falta anexo 2' },
     ],
   },
@@ -93,7 +90,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     formTitle: 'Filtro',
     fields: [
       { label: 'Folio', placeholder: 'EXP-01' },
-      { label: 'Estado', placeholder: 'En revision' },
+      { label: 'Estado', placeholder: 'En revisión' },
     ],
   },
   {
@@ -101,7 +98,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     title: 'Suave',
     description: 'Tinte vino plano, sin degradado.',
     variant: 'soft',
-    formTitle: 'Filtro rapido',
+    formTitle: 'Filtro rápido',
     formDescription: 'Consulta por dependencia.',
     fields: [
       { label: 'Dependencia', placeholder: 'Salud' },
@@ -114,7 +111,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     description: 'Superficie limpia con pie de acciones.',
     variant: 'card',
     formTitle: 'Solicitud',
-    formDescription: 'Completa los datos del tramite.',
+    formDescription: 'Completa los datos del trámite.',
     fields: [
       { label: 'Tramite', placeholder: 'Licencia' },
       { label: 'Solicitante', placeholder: 'Nombre' },
@@ -124,10 +121,10 @@ export const FORM_EXAMPLES: FormExample[] = [
   {
     id: 'sections',
     title: 'Secciones',
-    description: 'Titulo uppercase y reglas entre campos.',
+    description: 'Título uppercase y reglas entre campos.',
     variant: 'sections',
     formTitle: 'Expediente',
-    formDescription: 'Bloques separados por lineas.',
+    formDescription: 'Bloques separados por líneas.',
     fields: [
       { label: 'Titular', placeholder: 'Nombre del titular' },
       { label: 'Referencia', placeholder: 'OF-2026-12' },
@@ -139,7 +136,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     description: 'Panel moderno con riel dorado y acciones.',
     variant: 'complete',
     formTitle: 'Registro institucional',
-    formDescription: 'Formulario de alta con validacion.',
+    formDescription: 'Formulario de alta con validación.',
     columns: 2,
     fields: [
       { label: 'Nombre', placeholder: 'Nombre' },
@@ -158,7 +155,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     formDescription: 'Captura breve del documento.',
     fields: [
       { label: 'Numero de oficio', placeholder: 'OF-2026-88' },
-      { label: 'Asunto', placeholder: 'Solicitud de informacion' },
+      { label: 'Asunto', placeholder: 'Solicitud de información' },
     ],
   },
   {
@@ -179,7 +176,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     description: 'Superficie hundida plana.',
     variant: 'inset',
     formTitle: 'Contacto',
-    formDescription: 'Medios de notificacion.',
+    formDescription: 'Medios de notificación.',
     fields: [
       { label: 'Correo', placeholder: 'correo@gob.mx' },
       { label: 'Telefono', placeholder: '33 0000 0000' },
@@ -188,19 +185,19 @@ export const FORM_EXAMPLES: FormExample[] = [
   {
     id: 'flat',
     title: 'Plano',
-    description: 'Tipografia protagonista, sin marco.',
+    description: 'Tipografía protagonista, sin marco.',
     variant: 'flat',
     formTitle: 'Nueva solicitud',
     formDescription: 'Empieza con lo esencial.',
     fields: [
-      { label: 'Titulo', placeholder: 'Nombre del tramite' },
-      { label: 'Descripcion', placeholder: 'Breve resumen' },
+      { label: 'Título', placeholder: 'Nombre del trámite' },
+      { label: 'Descripción', placeholder: 'Breve resumen' },
     ],
   },
   {
     id: 'wide',
     title: 'Amplio',
-    description: 'Dos columnas con mas aire.',
+    description: 'Dos columnas con más aire.',
     variant: 'wide',
     formTitle: 'Domicilio fiscal',
     formDescription: 'Direccion para notificaciones.',
@@ -231,7 +228,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     description: 'Bloque institucional con barra vino.',
     variant: 'panel',
     formTitle: 'Dictamen',
-    formDescription: 'Resultado de la revision.',
+    formDescription: 'Resultado de la revisión.',
     fields: [
       { label: 'Folio', placeholder: 'DIC-01' },
       { label: 'Resolucion', placeholder: 'Aprobado' },
@@ -272,7 +269,7 @@ export const FORM_EXAMPLES: FormExample[] = [
     columns: 2,
     fields: [
       { label: 'Periodo', placeholder: 'Este mes' },
-      { label: 'Area', placeholder: 'Todas' },
+      { label: 'Área', placeholder: 'Todas' },
       { label: 'Estatus', placeholder: 'Activo' },
       { label: 'Responsable', placeholder: 'Cualquiera' },
     ],
@@ -308,7 +305,7 @@ export const FORM_ATTRS = [
   {
     name: 'slot / slot=actions',
     type: 'node',
-    defaultValue: '—',
+    defaultValue: 'â€”',
     body: 'Campos del formulario y acciones del pie.',
   },
 ] as const;

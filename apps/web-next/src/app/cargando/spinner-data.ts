@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SpinnerExample = {
@@ -57,7 +54,7 @@ export const SPINNER_EXAMPLES: SpinnerExample[] = [
   },
   {
     id: 'button',
-    title: 'Boton',
+    title: 'Botón',
     description: 'Tamano compacto para CTAs en carga.',
     variant: 'button',
     size: 'sm',
@@ -65,15 +62,15 @@ export const SPINNER_EXAMPLES: SpinnerExample[] = [
   {
     id: 'inline',
     title: 'Inline',
-    description: 'Spinner + texto en una sola linea.',
+    description: 'Spinner + texto en una sola línea.',
     variant: 'inline',
-    label: 'Guardando cambios…',
+    label: 'Guardando cambiosâ€¦',
     size: 'sm',
   },
   {
     id: 'page',
-    title: 'Pagina',
-    description: 'Espera de pagina completa con mensaje.',
+    title: 'Página',
+    description: 'Espera de página completa con mensaje.',
     variant: 'page',
     label: 'Cargando expediente',
     size: 'lg',
@@ -98,7 +95,7 @@ export const SPINNER_EXAMPLES: SpinnerExample[] = [
   {
     id: 'orbit',
     title: 'Orbita',
-    description: 'Nucleo vino con satelite dorado en orbita.',
+    description: 'Núcleo vino con satelite dorado en orbita.',
     variant: 'orbit',
     size: 'lg',
   },

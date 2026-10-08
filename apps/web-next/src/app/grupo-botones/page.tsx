@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Grupo de botones — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Grupo de botones — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -116,7 +116,7 @@ export default function GrupoBotonesPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

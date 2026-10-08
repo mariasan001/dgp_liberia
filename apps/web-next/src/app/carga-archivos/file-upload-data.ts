@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type FileUploadExample = {
@@ -34,7 +31,7 @@ export type FileUploadExample = {
 export const FILE_UPLOAD_EXAMPLES: FileUploadExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Zona de arrastre limpia.',
     variant: 'basic',
   },
@@ -74,8 +71,8 @@ export const FILE_UPLOAD_EXAMPLES: FileUploadExample[] = [
   },
   {
     id: 'button',
-    title: 'Boton',
-    description: 'Fila compacta tipo accion.',
+    title: 'Botón',
+    description: 'Fila compacta tipo acción.',
     variant: 'button',
     label: 'Adjunto',
   },
@@ -109,11 +106,11 @@ export const FILE_UPLOAD_EXAMPLES: FileUploadExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'labeled',
     label: 'Constancia cargada',
     status: 'success',
-    helper: 'Archivo listo para revision.',
+    helper: 'Archivo listo para revisión.',
   },
   {
     id: 'disabled',
@@ -128,7 +125,7 @@ export const FILE_UPLOAD_EXAMPLES: FileUploadExample[] = [
     title: 'Completo',
     description: 'Label + ayuda + required + info + limites.',
     variant: 'complete',
-    label: 'Anexos del tramite',
+    label: 'Anexos del trámite',
     helper: 'Se validan al enviar la solicitud.',
     required: true,
     status: 'info',
@@ -145,7 +142,7 @@ export const FILE_UPLOAD_ATTRS = [
     name: 'variant',
     type: 'string',
     defaultValue: 'basic',
-    body: 'basic | labeled | helper | dense | soft | button | compact | multiple | complete',
+    body: 'basic | labeled | helper | dense | soft | button | compact | múltiple | complete',
   },
   {
     name: 'accept',
@@ -156,7 +153,7 @@ export const FILE_UPLOAD_ATTRS = [
   {
     name: 'multiple / max-files',
     type: 'boolean / number',
-    defaultValue: 'false / ∞',
+    defaultValue: 'false / âˆž',
     body: 'Permite varios archivos y tope de cantidad.',
   },
   {

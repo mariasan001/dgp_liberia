@@ -6,9 +6,6 @@ export type ButtonState = 'enabled' | 'disabled' | 'hover' | 'pressed' | 'loadin
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
@@ -23,7 +20,7 @@ export const ANATOMY_SAMPLES = [
   {
     id: 'text',
     title: 'Solo texto',
-    caption: 'Relleno · etiqueta',
+    caption: 'Relleno Â· etiqueta',
     appearance: 'solid' as Appearance,
     mode: 'basic' as ContentMode,
     metrics: [
@@ -35,7 +32,7 @@ export const ANATOMY_SAMPLES = [
   {
     id: 'icon-text',
     title: 'Icono + texto',
-    caption: 'Relleno · Phosphor thin',
+    caption: 'Relleno Â· Phosphor thin',
     appearance: 'solid' as Appearance,
     mode: 'with-icon' as ContentMode,
     metrics: [
@@ -47,7 +44,7 @@ export const ANATOMY_SAMPLES = [
   {
     id: 'outline',
     title: 'Contorno',
-    caption: 'Borde · sin relleno',
+    caption: 'Borde Â· sin relleno',
     appearance: 'outline' as Appearance,
     mode: 'basic' as ContentMode,
     metrics: [
@@ -81,7 +78,7 @@ export const CONTENT_SECTIONS: {
 }[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Solo etiqueta. Uso principal en formularios y acciones de bandeja.',
   },
   {
@@ -93,7 +90,7 @@ export const CONTENT_SECTIONS: {
   {
     id: 'icon-only',
     title: 'Solo icono',
-    description: 'Accion compacta con Phosphor thin. En procesando solo se muestra el spinner.',
+    description: 'Acción compacta con Phosphor thin. En procesando solo se muestra el spinner.',
   },
 ];
 
@@ -164,7 +161,7 @@ export function buildSnippet(opts: {
       return `import { Plus } from '@phosphor-icons/react';
 import '@mariasan001/ui-wc';
 ${note ? '// demo-state solo para docs; en app usa hover/active CSS nativo\n' : ''}
-export function Boton() {
+export function Botón() {
   return (
     ${reactBase} icon-only aria-label="Aceptar" onClick={() => console.log('Aceptar')}>
       <Plus weight="thin" size={16} slot="icon" />
@@ -176,7 +173,7 @@ export function Boton() {
       return `import { Plus } from '@phosphor-icons/react';
 import '@mariasan001/ui-wc';
 
-export function Boton() {
+export function Botón() {
   return (
     ${reactBase} icon-position="left" onClick={() => console.log('Aceptar')}>
       <Plus weight="thin" size={16} slot="icon" />
@@ -187,7 +184,7 @@ export function Boton() {
     }
     return `import '@mariasan001/ui-wc';
 
-export function Boton() {
+export function Botón() {
   return (
     ${reactBase} onClick={() => console.log('Aceptar')}>
       Aceptar

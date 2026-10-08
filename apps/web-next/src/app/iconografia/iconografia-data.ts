@@ -661,9 +661,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type IconItem = {
@@ -706,7 +703,7 @@ function item(name: string, IconComp: ComponentType<IconProps>): IconItem {
 export const ICON_CATEGORIES: IconCategory[] = [
   {
     id: 'nav',
-    title: 'Navegacion',
+    title: 'Navegación',
     description: 'Flechas, carets y controles de recorrido.',
     icons: [
       item('ArrowLeft', ArrowLeft),
@@ -1190,7 +1187,7 @@ export const ICON_CATEGORIES: IconCategory[] = [
   {
     id: 'commerce',
     title: 'Comercio y gestion',
-    description: 'Pagos, tienda, agenda y metricas.',
+    description: 'Pagos, tienda, agenda y métricas.',
     icons: [
       item('ShoppingCart', ShoppingCart),
       item('ShoppingCartSimple', ShoppingCartSimple),
@@ -1364,7 +1361,7 @@ export const ICON_CATEGORIES: IconCategory[] = [
   {
     id: 'forms',
     title: 'Formularios y layout',
-    description: 'Campos, seleccion y estructura de interfaz.',
+    description: 'Campos, selección y estructura de interfaz.',
     icons: [
       item('Textbox', Textbox),
       item('CursorText', CursorText),
@@ -1407,7 +1404,7 @@ export const ICON_CATEGORIES: IconCategory[] = [
   {
     id: 'objects',
     title: 'Objetos cotidianos',
-    description: 'Elementos utiles para contenido institucional y UX.',
+    description: 'Elementos útiles para contenido institucional y UX.',
     icons: [
       item('Coffee', Coffee),
       item('Cookie', Cookie),
@@ -1474,13 +1471,13 @@ export const ICON_RULES = [
     id: 'lib',
     index: '01',
     title: 'Libreria',
-    body: 'Usar Phosphor Icons. Es la libreria oficial de iconografia Gob UI.',
+    body: 'Usar Phosphor Icons. Es la librería oficial de iconografía Gob UI.',
   },
   {
     id: 'weight',
     index: '02',
     title: 'Peso thin',
-    body: 'El trazo por defecto es thin: delgado y armonioso, alineado a la tipografia Gotham.',
+    body: 'El trazo por defecto es thin: delgado y armonioso, alineado a la tipografía Gotham.',
   },
   {
     id: 'size',
@@ -1497,7 +1494,7 @@ export const ICON_RULES = [
   {
     id: 'install',
     index: '05',
-    title: 'Instalacion por stack',
+    title: 'Instalación por stack',
     body: 'Cada lenguaje tiene su paquete. No mezclar web-font HTML con imports de React en el mismo arbol.',
   },
   {
@@ -1519,7 +1516,7 @@ export const INSTALL_BY_LANG: Record<
   { title: string; packageName: string; steps: string[]; snippet: string }
 > = {
   html: {
-    title: 'Instalacion HTML',
+    title: 'Instalación HTML',
     packageName: '@phosphor-icons/web',
     steps: [
       'Carga solo el peso thin (mas liviano).',
@@ -1537,7 +1534,7 @@ export const INSTALL_BY_LANG: Record<
 <i class="ph-thin ph-user" aria-label="Usuario"></i>`,
   },
   react: {
-    title: 'Instalacion React',
+    title: 'Instalación React',
     packageName: '@phosphor-icons/react',
     steps: [
       'Instala el paquete React.',
@@ -1552,7 +1549,7 @@ import { House, User } from '@phosphor-icons/react';
 <User weight="thin" size={24} aria-label="Usuario" />`,
   },
   vue: {
-    title: 'Instalacion Vue',
+    title: 'Instalación Vue',
     packageName: '@phosphor-icons/vue',
     steps: [
       'Instala el paquete Vue.',
@@ -1567,7 +1564,7 @@ import { PhHouse, PhUser } from '@phosphor-icons/vue';
 <PhUser weight="thin" :size="24" aria-label="Usuario" />`,
   },
   angular: {
-    title: 'Instalacion Angular',
+    title: 'Instalación Angular',
     packageName: '@phosphor-icons/webcomponents',
     steps: [
       'Usa web components Phosphor.',

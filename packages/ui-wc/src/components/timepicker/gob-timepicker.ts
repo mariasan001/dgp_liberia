@@ -1,1 +1,0 @@
-import './gob-timepicker.element';

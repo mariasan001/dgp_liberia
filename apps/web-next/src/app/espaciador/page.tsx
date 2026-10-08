@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Espaciador — cascaron canonico = Botones (/botones).
+ * Docs de Espaciador — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -49,7 +49,7 @@ export default function EspaciadorPage() {
           <h1 className={s.title}>Espaciador</h1>
           <p className={s.hint}>
             Espaciado utilitario entre bloques. Pasa el mouse y pulsa{' '}
-            <strong>Copiar</strong> para el codigo en <strong>{lang.toUpperCase()}</strong>.
+            <strong>Copiar</strong> para el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -115,7 +115,7 @@ export default function EspaciadorPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

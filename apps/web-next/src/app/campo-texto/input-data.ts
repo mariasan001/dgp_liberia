@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type InputExample = {
@@ -31,10 +28,10 @@ export type InputExample = {
 export const INPUT_EXAMPLES: InputExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Campo limpio sin etiqueta.',
     variant: 'basic',
-    placeholder: 'Escribe aqui…',
+    placeholder: 'Escribe aquíâ€¦',
   },
   {
     id: 'labeled',
@@ -64,11 +61,11 @@ export const INPUT_EXAMPLES: InputExample[] = [
   },
   {
     id: 'search',
-    title: 'Busqueda',
+    title: 'Búsqueda',
     description: 'Tipo search con icono de lupa.',
     variant: 'search',
     label: 'Buscar expediente',
-    placeholder: 'EXP-2026…',
+    placeholder: 'EXP-2026â€¦',
   },
   {
     id: 'password',
@@ -76,7 +73,7 @@ export const INPUT_EXAMPLES: InputExample[] = [
     description: 'Con toggle para mostrar u ocultar.',
     variant: 'password',
     label: 'Contrasena',
-    placeholder: '••••••••',
+    placeholder: 'â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢',
     value: 'secreto123',
   },
   {
@@ -95,7 +92,7 @@ export const INPUT_EXAMPLES: InputExample[] = [
     variant: 'suffix',
     label: 'Superficie',
     placeholder: '120',
-    suffix: 'm²',
+    suffix: 'mÂ²',
   },
   {
     id: 'dense',
@@ -119,7 +116,7 @@ export const INPUT_EXAMPLES: InputExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'helper',
     label: 'CURP',
     value: 'GOMC850101HDFRRN09',
@@ -148,7 +145,7 @@ export const INPUT_EXAMPLES: InputExample[] = [
   {
     id: 'underline',
     title: 'Subrayado',
-    description: 'Solo linea inferior; acento vino al foco.',
+    description: 'Solo línea inferior; acento vino al foco.',
     variant: 'underline',
     label: 'Institucion',
     placeholder: 'Escribe el nombre',
@@ -158,26 +155,26 @@ export const INPUT_EXAMPLES: InputExample[] = [
     title: 'Pildora',
     description: 'Bordes redondeados con lupa. Ideal para filtros.',
     variant: 'pill',
-    label: 'Buscar tramite',
-    placeholder: 'Folio, CURP o nombre…',
+    label: 'Buscar trámite',
+    placeholder: 'Folio, CURP o nombreâ€¦',
   },
   {
     id: 'clearable',
     title: 'Borrable',
-    description: 'Boton × al escribir. Limpia el valor de un toque.',
+    description: 'Botón Ã— al escribir. Limpia el valor de un toque.',
     variant: 'clearable',
     label: 'Referencia',
-    placeholder: 'Escribe y borra…',
+    placeholder: 'Escribe y borraâ€¦',
     value: 'REF-2026-0042',
   },
   {
     id: 'code',
-    title: 'Codigo',
+    title: 'Código',
     description: 'OTP monoespaciado, centrado. Max. 6 digitos.',
     variant: 'code',
-    label: 'Codigo de verificacion',
+    label: 'Código de verificacion',
     helper: 'Revisa tu correo institucional',
-    placeholder: '······',
+    placeholder: 'Â·Â·Â·Â·Â·Â·',
   },
   {
     id: 'soft',
@@ -213,7 +210,7 @@ export const INPUT_ATTRS = [
     name: 'helper',
     type: 'string',
     defaultValue: '',
-    body: 'Ayuda o mensaje de validacion.',
+    body: 'Ayuda o mensaje de validación.',
   },
   {
     name: 'status',

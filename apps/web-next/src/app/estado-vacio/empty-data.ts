@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type EmptyExample = {
@@ -19,8 +16,8 @@ export type EmptyExample = {
 export const EMPTY_EXAMPLES: EmptyExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Titulo y texto cuando no hay datos.',
+    title: 'Básico',
+    description: 'Título y texto cuando no hay datos.',
     variant: 'basic',
   },
   {
@@ -38,13 +35,13 @@ export const EMPTY_EXAMPLES: EmptyExample[] = [
   {
     id: 'search',
     title: 'Sin resultados',
-    description: 'Vacio tipico tras una busqueda.',
+    description: 'Vacío tipico tras una búsqueda.',
     variant: 'search',
   },
   {
     id: 'error',
     title: 'Error',
-    description: 'Fallo al cargar con reintento (semaforo danger).',
+    description: 'Fallo al cargar con reintento (semáforo danger).',
     variant: 'error',
   },
   {
@@ -62,19 +59,19 @@ export const EMPTY_EXAMPLES: EmptyExample[] = [
   {
     id: 'filter',
     title: 'Sin filtros',
-    description: 'Ningun registro cumple los filtros (semaforo info).',
+    description: 'Ningun registro cumple los filtros (semáforo info).',
     variant: 'filter',
   },
   {
     id: 'permission',
     title: 'Sin permiso',
-    description: 'Acceso restringido (semaforo warning).',
+    description: 'Acceso restringido (semáforo warning).',
     variant: 'permission',
   },
   {
     id: 'success',
     title: 'Al dia',
-    description: 'Nada pendiente por atender (semaforo success).',
+    description: 'Nada pendiente por atender (semáforo success).',
     variant: 'success',
   },
   {
@@ -121,10 +118,10 @@ export function copyFor(example: EmptyExample): EmptyCopy {
     case 'search':
       return {
         title: 'Sin resultados',
-        desc: 'No encontramos expedientes con esos criterios. Prueba otra busqueda.',
-        pill: 'Busqueda',
+        desc: 'No encontramos expedientes con esos criterios. Prueba otra búsqueda.',
+        pill: 'Búsqueda',
         pillTone: 'info',
-        primaryLabel: 'Nueva busqueda',
+        primaryLabel: 'Nueva búsqueda',
         secondaryLabel: 'Limpiar filtros',
       };
     case 'error':
@@ -163,7 +160,7 @@ export function copyFor(example: EmptyExample): EmptyCopy {
     case 'success':
       return {
         title: 'Todo al dia',
-        desc: 'No hay pendientes. Los nuevos movimientos apareceran aqui.',
+        desc: 'No hay pendientes. Los nuevos movimientos apareceran aquí.',
         pill: 'Al dia',
         pillTone: 'success',
         primaryLabel: 'Ver historial',
@@ -173,7 +170,7 @@ export function copyFor(example: EmptyExample): EmptyCopy {
         title: 'Sin documentos',
         desc: 'Arrastra un archivo o selecciona uno para iniciar el expediente.',
         primaryLabel: 'Subir archivo',
-        secondaryLabel: 'Crear vacio',
+        secondaryLabel: 'Crear vacío',
       };
     case 'inline':
       return {
@@ -184,7 +181,7 @@ export function copyFor(example: EmptyExample): EmptyCopy {
     default:
       return {
         title: 'Sin expedientes',
-        desc: 'Cuando existan registros apareceran aqui. Puedes crear el primero.',
+        desc: 'Cuando existan registros apareceran aquí. Puedes crear el primero.',
         primaryLabel: 'Nuevo expediente',
         secondaryLabel: 'Limpiar filtros',
       };

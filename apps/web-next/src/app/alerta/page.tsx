@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Alerta — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Alerta — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -49,7 +49,7 @@ export default function AlertaPage() {
           </Link>
           <h1 className={s.title}>Alerta</h1>
           <p className={s.hint}>
-            Avisos persistentes dentro de la pagina. Pulsa <strong>Copiar</strong>{' '}
+            Avisos persistentes dentro de la página. Pulsa <strong>Copiar</strong>{' '}
             para markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -115,7 +115,7 @@ export default function AlertaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
@@ -27,20 +24,20 @@ export type MenuExample = {
 export const MENU_EXAMPLES: MenuExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Icono + etiqueta. Usa el boton para colapsar o expandir.',
+    title: 'Básico',
+    description: 'Icono + etiqueta. Usa el botón para colapsar o expandir.',
     variant: 'basic',
   },
   {
     id: 'collapsed',
     title: 'Colapsado',
-    description: 'Carril de iconos con boton para expandir. Ideal junto a tablas.',
+    description: 'Carril de iconos con botón para expandir. Ideal junto a tablas.',
     variant: 'collapsed',
   },
   {
     id: 'brand',
     title: 'Con marca',
-    description: 'Bloque de marca mas presente arriba del menu.',
+    description: 'Bloque de marca más presente arriba del menú.',
     variant: 'brand',
   },
   {
@@ -86,7 +83,7 @@ export const MENU_ATTRS = [
     name: 'collapsed',
     type: 'boolean',
     defaultValue: 'false',
-    body: 'Activa el carril compacto de iconos. Combinalo con un boton para alternar.',
+    body: 'Activa el carril compacto de iconos. Combinalo con un botón para alternar.',
   },
 ] as const;
 
@@ -109,7 +106,7 @@ function bodyFor(lang: CodeLang, example: MenuExample): string {
   const brand = collapsed
     ? `${i}<div slot="brand" class="brand">
 ${i}  <span class="mark">G</span>
-${i}  <button type="button" aria-label="Expandir menu">${icon(lang, 'CaretDoubleRight')}</button>
+${i}  <button type="button" aria-label="Expandir menú">${icon(lang, 'CaretDoubleRight')}</button>
 ${i}</div>`
     : `${i}<div slot="brand" class="brand">
 ${i}  <span class="mark">G</span>
@@ -117,7 +114,7 @@ ${i}  <div>
 ${i}    <strong>Gob UI</strong>
 ${i}    <small>Sistema institucional</small>
 ${i}  </div>
-${i}  <button type="button" aria-label="Colapsar menu">${icon(lang, 'CaretDoubleLeft')}</button>
+${i}  <button type="button" aria-label="Colapsar menú">${icon(lang, 'CaretDoubleLeft')}</button>
 ${i}</div>`;
 
   const navBasic = `${i}<a href="#" class="nav-item is-active" data-active="true">

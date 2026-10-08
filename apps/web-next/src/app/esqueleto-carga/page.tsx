@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Esqueleto de carga — cascaron canonico = Botones (/botones).
- * Presentacion unica en gris clarito; sin selector de color.
+ * Docs de Esqueleto de carga — cascarrón canónico = Botones (/botones).
+ * Presentacion única en gris clarito; sin selector de color.
  * Nativo en @mariasan001/ui-wc para HTML / React / Vue / Angular.
  */
 
@@ -50,7 +50,7 @@ export default function EsqueletoCargaPage() {
           </Link>
           <h1 className={s.title}>Esqueleto de carga</h1>
           <p className={s.hint}>
-            Placeholders nativos del design system (sin libreria externa). Pulsa{' '}
+            Placeholders nativos del design system (sin librería externa). Pulsa{' '}
             <strong>Copiar</strong> para markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -117,7 +117,7 @@ export default function EsqueletoCargaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

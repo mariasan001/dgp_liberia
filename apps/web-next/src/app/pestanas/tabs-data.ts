@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type TabsExample = {
@@ -55,8 +52,8 @@ const ITEMS_SETTINGS = JSON.stringify([
 export const TABS_EXAMPLES: TabsExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Pestañas con iconos Phosphor thin.',
+    title: 'Básico',
+    description: 'PestaÃ±as con iconos Phosphor thin.',
     variant: 'basic',
     items: ITEMS_BASIC,
   },
@@ -71,7 +68,7 @@ export const TABS_EXAMPLES: TabsExample[] = [
   {
     id: 'pills',
     title: 'Pildoras',
-    description: 'Grupo suave con iconografia.',
+    description: 'Grupo suave con iconografía.',
     variant: 'pills',
     items: ITEMS_BASIC,
   },
@@ -100,7 +97,7 @@ export const TABS_EXAMPLES: TabsExample[] = [
   {
     id: 'icons',
     title: 'Con iconos',
-    description: 'Iconografia protagonista (stroke thin).',
+    description: 'Iconografía protagonista (stroke thin).',
     variant: 'icons',
     items: ITEMS_BASIC,
   },
@@ -154,7 +151,7 @@ export const TABS_EXAMPLES: TabsExample[] = [
   },
   {
     id: 'line',
-    title: 'Linea',
+    title: 'Línea',
     description: 'Indicador dorado e iconos.',
     variant: 'line',
     value: 'detalle',
@@ -163,7 +160,7 @@ export const TABS_EXAMPLES: TabsExample[] = [
   {
     id: 'ghost',
     title: 'Fantasma',
-    description: 'Tipografia + iconos sin chrome.',
+    description: 'Tipografía + iconos sin chrome.',
     variant: 'ghost',
     items: ITEMS_BASIC,
   },
@@ -213,13 +210,13 @@ export const TABS_ATTRS = [
     name: 'items',
     type: 'JSON string',
     defaultValue: '[]',
-    body: 'Arreglo [{ id, label, icon?, badge?, disabled? }]. icon: house | user | file | folder | gear | bell | tray | …',
+    body: 'Arreglo [{ id, label, icon?, badge?, disabled? }]. icon: house | user | file | folder | gear | bell | tray | â€¦',
   },
   {
     name: 'value',
     type: 'string',
     defaultValue: 'primer item',
-    body: 'Id de la pestaña activa.',
+    body: 'Id de la pestaÃ±a activa.',
   },
   {
     name: 'size',

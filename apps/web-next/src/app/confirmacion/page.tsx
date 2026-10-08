@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Confirmacion — cascaron canonico = Botones (/botones).
+ * Docs de Confirmacion — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -48,8 +48,8 @@ export default function ConfirmacionPage() {
           </Link>
           <h1 className={s.title}>Confirmacion</h1>
           <p className={s.hint}>
-            Dialogo para acciones destructivas o criticas. Cada tarjeta muestra
-            el dialogo en linea; pulsa <strong>Probar overlay</strong> o{' '}
+            Diálogo para acciones destructivas o críticas. Cada tarjeta muestra
+            el diálogo en línea; pulsa <strong>Probar overlay</strong> o{' '}
             <strong>Copiar</strong> para markup en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
@@ -117,7 +117,7 @@ export default function ConfirmacionPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

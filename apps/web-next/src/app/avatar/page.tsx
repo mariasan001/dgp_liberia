@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Avatar — cascaron canonico = Botones (/botones).
+ * Docs de Avatar — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -114,7 +114,7 @@ export default function AvatarPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Descripcion emergente — cascaron canonico = Botones (/botones).
+ * Docs de Descripción emergente — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -46,7 +46,7 @@ export default function DescripcionEmergentePage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Descripcion emergente</h1>
+          <h1 className={s.title}>Descripción emergente</h1>
           <p className={s.hint}>
             Ayuda contextual al pasar el cursor. Pulsa <strong>Copiar</strong>{' '}
             para markup en <strong>{lang.toUpperCase()}</strong>.
@@ -114,7 +114,7 @@ export default function DescripcionEmergentePage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

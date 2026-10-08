@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type RadioExample = {
@@ -32,7 +29,7 @@ export type RadioExample = {
 export const RADIO_EXAMPLES: RadioExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Grupo simple con name compartido.',
     variant: 'basic',
     name: 'canal-basic',
@@ -44,8 +41,8 @@ export const RADIO_EXAMPLES: RadioExample[] = [
   },
   {
     id: 'labeled',
-    title: 'Con descripcion',
-    description: 'Titulo + texto de apoyo por opcion.',
+    title: 'Con descripción',
+    description: 'Título + texto de apoyo por opción.',
     variant: 'labeled',
     name: 'prioridad-labeled',
     items: [
@@ -96,7 +93,7 @@ export const RADIO_EXAMPLES: RadioExample[] = [
   {
     id: 'soft',
     title: 'Suave',
-    description: 'Fondo tinte vino por opcion.',
+    description: 'Fondo tinte vino por opción.',
     variant: 'soft',
     name: 'dictamen-soft',
     items: [
@@ -109,7 +106,7 @@ export const RADIO_EXAMPLES: RadioExample[] = [
       {
         value: 'observado',
         label: 'Con observaciones',
-        description: 'Regresa a revision documental.',
+        description: 'Regresa a revisión documental.',
       },
     ],
   },
@@ -121,8 +118,8 @@ export const RADIO_EXAMPLES: RadioExample[] = [
     name: 'pago-card',
     items: [
       {
-        value: 'linea',
-        label: 'Pago en linea',
+        value: 'línea',
+        label: 'Pago en línea',
         description: 'Tarjeta o transferencia SPEI.',
         checked: true,
       },
@@ -167,11 +164,11 @@ export const RADIO_EXAMPLES: RadioExample[] = [
   {
     id: 'error',
     title: 'Error',
-    description: 'Semaforo danger si falta seleccion.',
+    description: 'Semaforo danger si falta selección.',
     variant: 'helper',
     name: 'acepta-error',
     status: 'error',
-    helper: 'Debes elegir una opcion para continuar.',
+    helper: 'Debes elegir una opción para continuar.',
     required: true,
     items: [
       { value: 'si', label: 'Si, autorizo' },
@@ -181,7 +178,7 @@ export const RADIO_EXAMPLES: RadioExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'card',
     name: 'modalidad-success',
     status: 'success',
@@ -203,7 +200,7 @@ export const RADIO_EXAMPLES: RadioExample[] = [
   {
     id: 'disabled',
     title: 'Deshabilitado',
-    description: 'Opcion no disponible en el grupo.',
+    description: 'Opción no disponible en el grupo.',
     variant: 'basic',
     name: 'canal-disabled',
     items: [
@@ -253,13 +250,13 @@ export const RADIO_ATTRS = [
     name: 'label / description / helper',
     type: 'string',
     defaultValue: '',
-    body: 'Textos del control. El slot tambien puede ser el label.',
+    body: 'Textos del control. El slot también puede ser el label.',
   },
   {
     name: 'checked',
     type: 'boolean',
     defaultValue: 'false',
-    body: 'Opcion seleccionada del grupo.',
+    body: 'Opción seleccionada del grupo.',
   },
   {
     name: 'status',

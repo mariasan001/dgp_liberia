@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: Tone; label: string; swatch: string }[] = [
@@ -28,7 +25,7 @@ export const LIST_EXAMPLES: ListExample[] = [
   {
     id: 'basic',
     title: 'Basica',
-    description: 'Titulo y texto secundario por fila.',
+    description: 'Título y texto secundario por fila.',
     variant: 'basic',
   },
   {
@@ -45,8 +42,8 @@ export const LIST_EXAMPLES: ListExample[] = [
   },
   {
     id: 'actions',
-    title: 'Con accion',
-    description: 'Menu o boton por fila.',
+    title: 'Con acción',
+    description: 'Menú o botón por fila.',
     variant: 'actions',
   },
   {
@@ -64,7 +61,7 @@ export const LIST_EXAMPLES: ListExample[] = [
   {
     id: 'complete',
     title: 'Completa',
-    description: 'Avatar, meta, accion y seleccion juntos.',
+    description: 'Avatar, meta, acción y selección juntos.',
     variant: 'complete',
   },
   {
@@ -82,7 +79,7 @@ export const LIST_EXAMPLES: ListExample[] = [
   {
     id: 'grouped',
     title: 'Agrupada',
-    description: 'Secciones con encabezado (Hoy, Ayer…).',
+    description: 'Secciones con encabezado (Hoy, Ayerâ€¦).',
     variant: 'grouped',
   },
   {
@@ -119,16 +116,16 @@ export const SAMPLE_ROWS = [
     id: '1',
     initials: 'MG',
     name: 'Maria Gonzalez',
-    detail: 'EXP-2026-01482 · Salud',
+    detail: 'EXP-2026-01482 Â· Salud',
     meta: 'Hoy',
-    status: 'En revision',
+    status: 'En revisión',
     group: 'Hoy',
   },
   {
     id: '2',
     initials: 'JR',
     name: 'Jorge Ramirez',
-    detail: 'EXP-2026-01491 · Educacion',
+    detail: 'EXP-2026-01491 Â· Educacion',
     meta: 'Ayer',
     status: 'Cerrado',
     group: 'Ayer',
@@ -137,7 +134,7 @@ export const SAMPLE_ROWS = [
     id: '3',
     initials: 'AL',
     name: 'Ana Lopez',
-    detail: 'EXP-2026-01502 · Finanzas',
+    detail: 'EXP-2026-01502 Â· Finanzas',
     meta: '2d',
     status: 'Pendiente',
     group: 'Ayer',
@@ -268,17 +265,17 @@ function interactiveHint(lang: CodeLang): string {
     return `
 // Interaccion (React): selected Set + onClick de fila/accion con useState.
 const [selected, setSelected] = useState<Set<string>>(new Set());
-// Toggle checkbox -> selected; nav row -> navigate; DotsThree -> menu.
+// Toggle checkbox -> selected; nav row -> navigate; DotsThree -> menú.
 `;
   }
   if (lang === 'vue') {
     return `
-<!-- Interaccion (Vue): selected como Set/ref; handler de accion/nav por fila. -->
+<!-- Interaccion (Vue): selected como Set/ref; handler de acción/nav por fila. -->
 `;
   }
   if (lang === 'angular') {
     return `
-// Interaccion (Angular): selected en el componente; handler de accion/nav.
+// Interaccion (Angular): selected en el componente; handler de acción/nav.
 `;
   }
   return `

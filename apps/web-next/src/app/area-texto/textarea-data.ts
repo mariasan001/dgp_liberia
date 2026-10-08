@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type TextareaExample = {
@@ -34,10 +31,10 @@ export type TextareaExample = {
 export const TEXTAREA_EXAMPLES: TextareaExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
-    description: 'Area limpia sin etiqueta.',
+    title: 'Básico',
+    description: 'Área limpia sin etiqueta.',
     variant: 'basic',
-    placeholder: 'Escribe tus notas…',
+    placeholder: 'Escribe tus notasâ€¦',
   },
   {
     id: 'labeled',
@@ -45,7 +42,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Label institucional arriba del control.',
     variant: 'labeled',
     label: 'Observaciones',
-    placeholder: 'Describe el hallazgo…',
+    placeholder: 'Describe el hallazgoâ€¦',
     required: true,
   },
   {
@@ -63,7 +60,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Limite de caracteres con aviso visual.',
     variant: 'counter',
     label: 'Resumen ejecutivo',
-    placeholder: 'Sintetiza el caso…',
+    placeholder: 'Sintetiza el casoâ€¦',
     maxlength: 160,
     value: 'Dictamen favorable con observaciones menores.',
   },
@@ -73,7 +70,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Crece con el contenido. Ideal para comentarios.',
     variant: 'auto',
     label: 'Comentario',
-    placeholder: 'Escribe y el area se expande…',
+    placeholder: 'Escribe y el area se expandeâ€¦',
     rows: 2,
   },
   {
@@ -82,7 +79,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Altura reducida para formularios densos.',
     variant: 'dense',
     label: 'Nota interna',
-    placeholder: 'Breve…',
+    placeholder: 'Breveâ€¦',
     size: 'sm',
   },
   {
@@ -90,8 +87,8 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     title: 'Relleno',
     description: 'Fondo suave sin borde duro hasta el foco.',
     variant: 'filled',
-    label: 'Descripcion',
-    placeholder: 'Detalle del tramite…',
+    label: 'Descripción',
+    placeholder: 'Detalle del trámiteâ€¦',
   },
   {
     id: 'soft',
@@ -99,7 +96,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Tinte vino ligero. Aspecto contemporaneo.',
     variant: 'soft',
     label: 'Justificacion',
-    placeholder: 'Fundamento normativo…',
+    placeholder: 'Fundamento normativoâ€¦',
   },
   {
     id: 'floating',
@@ -115,12 +112,12 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'El usuario ajusta la altura con el handle nativo.',
     variant: 'resize',
     label: 'Bitacora',
-    placeholder: 'Arrastra la esquina inferior…',
+    placeholder: 'Arrastra la esquina inferiorâ€¦',
     rows: 3,
   },
   {
     id: 'code',
-    title: 'Codigo',
+    title: 'Código',
     description: 'Monoespaciado oscuro para payloads o JSON.',
     variant: 'code',
     label: 'Payload',
@@ -140,10 +137,10 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'helper',
     label: 'Dictamen',
-    value: 'Se autoriza el tramite conforme al expediente.',
+    value: 'Se autoriza el trámite conforme al expediente.',
     status: 'success',
     helper: 'Texto validado.',
   },
@@ -153,7 +150,7 @@ export const TEXTAREA_EXAMPLES: TextareaExample[] = [
     description: 'Label, ayuda, contador y required.',
     variant: 'complete',
     label: 'Resolucion',
-    placeholder: 'Redacta la resolucion final…',
+    placeholder: 'Redacta la resolucion finalâ€¦',
     helper: 'Quien firma el dictamen revisara este texto.',
     required: true,
     maxlength: 400,
@@ -184,7 +181,7 @@ export const TEXTAREA_ATTRS = [
     name: 'helper',
     type: 'string',
     defaultValue: '',
-    body: 'Ayuda o mensaje de validacion.',
+    body: 'Ayuda o mensaje de validación.',
   },
   {
     name: 'status',
@@ -201,7 +198,7 @@ export const TEXTAREA_ATTRS = [
   {
     name: 'rows / maxlength',
     type: 'number',
-    defaultValue: '4 / —',
+    defaultValue: '4 / â€”',
     body: 'Filas iniciales y limite de caracteres (activa contador).',
   },
   {

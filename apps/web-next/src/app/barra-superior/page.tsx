@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Barra superior — cascaron canonico = Botones (/botones).
+ * Docs de Barra superior — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -51,7 +51,7 @@ export default function BarraSuperiorPage() {
           </Link>
           <h1 className={s.title}>Barra superior</h1>
           <p className={s.hint}>
-            Funcional: busqueda, notificaciones, acciones y perfil. Pulsa{' '}
+            Funcional: búsqueda, notificaciones, acciones y perfil. Pulsa{' '}
             <strong>Copiar</strong> para markup + patron interactivo en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
@@ -141,7 +141,7 @@ export default function BarraSuperiorPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

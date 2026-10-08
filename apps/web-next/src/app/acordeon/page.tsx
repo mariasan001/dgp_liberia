@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Acordeon — cascaron canonico = Botones (/botones).
+ * Docs de Acordeon — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -115,7 +115,7 @@ export default function AcordeonPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

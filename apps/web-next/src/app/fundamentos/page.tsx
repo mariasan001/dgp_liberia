@@ -9,17 +9,17 @@ import local from './fundamentos.module.css';
 const FOUNDATIONS = [
   {
     href: '/tipografia',
-    name: 'Tipografia',
+    name: 'Tipografía',
     description: 'Gotham, escala H1–H6, cuerpo y colores de texto.',
   },
   {
     href: '/colores',
     name: 'Colores',
-    description: 'Marca, superficies Canvas y semaforo institucional.',
+    description: 'Marca, superficies Canvas y semáforo institucional.',
   },
   {
     href: '/iconografia',
-    name: 'Iconografia',
+    name: 'Iconografía',
     description: 'Phosphor thin y uso correcto en componentes.',
   },
 ];
@@ -34,7 +34,7 @@ export default function FundamentosPage() {
           </Link>
           <h1 className={s.title}>Fundamentos</h1>
           <p className={s.hint}>
-            La base visual de <strong>Gob UI</strong>: tipografia, color e iconos antes de armar
+            La base visual de <strong>Gob UI</strong>: tipografía, color e iconos antes de armar
             pantallas.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>

@@ -8,9 +8,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type CheckboxExample = {
@@ -33,15 +30,15 @@ export type CheckboxExample = {
 export const CHECKBOX_EXAMPLES: CheckboxExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Casilla limpia con label.',
     variant: 'basic',
     children: 'Acepto el aviso de privacidad',
   },
   {
     id: 'labeled',
-    title: 'Con descripcion',
-    description: 'Titulo + texto de apoyo.',
+    title: 'Con descripción',
+    description: 'Título + texto de apoyo.',
     variant: 'labeled',
     label: 'Notificaciones por correo',
     descriptionText: 'Recibe alertas del expediente en tu bandeja.',
@@ -101,7 +98,7 @@ export const CHECKBOX_EXAMPLES: CheckboxExample[] = [
     title: 'Indeterminado',
     description: 'Estado parcial para seleccionar todo.',
     variant: 'soft',
-    label: 'Seleccionar seccion',
+    label: 'Seleccionar sección',
     descriptionText: 'Algunos elementos ya estan marcados.',
     indeterminate: true,
   },
@@ -118,7 +115,7 @@ export const CHECKBOX_EXAMPLES: CheckboxExample[] = [
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'card',
     label: 'Documentacion completa',
     descriptionText: 'Todos los anexos fueron validados.',
@@ -131,7 +128,7 @@ export const CHECKBOX_EXAMPLES: CheckboxExample[] = [
     title: 'Deshabilitado',
     description: 'No interactivo.',
     variant: 'basic',
-    children: 'Opcion bloqueada',
+    children: 'Opción bloqueada',
     checked: true,
     disabled: true,
   },
@@ -142,7 +139,7 @@ export const CHECKBOX_EXAMPLES: CheckboxExample[] = [
     variant: 'complete',
     label: 'Autorizo el uso de mis datos',
     descriptionText: 'Conforme a la ley de proteccion de datos personales.',
-    helper: 'Puedes revocar el consentimiento despues.',
+    helper: 'Puedes revocar el consentimiento después.',
     required: true,
     status: 'info',
   },
@@ -159,7 +156,7 @@ export const CHECKBOX_ATTRS = [
     name: 'label / description / helper',
     type: 'string',
     defaultValue: '',
-    body: 'Textos del control. El slot tambien puede ser el label.',
+    body: 'Textos del control. El slot también puede ser el label.',
   },
   {
     name: 'checked / indeterminate',

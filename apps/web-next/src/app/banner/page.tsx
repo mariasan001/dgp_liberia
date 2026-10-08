@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Banner — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Banner — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -115,7 +115,7 @@ export default function BannerPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

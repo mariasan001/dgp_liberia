@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type ButtonGroupExample = {
@@ -38,7 +35,7 @@ const SHARE = JSON.stringify([
 ]);
 
 export const BUTTON_GROUP_EXAMPLES: ButtonGroupExample[] = [
-  { id: 'basic', title: 'Basico', description: 'Grupo de acciones relacionadas.', variant: 'basic', items: ACTIONS },
+  { id: 'basic', title: 'Básico', description: 'Grupo de acciones relacionadas.', variant: 'basic', items: ACTIONS },
   { id: 'solid', title: 'Solido', description: 'Relleno vino institucional.', variant: 'solid', items: ACTIONS },
   { id: 'outline', title: 'Contorno', description: 'Bordes sin relleno fuerte.', variant: 'outline', items: EXPORT },
   { id: 'soft', title: 'Suave', description: 'Tinta vino sobre fondo claro.', variant: 'soft', items: SHARE },
@@ -48,7 +45,7 @@ export const BUTTON_GROUP_EXAMPLES: ButtonGroupExample[] = [
   { id: 'dense', title: 'Denso', description: 'Altura compacta para toolbars.', variant: 'dense', items: SHARE },
   { id: 'bordered', title: 'Con borde', description: 'Marco continuo alrededor.', variant: 'bordered', items: ACTIONS },
   { id: 'complete', title: 'Completo', description: 'Riel dorado institucional.', variant: 'complete', items: EXPORT },
-  { id: 'sm', title: 'Pequeño', description: 'Tamaño compacto.', variant: 'outline', size: 'sm', items: SHARE },
+  { id: 'sm', title: 'PequeÃ±o', description: 'TamaÃ±o compacto.', variant: 'outline', size: 'sm', items: SHARE },
   { id: 'lg', title: 'Grande', description: 'Mayor area tactil.', variant: 'solid', size: 'lg', items: ACTIONS },
   { id: 'disabled', title: 'Deshabilitado', description: 'Sin interaccion.', variant: 'basic', items: ACTIONS, disabled: true },
 ];

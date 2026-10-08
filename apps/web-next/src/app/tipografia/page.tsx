@@ -67,10 +67,10 @@ export default function TipografiaPage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Tipografia</h1>
+          <h1 className={s.title}>Tipografía</h1>
           <p className={s.hint}>
             Reglas de <strong>Gotham</strong> para titulos y texto. Pasa el mouse y pulsa{' '}
-            <strong>Copiar</strong> para obtener el codigo en <strong>{lang.toUpperCase()}</strong>.
+            <strong>Copiar</strong> para obtener el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -204,7 +204,7 @@ export default function TipografiaPage() {
             <div className={s.sectionHead}>
               <h2 className={s.sectionTitle}>Reglas</h2>
               <p className={s.sectionDesc}>
-                Criterios para mantener la tipografia delgada, clara y coherente en todo Gob UI.
+                Criterios para mantener la tipografía delgada, clara y coherente en todo Gob UI.
               </p>
             </div>
 

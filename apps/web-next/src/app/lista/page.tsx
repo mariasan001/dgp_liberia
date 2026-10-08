@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Lista — cascaron canonico = Botones (/botones).
+ * Docs de Lista — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -51,7 +51,7 @@ export default function ListaPage() {
           </Link>
           <h1 className={s.title}>Lista</h1>
           <p className={s.hint}>
-            Funcional: seleccion, meta y acciones por fila. Pulsa{' '}
+            Funcional: selección, meta y acciones por fila. Pulsa{' '}
             <strong>Copiar</strong> para markup + patron interactivo en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
@@ -141,7 +141,7 @@ export default function ListaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

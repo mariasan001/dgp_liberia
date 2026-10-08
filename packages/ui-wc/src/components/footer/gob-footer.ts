@@ -1,1 +1,0 @@
-import './gob-footer.element';

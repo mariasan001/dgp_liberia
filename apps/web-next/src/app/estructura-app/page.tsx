@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Estructura de app — cascaron canonico = Botones (/botones).
+ * Docs de Estructura de app — cascarrón canónico = Botones (/botones).
  * No alterar el hero vino ni el panel blanco superpuesto.
  */
 
@@ -54,8 +54,8 @@ export default function EstructuraAppPage() {
           </Link>
           <h1 className={s.title}>Estructura de app</h1>
           <p className={s.hint}>
-            Marco para tableros: menu, barra y contenido. Pasa el mouse y pulsa{' '}
-            <strong>Copiar</strong> para el codigo en <strong>{lang.toUpperCase()}</strong>.
+            Marco para tableros: menú, barra y contenido. Pasa el mouse y pulsa{' '}
+            <strong>Copiar</strong> para el código en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
         </div>
@@ -142,7 +142,7 @@ export default function EstructuraAppPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

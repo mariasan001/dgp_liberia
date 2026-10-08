@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type EnlaceExample = {
@@ -23,18 +20,18 @@ export type EnlaceExample = {
 };
 
 export const ENLACE_EXAMPLES: EnlaceExample[] = [
-  { id: 'basic', title: 'Basico', description: 'Enlace tipografico institucional.', variant: 'basic', label: 'Consultar tramite' },
-  { id: 'inline', title: 'En linea', description: 'Subrayado fijo para párrafos.', variant: 'inline', label: 'aviso de privacidad' },
+  { id: 'basic', title: 'Básico', description: 'Enlace tipografico institucional.', variant: 'basic', label: 'Consultar trámite' },
+  { id: 'inline', title: 'En línea', description: 'Subrayado fijo para pÃ¡rrafos.', variant: 'inline', label: 'aviso de privacidad' },
   { id: 'underline', title: 'Subrayado', description: 'Subrayado suave que se refuerza al hover.', variant: 'underline', label: 'Ver requisitos' },
-  { id: 'subtle', title: 'Sutil', description: 'Menos contraste para contexto secundario.', variant: 'subtle', label: 'Mas informacion' },
+  { id: 'subtle', title: 'Sutil', description: 'Menos contraste para contexto secundario.', variant: 'subtle', label: 'Mas información' },
   { id: 'strong', title: 'Fuerte', description: 'Peso tipografico alto.', variant: 'strong', label: 'Continuar al portal' },
-  { id: 'soft', title: 'Suave', description: 'Pill con fondo vino suave.', variant: 'soft', label: 'Ir al catalogo' },
-  { id: 'external', title: 'Externo', description: 'Abre en pestaña nueva con icono.', variant: 'external', href: 'https://www.gob.mx', label: 'Ir a gob.mx', external: true },
-  { id: 'nav', title: 'Navegacion', description: 'Con flecha para flujos internos.', variant: 'nav', label: 'Siguiente seccion' },
+  { id: 'soft', title: 'Suave', description: 'Pill con fondo vino suave.', variant: 'soft', label: 'Ir al catálogo' },
+  { id: 'external', title: 'Externo', description: 'Abre en pestaÃ±a nueva con icono.', variant: 'external', href: 'https://www.gob.mx', label: 'Ir a gob.mx', external: true },
+  { id: 'nav', title: 'Navegación', description: 'Con flecha para flujos internos.', variant: 'nav', label: 'Siguiente sección' },
   { id: 'muted', title: 'Atenuado', description: 'Tono neutro para pies o metadatos.', variant: 'muted', label: 'Politica de uso' },
-  { id: 'complete', title: 'Completo', description: 'Marco con riel dorado institucional.', variant: 'complete', label: 'Descargar guia PDF', external: true },
+  { id: 'complete', title: 'Completo', description: 'Marco con riel dorado institucional.', variant: 'complete', label: 'Descargar guía PDF', external: true },
   { id: 'danger', title: 'Tono peligro', description: 'Acento de alerta en el enlace.', variant: 'basic', tone: 'danger', label: 'Reportar incidencia' },
-  { id: 'sm', title: 'Pequeño', description: 'Tamaño compacto.', variant: 'basic', size: 'sm', label: 'Detalle' },
+  { id: 'sm', title: 'PequeÃ±o', description: 'TamaÃ±o compacto.', variant: 'basic', size: 'sm', label: 'Detalle' },
   { id: 'lg', title: 'Grande', description: 'Mayor presencia tipografica.', variant: 'nav', size: 'lg', label: 'Explorar servicios' },
   { id: 'disabled', title: 'Deshabilitado', description: 'Sin interaccion.', variant: 'basic', label: 'No disponible', disabled: true },
 ];
@@ -45,7 +42,7 @@ export const ENLACE_ATTRS = [
   { name: 'size', type: 'string', defaultValue: 'md', body: 'sm | md | lg' },
   { name: 'href', type: 'string', defaultValue: '#', body: 'URL de destino.' },
   { name: 'label', type: 'string', defaultValue: 'Enlace', body: 'Texto visible del enlace.' },
-  { name: 'external', type: 'boolean', defaultValue: 'false', body: 'Abre en pestaña nueva con rel seguro.' },
+  { name: 'external', type: 'boolean', defaultValue: 'false', body: 'Abre en pestaÃ±a nueva con rel seguro.' },
   { name: 'disabled', type: 'boolean', defaultValue: 'false', body: 'Bloquea la interaccion.' },
 ] as const;
 

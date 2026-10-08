@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Menu desplegable — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Menú desplegable — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -47,9 +47,9 @@ export default function MenuDesplegablePage() {
           <Link className={s.back} href="/">
             ← Componentes
           </Link>
-          <h1 className={s.title}>Menu desplegable</h1>
+          <h1 className={s.title}>Menú desplegable</h1>
           <p className={s.hint}>
-            Menu contextual de acciones. Pulsa <strong>Copiar</strong> para
+            Menú contextual de acciones. Pulsa <strong>Copiar</strong> para
             markup en <strong>{lang.toUpperCase()}</strong>.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -116,7 +116,7 @@ export default function MenuDesplegablePage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

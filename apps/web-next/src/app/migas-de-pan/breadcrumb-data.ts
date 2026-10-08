@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const COLOR_OPTIONS: { id: 'primary' | 'accent'; label: string; swatch: string }[] = [
@@ -51,19 +48,19 @@ export const BREADCRUMB_EXAMPLES: BreadcrumbExample[] = [
   {
     id: 'underline',
     title: 'Con subrayado',
-    description: 'Enlaces con subrayado al pasar para reforzar la accion.',
+    description: 'Enlaces con subrayado al pasar para reforzar la acción.',
     variant: 'underline',
   },
   {
     id: 'dense',
     title: 'Compacta',
-    description: 'Tipografia y huecos menores para barras densas.',
+    description: 'Tipografía y huecos menores para barras densas.',
     variant: 'dense',
   },
   {
     id: 'complete',
     title: 'Completa',
-    description: 'Ruta larga con icono, varios niveles y pagina actual.',
+    description: 'Ruta larga con icono, varios niveles y página actual.',
     variant: 'complete',
   },
   {
@@ -81,7 +78,7 @@ export const BREADCRUMB_EXAMPLES: BreadcrumbExample[] = [
   {
     id: 'back',
     title: 'Con volver',
-    description: 'Accion de regreso al inicio de la jerarquia.',
+    description: 'Acción de regreso al inicio de la jerarquia.',
     variant: 'back',
   },
 ];
@@ -102,9 +99,9 @@ export const BREADCRUMB_ATTRS = [
 ] as const;
 
 function sep(variant: BreadcrumbVariant): string {
-  if (variant === 'chevron') return '›';
-  if (variant === 'dot') return '·';
-  if (variant === 'arrow') return '→';
+  if (variant === 'chevron') return 'â€º';
+  if (variant === 'dot') return 'Â·';
+  if (variant === 'arrow') return 'â†’';
   return '/';
 }
 
@@ -116,7 +113,7 @@ function bodyFor(lang: CodeLang, example: BreadcrumbExample): string {
   if (example.variant === 'collapsed') {
     return `${i}<a href="#">Inicio</a>
 ${mark}
-${i}<span data-sep aria-hidden="true">…</span>
+${i}<span data-sep aria-hidden="true">â€¦</span>
 ${mark}
 ${i}<a href="#">Expedientes</a>
 ${mark}

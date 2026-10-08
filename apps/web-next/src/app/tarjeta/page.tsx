@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Docs de Tarjeta — cascaron canonico = Botones (/botones).
+ * Docs de Tarjeta — cascarrón canónico = Botones (/botones).
  */
 
 import Link from 'next/link';
@@ -114,7 +114,7 @@ export default function TarjetaPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

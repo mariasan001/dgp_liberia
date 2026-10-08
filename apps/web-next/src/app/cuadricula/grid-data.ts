@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export const GAP_OPTIONS: { id: GridGap; label: string }[] = [
@@ -27,14 +24,14 @@ export const GRID_EXAMPLES: GridExample[] = [
   {
     id: 'basic',
     title: '2 columnas',
-    description: 'Cuadricula base de dos columnas iguales.',
+    description: 'Cuadrícula base de dos columnas iguales.',
     variant: 'basic',
     cells: 4,
   },
   {
     id: 'three',
     title: '3 columnas',
-    description: 'Tres columnas para tarjetas o metricas.',
+    description: 'Tres columnas para tarjetas o métricas.',
     variant: 'three',
     cells: 6,
   },
@@ -55,7 +52,7 @@ export const GRID_EXAMPLES: GridExample[] = [
   {
     id: 'loose',
     title: 'Holgada',
-    description: 'Dos columnas con mas aire entre celdas.',
+    description: 'Dos columnas con más aire entre celdas.',
     variant: 'loose',
     cells: 4,
   },
@@ -126,7 +123,7 @@ ${body}
       .split('\n')
       .map((line) => (line ? `      ${line}` : ''))
       .join('\n');
-    return `${iconImports(lang)}export function Cuadricula() {
+    return `${iconImports(lang)}export function Cuadrícula() {
   return (
     <gob-grid${attrs}>
 ${indented}

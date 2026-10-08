@@ -4,9 +4,6 @@ export type CodeLang = 'html' | 'react' | 'vue' | 'angular';
 
 export const CODE_LANGUAGES: { id: CodeLang; label: string }[] = [
   { id: 'html', label: 'HTML' },
-  { id: 'react', label: 'React' },
-  { id: 'vue', label: 'Vue' },
-  { id: 'angular', label: 'Angular' },
 ];
 
 export type SwitchExample = {
@@ -28,15 +25,15 @@ export type SwitchExample = {
 export const SWITCH_EXAMPLES: SwitchExample[] = [
   {
     id: 'basic',
-    title: 'Basico',
+    title: 'Básico',
     description: 'Interruptor limpio con label.',
     variant: 'basic',
     children: 'Notificaciones push',
   },
   {
     id: 'labeled',
-    title: 'Con descripcion',
-    description: 'Titulo + texto de apoyo.',
+    title: 'Con descripción',
+    description: 'Título + texto de apoyo.',
     variant: 'labeled',
     label: 'Modo oscuro',
     descriptionText: 'Ajusta el contraste de la consola.',
@@ -100,12 +97,12 @@ export const SWITCH_EXAMPLES: SwitchExample[] = [
     label: 'Acepto el tratamiento de datos',
     required: true,
     status: 'error',
-    helper: 'Debes activar esta opcion para continuar.',
+    helper: 'Debes activar esta opción para continuar.',
   },
   {
     id: 'success',
     title: 'Exito',
-    description: 'Semaforo success con confirmacion.',
+    description: 'Semaforo success con confirmación.',
     variant: 'card',
     label: 'Sincronizacion activa',
     descriptionText: 'Los cambios se replican al instante.',
@@ -118,7 +115,7 @@ export const SWITCH_EXAMPLES: SwitchExample[] = [
     title: 'Deshabilitado',
     description: 'No interactivo.',
     variant: 'basic',
-    children: 'Opcion bloqueada',
+    children: 'Opción bloqueada',
     checked: true,
     disabled: true,
   },
@@ -129,7 +126,7 @@ export const SWITCH_EXAMPLES: SwitchExample[] = [
     variant: 'complete',
     label: 'Compartir con otra dependencia',
     descriptionText: 'Solo personal autorizado vera el folio.',
-    helper: 'Puedes desactivar el acceso despues.',
+    helper: 'Puedes desactivar el acceso después.',
     required: true,
     status: 'info',
   },
@@ -146,7 +143,7 @@ export const SWITCH_ATTRS = [
     name: 'label / description / helper',
     type: 'string',
     defaultValue: '',
-    body: 'Textos del control. El slot tambien puede ser el label.',
+    body: 'Textos del control. El slot también puede ser el label.',
   },
   {
     name: 'checked',

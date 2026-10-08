@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Docs de Aviso temporal — cascaron canonico = Botones (/botones).
- * Presentacion unica (vino + dorado / semaforo); sin selector de color.
+ * Docs de Aviso temporal — cascarrón canónico = Botones (/botones).
+ * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
 import Link from 'next/link';
@@ -49,7 +49,7 @@ export default function AvisoTemporalPage() {
           </Link>
           <h1 className={s.title}>Aviso temporal</h1>
           <p className={s.hint}>
-            Mensajes breves de exito, error e informacion. Pulsa{' '}
+            Mensajes breves de éxito, error e información. Pulsa{' '}
             <strong>Copiar</strong> para markup en{' '}
             <strong>{lang.toUpperCase()}</strong>.
           </p>
@@ -116,7 +116,7 @@ export default function AvisoTemporalPage() {
                     <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Default</th>
-                    <th>Descripcion</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

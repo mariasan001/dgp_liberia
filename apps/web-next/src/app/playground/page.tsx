@@ -35,7 +35,7 @@ export default function PlaygroundPage() {
             <span className={s.brandMark} aria-hidden="true" />
             <div>
               <span className={s.brandName}>Gob UI</span>
-              <span className={s.brandTag}>Guia visual de acciones</span>
+              <span className={s.brandTag}>Guía visual de acciones</span>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function PlaygroundPage() {
               Botones
             </Link>
             <Link className={s.topLink} href="/paginacion">
-              Paginacion
+              Paginación
             </Link>
             <button type="button" className={s.themeToggle} onClick={toggleTheme}>
               <span className={s.themeIcon} aria-hidden="true" />
@@ -100,7 +100,7 @@ export default function PlaygroundPage() {
           <div className={s.sectionIntro}>
             <h2 className={s.sectionTitle}>Referencias de uso</h2>
             <p className={s.sectionDesc}>
-              Cada fila sugiere una familia de acciones para flujos reales de captura, validacion y consulta.
+              Cada fila sugiere una familia de acciones para flujos reales de captura, validación y consulta.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ export default function PlaygroundPage() {
         <footer className={s.footer}>
           <p>Gob UI · referencia de acciones · {theme === 'light' ? 'Tema claro' : 'Tema oscuro'}</p>
           <Link className={s.footerLink} href="/playground/button">
-            Abrir configuracion detallada
+            Abrir configuración detallada
           </Link>
         </footer>
       </div>

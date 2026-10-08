@@ -1,9 +1,9 @@
 'use client';
 
 /**
- * DOCS SHELL REFERENCE — formato canonico de documentacion Gob UI.
- * No modificar layout, espaciado ni cascaron de esta pagina.
- * Otros componentes (Paginacion, etc.) deben copiar este mismo shell.
+ * DOCS SHELL REFERENCE — formato canónico de documentación Gob UI.
+ * No modificar layout, espaciado ni cascarrón de esta página.
+ * Otros componentes (Paginación, etc.) deben copiar este mismo shell.
  */
 
 import Link from 'next/link';
@@ -142,8 +142,8 @@ export default function BotonesPage() {
           </Link>
           <h1 className={s.title}>Botones</h1>
           <p className={s.hint}>
-            Clic en un boton habilitado para probarlo. Pulsa <strong>Copiar</strong>{' '}
-            para el codigo en <strong>{lang.toUpperCase()}</strong>
+            Clic en un botón habilitado para probarlo. Pulsa <strong>Copiar</strong>{' '}
+            para el código en <strong>{lang.toUpperCase()}</strong>
             {flash ? ` · ${flash}` : ''}.
           </p>
           <p className={s.version}>Version 1.0 / Libreria Gob_v2</p>
@@ -197,7 +197,7 @@ export default function BotonesPage() {
           </div>
 
           <div className={s.spec}>
-            <h2 className={s.specTitle}>Anatomia del boton</h2>
+            <h2 className={s.specTitle}>Anatomia del botón</h2>
             <p className={s.specDesc}>
               Tamano mediano del sistema. Altura, padding y borde alineados para uso real.
             </p>
