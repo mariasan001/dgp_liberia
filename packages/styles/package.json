@@ -1,6 +1,6 @@
 {
   "name": "@mariasan001/styles",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "private": false,
   "type": "module",
   "files": [
@@ -23,5 +23,14 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariasan001/dgp_liberia.git",
+    "directory": "packages/styles"
+  },
+  "homepage": "https://github.com/mariasan001/dgp_liberia#readme",
+  "bugs": {
+    "url": "https://github.com/mariasan001/dgp_liberia/issues"
   }
 }

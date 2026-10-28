@@ -1,53 +1,60 @@
 # gob-ui (HTML)
 
-Monorepo pnpm de un sistema de interfaz **compatible solo con HTML** (Web Components).
+Sistema de interfaz institucional para HTML (Web Components).
 
-## Alcance de esta copia
+## Instalación con npm
 
-- **50 componentes básicos** (sin capas avanzadas ni patrones innovadores)
-- Snippets y consumo documentados **solo en HTML**
-- Sin React / Vue / Angular en la API pública de documentación
+1. Archivo `.npmrc` (GitHub Packages):
 
-## Workspace
-
-- `packages/tokens`: tokens base en JSON
-- `packages/styles`: estilos compartidos (`base.css`, `theme.css`, `utilities.css`, `fonts.css`)
-- `packages/ui-wc`: Web Components `gob-*`
-- `apps/web-next`: demo de referencia
-- `apps/web-vanilla`: demo mínima en HTML puro
-
-## Requisitos
-
-- Node.js 20 o superior
-- pnpm 9.12.3
-
-## Como correr demos
-
-```bash
-pnpm install
-pnpm build:ui-wc
-pnpm dev
+```ini
+@mariasan001:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=TU_GITHUB_PACKAGES_TOKEN
+always-auth=true
 ```
 
-Abre `http://localhost:9090`.
+2. Instalar:
 
-## Como consumir (HTML)
+```bash
+npm install @mariasan001/styles@0.1.4 @mariasan001/ui-wc@0.3.1
+```
+
+También con `pnpm add` o `yarn add`.
+
+3. Enlazar en el HTML:
 
 ```html
+<link rel="stylesheet" href="node_modules/@mariasan001/styles/fonts.css" />
+<link rel="stylesheet" href="node_modules/@mariasan001/styles/theme.css" />
+<link rel="stylesheet" href="node_modules/@mariasan001/styles/base.css" />
+<link rel="stylesheet" href="node_modules/@mariasan001/styles/utilities.css" />
+
 <script type="module">
   import '@mariasan001/ui-wc';
 </script>
 
-<link rel="stylesheet" href="node_modules/@mariasan001/styles/base.css" />
-<link rel="stylesheet" href="node_modules/@mariasan001/styles/theme.css" />
-<link rel="stylesheet" href="node_modules/@mariasan001/styles/utilities.css" />
-<link rel="stylesheet" href="node_modules/@mariasan001/styles/fonts.css" />
-
 <gob-button tone="primary" appearance="solid">Guardar</gob-button>
 ```
 
-## Calidad
+Detalle en la demo → **Instalación**.
+
+## Sin npm
+
+Carpeta `apps/html-kit`: `gob-ui.css`, `gob-ui.js` e `index.html`.
 
 ```bash
-pnpm verify
+pnpm kit
 ```
+
+## Desarrollo del monorepo
+
+```bash
+pnpm install
+pnpm kit
+pnpm dev
+```
+
+## Alcance
+
+- 50 componentes básicos
+- Documentación solo en HTML
+- Paquetes: `@mariasan001/styles` y `@mariasan001/ui-wc`
