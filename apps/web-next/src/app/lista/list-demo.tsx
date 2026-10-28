@@ -59,7 +59,6 @@ export function ListDemo({
         role="listitem"
         data-selected={isSelected ? 'true' : undefined}
         data-interactive={showNav ? 'true' : undefined}
-        aria-selected={showCheck ? isSelected : undefined}
         onClick={
           showNav
             ? () => setFlash(`Abrir detalle: ${row.name}`)
