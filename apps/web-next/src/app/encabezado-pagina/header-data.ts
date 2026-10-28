@@ -129,23 +129,6 @@ ${i}</nav>`);
   return parts.join('\n');
 }
 
-function iconImports(lang: CodeLang): string {
-  if (lang === 'html') return '';
-  if (lang === 'react') {
-    return `import '@mariasan001/ui-wc';
-
-`;
-  }
-  if (lang === 'vue') {
-    return `import '@mariasan001/ui-wc';
-
-`;
-  }
-  return `import '@mariasan001/ui-wc';
-
-`;
-}
-
 export function buildSnippet(
   lang: CodeLang,
   example: HeaderExample,

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import type { PageHeaderSurface, PageHeaderVariant } from '@mariasan001/ui-wc';
+import type { PageHeaderSurface } from '@mariasan001/ui-wc';
 
 import type { HeaderExample } from './header-data';
 import local from './header.module.css';

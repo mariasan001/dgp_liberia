@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Bell, MagnifyingGlass } from '@phosphor-icons/react';
 
-import type { Tone, TopbarVariant } from '@mariasan001/ui-wc';
+import type { Tone } from '@mariasan001/ui-wc';
 
 import type { TopbarExample } from './topbar-data';
 import { TOPBAR_THEME_VARS } from './topbar-themes';
