@@ -1,6 +1,6 @@
 {
   "name": "@mariasan001/ui-wc",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "private": false,
   "type": "module",
   "sideEffects": true,
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariasan001/gob_ui.git",
+    "url": "git+https://github.com/mariasan001/dgp_liberia.git",
     "directory": "packages/ui-wc"
   },
-  "homepage": "https://github.com/mariasan001/gob_ui#readme",
+  "homepage": "https://github.com/mariasan001/dgp_liberia#readme",
   "bugs": {
-    "url": "https://github.com/mariasan001/gob_ui/issues"
+    "url": "https://github.com/mariasan001/dgp_liberia/issues"
   },
   "scripts": {
     "build": "tsup",

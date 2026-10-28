@@ -1,7 +1,25 @@
-# web-vanilla
+# web-vanilla · inicio fácil
 
-Abre `index.html` con un servidor estatico.
+Página HTML mínima para probar Gob UI.
 
-Esta referencia usa:
-- `@mariasan001/styles` para base, tema y utilidades
-- `@mariasan001/ui-wc` para `gob-button`
+**No necesitas clave de GitHub** si trabajas dentro de este proyecto.
+
+## Cómo arrancar
+
+Desde la raíz del repo:
+
+```bash
+pnpm install
+pnpm starter
+```
+
+Abre `http://localhost:5173/`.
+
+## Qué hace `pnpm starter`
+
+1. Prepara los componentes
+2. Abre esta página en un servidor local (abrir el archivo a doble clic suele fallar)
+
+## Cómo usarlo
+
+Edita `index.html`, guarda y recarga el navegador.
