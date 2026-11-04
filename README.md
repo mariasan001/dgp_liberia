@@ -4,7 +4,8 @@ Sistema de interfaz institucional para HTML (Web Components).
 
 ## Instalación con npm
 
-1. Archivo `.npmrc` (GitHub Packages):
+1. Archivo `.npmrc` en tu proyecto (GitHub Packages exige token aunque el
+   paquete sea público):
 
 ```ini
 @mariasan001:registry=https://npm.pkg.github.com
@@ -35,7 +36,7 @@ También con `pnpm add` o `yarn add`.
 <gob-button tone="primary" appearance="solid">Guardar</gob-button>
 ```
 
-Detalle en la demo → **Instalación**.
+Detalle en la demo → **Instalación** (`http://localhost:9090/instalacion`).
 
 ## Sin npm
 
@@ -49,7 +50,7 @@ pnpm kit
 
 ```bash
 pnpm install
-pnpm kit
+pnpm build:ui-wc
 pnpm dev
 ```
 
@@ -57,4 +58,4 @@ pnpm dev
 
 - 50 componentes básicos
 - Documentación solo en HTML
-- Paquetes: `@mariasan001/styles` y `@mariasan001/ui-wc`
+- Paquetes: `@mariasan001/styles` y `@mariasan001/ui-wc` (repo `dgp_liberia`)

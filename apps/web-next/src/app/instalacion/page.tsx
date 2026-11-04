@@ -18,6 +18,7 @@ const INSTALL_CMDS: Record<Manager, string> = {
   yarn: `yarn add @mariasan001/styles@${STYLES_VERSION} @mariasan001/ui-wc@${UI_VERSION}`,
 };
 
+/** GitHub Packages (npm) exige token aunque el paquete sea público. */
 const NPMRC = `@mariasan001:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=TU_GITHUB_PACKAGES_TOKEN
 always-auth=true`;
@@ -61,8 +62,8 @@ const STARTER_HTML = `<!doctype html>
 
 const FAQ = [
   {
-    q: '¿Por qué hace falta un token de GitHub?',
-    a: 'Los paquetes se publican en GitHub Packages. El token con permiso read:packages permite descargarlos. No lo subas al repositorio.',
+    q: '¿El paquete es público y aún pide token?',
+    a: 'Sí. En el registro npm de GitHub Packages hace falta autenticarse aunque el paquete sea público. Cada persona usa su propio token con read:packages. Si no quieren token, usen el kit HTML (gob-ui.css + gob-ui.js).',
   },
   {
     q: '¿Hay que instalar los dos paquetes?',
@@ -74,7 +75,7 @@ const FAQ = [
   },
   {
     q: '¿Se puede usar sin instalar paquetes?',
-    a: 'Sí. En apps/html-kit están gob-ui.css y gob-ui.js listos para copiar junto a tu HTML.',
+    a: 'Sí. En apps/html-kit están gob-ui.css y gob-ui.js listos para copiar junto a tu HTML. Esa vía no usa GitHub Packages.',
   },
 ];
 
@@ -150,9 +151,10 @@ export default function InstalacionPage() {
           <p className={s.eyebrow}>Documentación</p>
           <h1 className={s.title}>Instalación</h1>
           <p className={s.hint}>
-            Agrega Gob UI a tu proyecto con <strong>npm</strong>,{' '}
-            <strong>pnpm</strong> o <strong>yarn</strong>. Dos paquetes: estilos
-            y componentes HTML.
+            Instala Gob UI con <strong>npm</strong>, <strong>pnpm</strong> o{' '}
+            <strong>yarn</strong>. Dos paquetes publicados en GitHub Packages:{' '}
+            <code style={{ color: 'inherit', opacity: 0.95 }}>styles</code> y{' '}
+            <code style={{ color: 'inherit', opacity: 0.95 }}>ui-wc</code>.
           </p>
         </div>
       </header>
@@ -164,8 +166,8 @@ export default function InstalacionPage() {
               <p className={s.kicker}>Por paquetes</p>
               <h2 className={s.cardTitle}>Instalar con npm</h2>
               <p className={s.cardLead}>
-                El camino habitual: configuras el acceso, instalas los paquetes
-                y los enlazas en tu HTML.
+                Cuatro pasos: registry, instalar, enlazar CSS/JS y probar con
+                la plantilla.
               </p>
             </div>
 
@@ -183,23 +185,24 @@ export default function InstalacionPage() {
             </div>
 
             <div className={s.block}>
-              <h3 className={s.blockTitle}>1. Acceso a los paquetes</h3>
+              <h3 className={s.blockTitle}>1. Archivo .npmrc</h3>
               <p className={s.blockText}>
-                Gob UI no está en el registro público de npm. Se publica en
-                GitHub Packages. Agrega este archivo <code>.npmrc</code> en la
-                raíz de tu proyecto:
+                Los paquetes viven en GitHub Packages (no en npmjs.com). En la
+                raíz del proyecto crea <code>.npmrc</code>. Hace falta un token
+                con permiso <code>read:packages</code>, aunque el paquete sea
+                público (regla de GitHub para npm).
               </p>
               <CodeBlock code={NPMRC} label=".npmrc" />
               <p className={s.callout}>
-                Usa un token de GitHub con permiso <code>read:packages</code>.
-                No lo commits.
+                Cada persona genera su propio token. No lo subas al repositorio.
+                Si no quieres token, usa la sección “Archivos listos” más abajo.
               </p>
             </div>
 
             <div className={s.block}>
               <h3 className={s.blockTitle}>2. Instalar</h3>
               <p className={s.blockText}>
-                Instala ambos paquetes. Elige el gestor que uses en el equipo:
+                Instala los dos paquetes. Elige el gestor del equipo:
               </p>
               <ManagerTabs value={manager} onChange={setManager} />
               <CodeBlock code={INSTALL_CMDS[manager]} label="Terminal" />
@@ -208,11 +211,11 @@ export default function InstalacionPage() {
             <div className={s.block}>
               <h3 className={s.blockTitle}>3. Enlazar en el HTML</h3>
               <p className={s.blockText}>
-                Carga los estilos (en este orden) y el script de componentes:
+                Carga los estilos en este orden y el script de componentes:
               </p>
               <CodeBlock code={IMPORT_CSS} label="CSS" />
               <CodeBlock code={IMPORT_JS} label="JavaScript" />
-              <p className={s.blockText}>Uso en el cuerpo de la página:</p>
+              <p className={s.blockText}>Uso en el body:</p>
               <CodeBlock
                 code={`<gob-button tone="primary" appearance="solid">Guardar</gob-button>`}
                 label="HTML"
@@ -223,7 +226,7 @@ export default function InstalacionPage() {
               <h3 className={s.blockTitle}>4. Ejemplo completo</h3>
               <p className={s.blockText}>
                 Plantilla mínima. Ábrela con un servidor local (Vite, Live
-                Server u otro). Evita abrir el archivo directo en el navegador.
+                Server u otro). No abras el archivo con doble clic.
               </p>
               <CodeBlock code={STARTER_HTML} label="index.html" />
             </div>
@@ -234,8 +237,9 @@ export default function InstalacionPage() {
               <p className={s.kicker}>Sin npm</p>
               <h2 className={s.cardTitle}>Archivos listos</h2>
               <p className={s.cardLead}>
-                Si prefieres no instalar dependencias en el trámite, copia los
-                archivos ya generados desde <code>apps/html-kit</code>.
+                Alternativa: copia <code>gob-ui.css</code> y{' '}
+                <code>gob-ui.js</code> desde <code>apps/html-kit</code> junto a
+                tu HTML.
               </p>
             </div>
             <ul className={s.bulletList}>
@@ -249,11 +253,10 @@ export default function InstalacionPage() {
                 <code>index.html</code> — ejemplo
               </li>
             </ul>
-            <p className={s.blockText}>Inclúyelos en tu página así:</p>
+            <p className={s.blockText}>Inclúyelos así:</p>
             <CodeBlock code={KIT_LINKS} label="HTML" />
             <p className={s.callout}>
-              Desde este monorepo puedes regenerarlos con{' '}
-              <code>pnpm kit</code> y abrir http://localhost:5173/
+              En este monorepo: <code>pnpm kit</code> → http://localhost:5173/
             </p>
           </section>
 
@@ -262,8 +265,8 @@ export default function InstalacionPage() {
               <p className={s.kicker}>Verificación</p>
               <h2 className={s.cardTitle}>Ejemplo en esta página</h2>
               <p className={s.cardLead}>
-                Si los botones se ven con la marca institucional, los
-                componentes están cargando correctamente aquí.
+                Si ves estos botones con la marca institucional, los componentes
+                cargan bien aquí.
               </p>
             </div>
             <div className={s.liveStage}>
@@ -287,7 +290,7 @@ export default function InstalacionPage() {
               <p className={s.kicker}>Soporte</p>
               <h2 className={s.cardTitle}>Problemas frecuentes</h2>
               <p className={s.cardLead}>
-                Revisa en orden: token, instalación, CSS, script y servidor
+                Orden útil: token/.npmrc → install → CSS → script → servidor
                 local.
               </p>
             </div>
