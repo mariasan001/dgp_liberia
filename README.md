@@ -29,12 +29,14 @@ También con `pnpm add` o `yarn add`.
 <link rel="stylesheet" href="node_modules/@mariasan001/styles/base.css" />
 <link rel="stylesheet" href="node_modules/@mariasan001/styles/utilities.css" />
 
-<script type="module">
-  import '@mariasan001/ui-wc';
-</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 
 <gob-button tone="primary" appearance="solid">Guardar</gob-button>
 ```
+
+En HTML suelto no uses `import '@mariasan001/ui-wc'`: el navegador no resuelve ese nombre, los estilos cargan y los componentes no. Ese import sí sirve en React, Next o Vite. Abre el HTML con un servidor local, no con doble clic.
+
+
 
 Detalle en la demo → **Instalación** (`http://localhost:9090/instalacion`).
 
@@ -45,6 +47,10 @@ Carpeta `apps/html-kit`: `gob-ui.css`, `gob-ui.js` e `index.html`.
 ```bash
 pnpm kit
 ```
+
+## Documentación interna
+
+No va en el sitio público. Para auditoría y para continuar el proyecto: `docs/INTERNO.md`.
 
 ## Desarrollo del monorepo
 

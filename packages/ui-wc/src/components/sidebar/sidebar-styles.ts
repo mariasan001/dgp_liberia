@@ -2,9 +2,12 @@ export const sidebarStyles = `
 :host {
   display: block;
   width: var(--gob-sidebar-width, 248px);
+  max-width: 100%;
+  min-width: 0;
   height: 100%;
   min-height: inherit;
   box-sizing: border-box;
+  overflow-x: hidden;
   font-family: var(--gob-font-sans, Gotham, Raleway, sans-serif);
   color: var(--gob-sidebar-text, #6b665f);
   transition: width 240ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -71,7 +74,8 @@ export const sidebarStyles = `
   gap: 3px;
   align-content: start;
   min-height: 0;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-right: 2px;
   scrollbar-width: none;
   -ms-overflow-style: none;

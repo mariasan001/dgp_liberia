@@ -191,7 +191,7 @@ export function buildSnippet(
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
 <!-- gob-topbar organiza layout; la interaccion la cables tu. -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 ${iconImports(lang)}<gob-topbar${attrs}>
 ${body}
 </gob-topbar>`;

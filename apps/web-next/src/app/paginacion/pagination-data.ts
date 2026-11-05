@@ -291,8 +291,8 @@ import '@mariasan001/ui-wc';
   }
 
   return `<!-- npm i @mariasan001/ui-wc -->
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 <script type="module">
-  import '@mariasan001/ui-wc';
   const el = document.querySelector('gob-pagination');
   el.addEventListener('gob-page-change', (e) => {
     el.setAttribute('page', String(e.detail.page));

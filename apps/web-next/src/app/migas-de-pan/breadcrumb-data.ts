@@ -234,7 +234,7 @@ export function buildSnippet(
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
 <!-- gob-breadcrumb estiliza; navegar/expandir lo cables tu. -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 ${iconImports(lang, example)}<gob-breadcrumb${attrs}>
 ${body}
 </gob-breadcrumb>`;

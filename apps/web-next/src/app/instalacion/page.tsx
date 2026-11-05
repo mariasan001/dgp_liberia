@@ -24,14 +24,27 @@ const NPMRC = `@mariasan001:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=TU_GITHUB_PACKAGES_TOKEN
 always-auth=true`;
 
+const PROJECT_TREE = `mi-tramite/
+  .npmrc          ← token (Paso 1)
+  package.json    ← se crea con: npm init -y
+  index.html      ← tu página + estilos Gob UI
+  node_modules/   ← aparece al instalar (Paso 2)`;
+
+/** CMD (Windows): crea carpeta y archivos vacíos. */
+const CREATE_FROM_CONSOLE = `mkdir mi-tramite
+cd mi-tramite
+npm init -y
+type nul > .npmrc
+type nul > index.html
+notepad .npmrc
+notepad index.html`;
+
 const IMPORT_CSS = `<link rel="stylesheet" href="node_modules/@mariasan001/styles/fonts.css" />
 <link rel="stylesheet" href="node_modules/@mariasan001/styles/theme.css" />
 <link rel="stylesheet" href="node_modules/@mariasan001/styles/base.css" />
 <link rel="stylesheet" href="node_modules/@mariasan001/styles/utilities.css" />`;
 
-const IMPORT_JS = `<script type="module">
-  import '@mariasan001/ui-wc';
-</script>`;
+const IMPORT_JS = `<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>`;
 
 const STARTER_HTML = `<!doctype html>
 <html lang="es">
@@ -87,9 +100,7 @@ const STARTER_HTML = `<!doctype html>
       </gob-form>
     </main>
 
-    <script type="module">
-      import '@mariasan001/ui-wc';
-    </script>
+    <script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
   </body>
 </html>`;
 
@@ -170,8 +181,20 @@ const FAQ = [
     a: 'Usa Tokens (classic) como en la guía. Con fine-grained a veces falla el acceso a GitHub Packages npm; classic + read:packages es el camino estable.',
   },
   {
+    q: '¿Necesito instalar Node.js?',
+    a: 'Sí, si vas a instalar con npm/pnpm/yarn. Descarga Node.js LTS (incluye npm). Sin Node no puedes correr el install.',
+  },
+  {
     q: '¿Dónde va el archivo .npmrc?',
-    a: 'En la raíz del proyecto (junto a package.json). Ahí npm/pnpm/yarn lo leen al instalar.',
+    a: 'En la raíz del proyecto (junto a package.json e index.html). Ahí npm/pnpm/yarn lo leen al instalar.',
+  },
+  {
+    q: 'Proyecto nuevo solo con HTML: ¿qué carpetas creo?',
+    a: 'Una carpeta con .npmrc, package.json (npm init -y), index.html y, tras instalar, node_modules. Los estilos salen de @mariasan001/styles; no armes otro CSS base.',
+  },
+  {
+    q: '¿Cómo creo .npmrc e index.html desde la consola?',
+    a: 'En CMD: type nul > .npmrc y type nul > index.html. Luego notepad .npmrc / notepad index.html y pega el contenido de esta guía. New-Item solo existe en PowerShell.',
   },
   {
     q: '¿Hay que instalar los dos paquetes?',
@@ -191,11 +214,11 @@ const FAQ = [
   },
   {
     q: 'Los componentes no se ven o salen sin estilo',
-    a: 'Carga los 4 CSS de styles en ese orden, importa @mariasan001/ui-wc, y abre la página con un servidor local. Con doble clic al HTML (file://) suele fallar.',
+    a: 'Carga los 4 CSS en ese orden y el script con la ruta ./node_modules/@mariasan001/ui-wc/dist/index.js. No uses import \'@mariasan001/ui-wc\' en un HTML suelto: el navegador no encuentra el paquete, el fondo sí cambia y solo queda el texto. Ábrelo con un servidor local. Con doble clic al HTML (file://) también falla.',
   },
   {
     q: 'Veo el HTML crudo o etiquetas gob-* sin pintar',
-    a: 'El script de ui-wc no está cargando. Revisa la ruta del import y la consola del navegador (errores 404 o de módulo).',
+    a: 'El script no está cargando. En HTML usa <script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>. Si la consola dice que no puede resolver el módulo, es porque import \'@mariasan001/ui-wc\' solo funciona dentro de Vite, React o Next.',
   },
   {
     q: '¿Puedo pegar el token en el código o en el repo?',
@@ -215,7 +238,7 @@ const FAQ = [
   },
   {
     q: '¿Sirve en React, Next o solo HTML?',
-    a: 'Los componentes son Web Components: funcionan en HTML, React, Next, Vue, etc. En frameworks, importa ui-wc una vez y usa las etiquetas gob-* en el JSX/HTML.',
+    a: 'Sí. En HTML carga el script con la ruta a dist/index.js. En React, Next o Vite importa @mariasan001/ui-wc una vez (ahí el empaquetador sí resuelve el nombre) y usa las etiquetas gob-* en el JSX.',
   },
   {
     q: 'En CI/CD también pide token',
@@ -223,7 +246,7 @@ const FAQ = [
   },
   {
     q: 'Instalé bien pero el formulario no se ve como en la demo',
-    a: 'Compara tu HTML con el ejemplo: orden de CSS, import de ui-wc y atributos de cada gob-*. Luego revisa Componentes para copiar el markup de cada pieza.',
+    a: 'Compara tu HTML con el ejemplo: orden de CSS, script apuntando a dist/index.js y atributos de cada gob-*. Luego revisa Componentes para copiar el markup de cada pieza.',
   },
 ];
 
@@ -609,21 +632,93 @@ export default function InstalacionPage() {
 
           <section className={s.card}>
             <div className={s.cardHead}>
-              <p className={s.kicker}>Paso 1 · Configurar</p>
-              <h2 className={s.cardTitle}>Cómo se enseña en el proyecto</h2>
+              <p className={s.kicker}>Antes · Proyecto HTML</p>
+              <h2 className={s.cardTitle}>Qué necesitas en un proyecto nuevo</h2>
               <p className={s.cardLead}>
-                Crea un archivo <code>.npmrc</code> en la raíz del proyecto.
-                Copia el bloque, pégalo y solo sustituye{' '}
-                <code>TU_GITHUB_PACKAGES_TOKEN</code> por tu token.
+                Para instalar con npm hace falta <strong>Node.js</strong> (LTS).
+                Trae <code>npm</code>. Sin eso no puedes bajar los paquetes.
               </p>
             </div>
 
+            <div className={s.reqList}>
+              <article className={s.reqItem}>
+                <span className={s.reqNum}>1</span>
+                <div>
+                  <h3 className={s.reqTitle}>Instala Node.js LTS</h3>
+                  <p className={s.reqText}>
+                    Desde{' '}
+                    <a
+                      className={s.reqLink}
+                      href="https://nodejs.org"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      nodejs.org
+                    </a>
+                    . Luego abre una terminal y comprueba con{' '}
+                    <code>node -v</code> y <code>npm -v</code>.
+                  </p>
+                </div>
+              </article>
+              <article className={s.reqItem}>
+                <span className={s.reqNum}>2</span>
+                <div>
+                  <h3 className={s.reqTitle}>Crea la carpeta del trámite</h3>
+                  <p className={s.reqText}>
+                    Estructura recomendada (HTML + estilos de Gob UI):
+                  </p>
+                </div>
+              </article>
+            </div>
+
             <CodeBlock
-              code={NPMRC}
-              filename=".npmrc"
-              lang="npmrc"
-              accent="Copiar y pegar"
+              code={PROJECT_TREE}
+              filename="carpeta del proyecto"
+              lang="plain"
+              accent="Estructura"
             />
+
+            <div className={s.reqList}>
+              <article className={s.reqItem}>
+                <span className={s.reqNum}>3</span>
+                <div>
+                  <h3 className={s.reqTitle}>Créalos desde la consola</h3>
+                  <p className={s.reqText}>
+                    En <strong>CMD</strong> (Símbolo del sistema). Si ya estás
+                    dentro de la carpeta del proyecto, omite{' '}
+                    <code>mkdir</code> y <code>cd</code>.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <CodeBlock
+              code={CREATE_FROM_CONSOLE}
+              filename="terminal"
+              lang="shell"
+              accent="CMD"
+            />
+
+            <p className={s.callout}>
+              Después pega el contenido del Paso 1 en <code>.npmrc</code> y el
+              ejemplo del Paso 2 en <code>index.html</code>. Estilos: fonts →
+              theme → base → utilities. El script, al final del body, apunta a{' '}
+              <code>dist/index.js</code>.
+            </p>
+          </section>
+
+          <section className={s.card}>
+            <div className={s.cardHead}>
+              <p className={s.kicker}>Paso 1 · Configurar</p>
+              <h2 className={s.cardTitle}>Archivo .npmrc</h2>
+              <p className={s.cardLead}>
+                En el <code>.npmrc</code> que acabas de crear, pega este bloque
+                y solo sustituye <code>TU_GITHUB_PACKAGES_TOKEN</code> por tu
+                token.
+              </p>
+            </div>
+
+            <CodeBlock code={NPMRC} filename=".npmrc" lang="npmrc" />
           </section>
 
           <section className={s.card}>
@@ -673,7 +768,6 @@ export default function InstalacionPage() {
                   code={INSTALL_CMDS[manager]}
                   filename="terminal"
                   lang="shell"
-                  accent="Copiar"
                 />
               </div>
 
@@ -685,8 +779,8 @@ export default function InstalacionPage() {
                   <div>
                     <h3 className={s.useStepTitle}>Enlazar en el HTML</h3>
                     <p className={s.useStepText}>
-                      Carga los estilos en este orden y el script de
-                      componentes:
+                      Carga los estilos en este orden. El script de componentes
+                      va con la ruta al archivo, no con un import suelto:
                     </p>
                   </div>
                 </div>
@@ -702,7 +796,18 @@ export default function InstalacionPage() {
                   lang="html"
                   accent="JS"
                 />
-  <p className={s.useStepText}>
+                <p className={s.callout}>
+                  En un HTML suelto el navegador no resuelve{' '}
+                  <code>import &apos;@mariasan001/ui-wc&apos;</code>. Si lo
+                  dejas así, los CSS sí cargan (se ve el fondo) pero las
+                  etiquetas <code>gob-*</code> no se pintan y solo queda el
+                  texto. Usa la ruta a <code>dist/index.js</code> y abre la
+                  página con un servidor local (Live Server u otro). Con doble
+                  clic (<code>file://</code>) también falla. En React, Next o
+                  Vite sí puedes importar <code>@mariasan001/ui-wc</code>,
+                  porque el empaquetador lo resuelve.
+                </p>
+                <p className={s.useStepText}>
                   Ejemplo corto en el body (alerta + botón):
                 </p>
                 <CodeBlock
@@ -730,7 +835,7 @@ export default function InstalacionPage() {
                     <p className={s.useStepText}>
                       Copia el <code>index.html</code> o pasa a{' '}
                       <strong>Vista</strong> para ver cómo se ve. Ábrelo con un
-                      servidor local (Vite, Live Server u otro).
+                      servidor local (Live Server u otro), no con doble clic.
                     </p>
                   </div>
                 </div>

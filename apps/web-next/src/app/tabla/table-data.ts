@@ -374,7 +374,7 @@ export function TablaVacia() {
 }`;
     }
     return `<!-- npm i @mariasan001/ui-wc -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 <gob-table${attrs}>
   <span slot="title">${title}</span>
   <div slot="empty">
@@ -387,7 +387,7 @@ export function TablaVacia() {
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
 <!-- gob-table estiliza. Selección/orden los cables tu (JS o framework). -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 
 <gob-table${attrs}>
   <span slot="title">${title}</span>

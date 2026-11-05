@@ -137,6 +137,64 @@
   font-weight: 500;
 }
 
+.reqList {
+  display: grid;
+  gap: 14px;
+  margin: 4px 0 12px;
+}
+
+.reqItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.reqNum {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #9f2141;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.reqTitle {
+  margin: 2px 0 4px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #181511;
+}
+
+.reqText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #6b665f;
+}
+
+.reqText code {
+  font-family: var(--gob-font-mono, ui-monospace, Menlo, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  color: #9f2141;
+}
+
+.reqLink {
+  color: #9f2141;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.reqLink:hover {
+  color: #861c37;
+}
+
 .usePanel {
   display: grid;
   gap: 16px;

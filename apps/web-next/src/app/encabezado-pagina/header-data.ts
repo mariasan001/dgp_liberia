@@ -146,7 +146,7 @@ export function buildSnippet(
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
 <!-- gob-page-header es el cascaron; acciones/migas las cables tu. -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 
 <gob-page-header${attrs}>
 ${body}

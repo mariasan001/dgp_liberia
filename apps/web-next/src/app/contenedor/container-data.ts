@@ -132,7 +132,7 @@ export function buildSnippet(
 
   if (lang === 'html') {
     return `<!-- npm i @mariasan001/ui-wc -->
-<script type="module">import '@mariasan001/ui-wc';</script>
+<script type="module" src="./node_modules/@mariasan001/ui-wc/dist/index.js"></script>
 
 <gob-container${attrs}>
 ${body}

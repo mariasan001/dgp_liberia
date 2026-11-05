@@ -30,7 +30,9 @@ export const appShellStyles = `
   top: 0;
   align-self: start;
   height: var(--gob-shell-frame-height, 100vh);
-  overflow: auto;
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   border-right: 1px solid var(--gob-shell-sidebar-border, var(--gob-border, rgba(24, 21, 17, 0.1)));
   background: var(--gob-shell-sidebar-bg, var(--gob-surface, #fff));
   color: var(--gob-shell-sidebar-text, var(--gob-text, #181511));
