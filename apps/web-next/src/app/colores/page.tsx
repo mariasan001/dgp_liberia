@@ -1,5 +1,6 @@
 'use client';
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -106,7 +107,7 @@ export default function ColoresPage() {
   async function copyColor(color: ColorSwatch) {
     const snippet = buildColorSnippet({ lang, token: color.token, hex: color.hex });
     try {
-      await navigator.clipboard.writeText(snippet);
+      await copyText(snippet);
       setCopiedKey(color.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

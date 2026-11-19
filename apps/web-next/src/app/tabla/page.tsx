@@ -5,6 +5,7 @@
  * Pensada para listados masivos institucionales.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -35,7 +36,7 @@ export default function TablaPage() {
 
   async function copyExample(example: TableExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, tone));
+      await copyText(buildSnippet(lang, example, tone));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

@@ -1,5 +1,6 @@
 'use client';
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -40,7 +41,7 @@ export default function PaginacionPage() {
     const snippet = buildSnippet({ lang, tone, variant, page, total: demo.total });
 
     try {
-      await navigator.clipboard.writeText(snippet);
+      await copyText(snippet);
       setCopiedKey(variant);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

@@ -1,5 +1,6 @@
 'use client';
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { createElement, useState } from 'react';
 
@@ -52,7 +53,7 @@ export default function TipografiaPage() {
   async function copyLevel(level: TypeLevel) {
     const snippet = buildSnippet({ lang, level, tone });
     try {
-      await navigator.clipboard.writeText(snippet);
+      await copyText(snippet);
       setCopiedKey(level.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

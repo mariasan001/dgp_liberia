@@ -1,5 +1,6 @@
 'use client';
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
@@ -26,7 +27,7 @@ export default function IconografiaPage() {
 
   async function copyText(key: string, value: string) {
     try {
-      await navigator.clipboard.writeText(value);
+      await copyText(value);
       setCopiedKey(key);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

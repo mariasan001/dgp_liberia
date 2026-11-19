@@ -5,6 +5,7 @@
  * Caracteristicas: radio y sombra (sin selección de color).
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -36,7 +37,7 @@ export default function ContenedorPage() {
 
   async function copyExample(example: ContainerExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, radius, shadow));
+      await copyText(buildSnippet(lang, example, radius, shadow));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

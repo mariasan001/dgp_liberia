@@ -5,6 +5,7 @@
  * No alterar el hero vino ni el panel blanco superpuesto.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -37,7 +38,7 @@ export default function EstructuraAppPage() {
 
   async function copyExample(example: ShellExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, tone));
+      await copyText(buildSnippet(lang, example, tone));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

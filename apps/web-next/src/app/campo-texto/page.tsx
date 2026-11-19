@@ -5,6 +5,7 @@
  * Presentacion única (vino + dorado / semáforo); sin selector de color.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -32,7 +33,7 @@ export default function CampoTextoPage() {
 
   async function copyExample(example: InputExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example));
+      await copyText(buildSnippet(lang, example));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

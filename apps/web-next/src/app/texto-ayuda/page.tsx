@@ -4,6 +4,7 @@
  * Docs de Texto de ayuda — cascarrón canónico = Botones (/botones).
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -31,7 +32,7 @@ export default function TextoAyudaPage() {
 
   async function copyExample(example: HelperTextExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example));
+      await copyText(buildSnippet(lang, example));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

@@ -5,6 +5,7 @@
  * Filtro de superficie: con fondo / sin fondo (sin selección de color).
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -35,7 +36,7 @@ export default function EncabezadoPaginaPage() {
 
   async function copyExample(example: HeaderExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, surface));
+      await copyText(buildSnippet(lang, example, surface));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

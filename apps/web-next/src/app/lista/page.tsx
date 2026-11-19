@@ -4,6 +4,7 @@
  * Docs de Lista — cascarrón canónico = Botones (/botones).
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -34,7 +35,7 @@ export default function ListaPage() {
 
   async function copyExample(example: ListExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, tone));
+      await copyText(buildSnippet(lang, example, tone));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

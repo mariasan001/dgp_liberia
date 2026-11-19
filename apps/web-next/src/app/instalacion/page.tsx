@@ -1,5 +1,6 @@
 'use client';
 
+import { copyText } from '../copy-text';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, type ReactNode } from 'react';
@@ -439,7 +440,7 @@ function CodeBlock({
 
   async function onCopy() {
     try {
-      await navigator.clipboard.writeText(code);
+      await copyText(code);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 1400);
     } catch {

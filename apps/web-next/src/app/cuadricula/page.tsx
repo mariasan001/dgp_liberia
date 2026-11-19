@@ -5,6 +5,7 @@
  * Caracteristica: espaciado (gap), sin selección de color.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -35,7 +36,7 @@ export default function CuadriculaPage() {
 
   async function copyExample(example: GridExample) {
     try {
-      await navigator.clipboard.writeText(buildSnippet(lang, example, gap));
+      await copyText(buildSnippet(lang, example, gap));
       setCopiedKey(example.id);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {

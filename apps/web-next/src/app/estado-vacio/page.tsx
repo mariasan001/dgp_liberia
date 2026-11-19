@@ -5,6 +5,7 @@
  * Color de marca fijo (vino + dorado); sin selector de tone.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -34,7 +35,7 @@ export default function EstadoVacioPage() {
 
   async function copyExample(example: EmptyExample) {
     try {
-      await navigator.clipboard.writeText(
+      await copyText(
         buildSnippet(lang, example, BRAND_TONE),
       );
       setCopiedKey(example.id);

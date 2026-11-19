@@ -6,6 +6,7 @@
  * Otros componentes (Paginación, etc.) deben copiar este mismo shell.
  */
 
+import { copyText } from '../copy-text';
 import Link from 'next/link';
 import { Plus } from '@phosphor-icons/react';
 import { Fragment, useEffect, useState } from 'react';
@@ -125,7 +126,7 @@ export default function BotonesPage() {
     const snippet = buildSnippet({ lang, tone, appearance, mode, state });
 
     try {
-      await navigator.clipboard.writeText(snippet);
+      await copyText(snippet);
       setCopiedKey(key);
       window.setTimeout(() => setCopiedKey(null), 1200);
     } catch {
