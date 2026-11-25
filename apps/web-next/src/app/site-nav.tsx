@@ -7,6 +7,8 @@ const LINKS = [
   { href: '/instalacion', label: 'Instalación', id: 'instalacion' as const },
 ];
 
+
+
 export function SiteNav({ active }: { active?: 'componentes' | 'instalacion' }) {
   return (
     <header className={s.nav}>
